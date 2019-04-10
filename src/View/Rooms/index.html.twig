@@ -1,0 +1,11 @@
+{% extends 'layout.html.twig' %}
+
+{% block content %}
+    <h1>Chambres</h1>
+    <ul>
+        {% for room in rooms %}
+            {{ room.name }} {{ room.description }}
+        {% endfor %}
+    </ul>
+    <a href="../Item/add.html.twig">Ajouter</a>
+{% endblock %}
