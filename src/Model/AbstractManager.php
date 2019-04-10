@@ -31,12 +31,14 @@ abstract class AbstractManager
 
 
     /**
-     * Initializes Manager Abstract class.
+     * AbstractManager constructor.
      * @param string $table
+     * @param string $tableTojoin
      */
-    public function __construct(string $table)
+    public function __construct(string $table, string $tableTojoin)
     {
         $this->table = $table;
+        $this->tableToJoin = $tableTojoin;
         $this->className = __NAMESPACE__ . '\\' . ucfirst($table);
         $this->pdo = (new Connection())->getPdoConnection();
     }
@@ -66,5 +68,11 @@ abstract class AbstractManager
         $statement->execute();
 
         return $statement->fetch();
+    }
+
+    public function selectAllJoin(string $foreignKey, string $primaryKey):array
+    {
+        return $this->pdo->query('SELECT * FROM ' . $this->table . ' JOIN '.$this->tableToJoin .' ON ' .
+            $this->tableToJoin .'.' . $foreignKey.'='.$this->table.'.'.$primaryKey)->fetchAll();
     }
 }

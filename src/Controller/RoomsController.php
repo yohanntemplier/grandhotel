@@ -3,7 +3,6 @@
 
 namespace App\Controller;
 
-
 use App\Model\RoomsManager;
 
 class RoomsController extends AbstractController
@@ -17,10 +16,8 @@ class RoomsController extends AbstractController
     public function index()
     {
         $roomsManager = new RoomsManager();
-        $rooms = $roomsManager->selectAll();
+        $rooms = $roomsManager->selectAllJoin('room_id', 'id');
 
         return $this->twig->render('Rooms/index.html.twig', ['rooms' => $rooms]);
     }
-
-
 }
