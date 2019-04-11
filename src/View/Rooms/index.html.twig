@@ -9,10 +9,8 @@
 
             <div class="row m-0 align-items-center">
                 {% if key is odd %}
-                    <div class="col-md-4 p-0">
+                    <div class="d-none d-md-block col-md-4 p-0">
                         <img src="/assets/images/{{ room['photo1'] }}" class="card-img m-0" alt="photo chambre">
-
-
                     </div>
                 {% endif %}
 
@@ -64,6 +62,11 @@
                 </div>
                 {% if key is not odd %}
                     <div class="col-md-4 p-0">
+                        <img src="/assets/images/{{ room['photo1'] }}" class="card-img m-0" alt="photo chambre">
+                    </div>
+                {% endif %}
+                {% if key is odd %}
+                    <div class="d-block d-md-none col-md-4 p-0">
                         <img src="/assets/images/{{ room['photo1'] }}" class="card-img m-0" alt="photo chambre">
                     </div>
                 {% endif %}
