@@ -1,0 +1,35 @@
+
+h1, h2 {
+    color: #2d417a;
+    font-family: Raleway, sans-serif;
+    font-size: 26pt;
+}
+
+h3 {
+    font-size: 22pt;
+    font-family: Raleway, sans-serif;
+}
+
+body {
+    font-family: Source Sans Pro, sans-serif;
+    font-size: 16pt;
+}
+
+li {
+    list-style: none;
+}
+
+.roomCard {
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom-color: #2d417a;
+    border-bottom-width: medium;
+}
+
+.services {
+    background-color: #2d417a;
+    color: whitesmoke;
+
+
+}
