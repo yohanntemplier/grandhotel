@@ -9,8 +9,6 @@
 
 namespace App\Model;
 
-use App\Model\Connection;
-
 /**
  * Abstract class handling default manager.
  */
