@@ -1,42 +1,42 @@
 {% extends 'layout.html.twig' %}
 {% block title %}Chambres Grand Hôtel{% endblock %}
 {% block content %}
-<h1>Les chambres du Grand Hôtel d'Orléans</h1>
+    <h1>Les chambres du Grand Hôtel d'Orléans</h1>
 
 
-{% for key, room in rooms %}
-<div class="card mb-3 mt-4">
-    <div class="container-fluid mr-0">
-        <div class="row">
-            {% if key is odd %}
-            <div class="col-md-4">
-                <img src="/assets/images/{{ room['photo1'] }}" class="card-img" alt="photo chambre">
-                <div class="container-fluid">
-                    <div class="row justify-content-center">
-                        <div class="col-2 align-self-center">
-                            <div data-toggle="modal" data-target="#modal{{ key }}2">
-                                <img src="/assets/images/{{ room['photo2'] }}" class="card-img"
-                                     alt="photo chambre">
+    {% for key, room in rooms %}
+        <div class="card mb-3 mt-4">
+
+            <div class="row">
+                {% if key is odd %}
+                    <div class="col-md-4">
+                        <img src="/assets/images/{{ room['photo1'] }}" class="card-img" alt="photo chambre">
+                        <div class="container-fluid">
+                            <div class="row justify-content-center">
+                                <div class="col-2 align-self-center">
+                                    <div data-toggle="modal" data-target="#modal{{ key }}2">
+                                        <img src="/assets/images/{{ room['photo2'] }}" class="card-img"
+                                             alt="photo chambre">
+                                    </div>
+                                </div>
+
+                                <div class="col-2 align-self-center">
+                                    <div data-toggle="modal" data-target="#modal{{ key }}3">
+                                        <img src="/assets/images/{{ room['photo3'] }}" class="card-img"
+                                             alt="photo chambre">
+                                    </div>
+                                </div>
+
+                                <div class="col-2 align-self-center">
+                                    <div data-toggle="modal" data-target="#modal{{ key }}4">
+                                        <img src="/assets/images/{{ room['photo4'] }}" class="card-img"
+                                             alt="photo chambre">
+                                    </div>
+                                </div>
                             </div>
-                        </div>
 
-                        <div class="col-2 align-self-center">
-                            <div data-toggle="modal" data-target="#modal{{ key }}3">
-                                <img src="/assets/images/{{ room['photo3'] }}" class="card-img"
-                                     alt="photo chambre">
-                            </div>
                         </div>
-
-                        <div class="col-2 align-self-center">
-                            <div data-toggle="modal" data-target="#modal{{ key }}4">
-                                <img src="/assets/images/{{ room['photo4'] }}" class="card-img"
-                                     alt="photo chambre">
-                            </div>
-                        </div>
-
                     </div>
-
-                </div>
                 {% endif %}
 
                 <div class="col-md-8">
@@ -65,70 +65,72 @@
                 </div>
                 {% if key is not odd %}
 
-                <div class="col-md-4">
-                    <img src="/assets/images/{{ room['photo1'] }}" class="card-img" alt="photo chambre">
-                    <div class="container-fluid">
-                        <div class="row justify-content-center">
-                            <div class="col-2 align-self-center">
-                                <div data-toggle="modal" data-target="#modal{{ key }}2">
-                                    <img src="/assets/images/{{ room['photo2'] }}" class="card-img"
-                                         alt="photo chambre">
+                    <div class="col-md-4">
+                        <img src="/assets/images/{{ room['photo1'] }}" class="card-img" alt="photo chambre">
+                        <div class="container-fluid">
+                            <div class="row justify-content-center">
+                                <div class="col-2 align-self-center">
+                                    <div data-toggle="modal" data-target="#modal{{ key }}2">
+                                        <img src="/assets/images/{{ room['photo2'] }}" class="card-img"
+                                             alt="photo chambre">
+                                    </div>
                                 </div>
-                            </div>
 
-                            <div class="col-2 align-self-center">
-                                <div data-toggle="modal" data-target="#modal{{ key }}3">
-                                    <img src="/assets/images/{{ room['photo3'] }}" class="card-img"
-                                         alt="photo chambre">
+                                <div class="col-2 align-self-center">
+                                    <div data-toggle="modal" data-target="#modal{{ key }}3">
+                                        <img src="/assets/images/{{ room['photo3'] }}" class="card-img"
+                                             alt="photo chambre">
+                                    </div>
                                 </div>
-                            </div>
 
-                            <div class="col-2 align-self-center">
-                                <div data-toggle="modal" data-target="#modal{{ key }}4">
-                                    <img src="/assets/images/{{ room['photo4'] }}" class="card-img"
-                                         alt="photo chambre">
+                                <div class="col-2 align-self-center">
+                                    <div data-toggle="modal" data-target="#modal{{ key }}4">
+                                        <img src="/assets/images/{{ room['photo4'] }}" class="card-img"
+                                             alt="photo chambre">
+                                    </div>
                                 </div>
-                            </div>
 
 
-                        </div>
-                    </div>
-                    {% endif %}
-                    <div class="modal fade" id="modal{{ key }}2" tabindex="-1" role="dialog">
-                        <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
-                            <div class="modal-content">
-                                <img src="/assets/images/{{ room['photo2'] }}" alt="photo chambre">
                             </div>
                         </div>
                     </div>
+                {% endif %}
 
-                    <div class="modal fade" id="modal{{ key }}3" tabindex="-1" role="dialog">
-                        <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
-                            <div class="modal-content">
-                                <img src="/assets/images/{{ room['photo3'] }}" alt="photo chambre">
-                            </div>
+                <div class="modal fade" id="modal{{ key }}2" tabindex="-1" role="dialog">
+                    <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+                        <div class="modal-content">
+                            <img src="/assets/images/{{ room['photo2'] }}" alt="photo chambre">
                         </div>
                     </div>
-
-                    <div class="modal fade" id="modal{{ key }}4" tabindex="-1" role="dialog">
-                        <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
-                            <div class="modal-content">
-                                <img src="/assets/images/{{ room['photo4'] }}" alt="photo chambre">
-                            </div>
-                        </div>
-                    </div>
-
-
                 </div>
 
+                <div class="modal fade" id="modal{{ key }}3" tabindex="-1" role="dialog">
+                    <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+                        <div class="modal-content">
+                            <img src="/assets/images/{{ room['photo3'] }}" alt="photo chambre">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="modal fade" id="modal{{ key }}4" tabindex="-1" role="dialog">
+                    <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+                        <div class="modal-content">
+                            <img src="/assets/images/{{ room['photo4'] }}" alt="photo chambre">
+                        </div>
+                    </div>
+                </div>
+
+
             </div>
+
         </div>
-    </div>
+
+
     {% endfor %}
 
 
 
 
 
-    {% endblock %}
+{% endblock %}
 
