@@ -6,6 +6,7 @@
  * Time: 20:52
  * PHP version 7
  */
+
 namespace App\Model;
 
 use App\Model\Connection;
@@ -62,7 +63,7 @@ abstract class AbstractManager
     /**
      * Get one row from database by ID.
      *
-     * @param  int $id
+     * @param int $id
      *
      * @return array
      */
@@ -76,21 +77,18 @@ abstract class AbstractManager
         return $statement->fetch();
     }
 
+
     /**
      * @param string $foreignKey
      * @param string $primaryKey
+     * @param string $secondForeignKey
      * @return array
      */
-    public function selectAllJoin(string $foreignKey, string $primaryKey):array
+    public function selectAllDoubleJoin(string $foreignKey, string $primaryKey, string $secondForeignKey): array
     {
-        return $this->pdo->query('SELECT * FROM ' . $this->table . ' JOIN '.$this->tableToJoin .' ON ' .
-            $this->tableToJoin .'.' . $foreignKey.'='.$this->table.'.'.$primaryKey)->fetchAll();
-    }
-
-    public function selectAllDoubleJoin(string $foreignKey, string $primaryKey, $secondForeignKey):array
-    {
-        return $this->pdo->query('SELECT * FROM ' . $this->table . ' JOIN '.$this->tableToJoin .' ON ' .
-            $this->tableToJoin .'.' . $foreignKey.'='.$this->table.'.'.$primaryKey. ' JOIN '.$this->secondTableToJoin .' ON ' .
-        $this->secondTableToJoin .'.' . $secondForeignKey. '=' .$this->table. '.' .$primaryKey)->fetchAll();
+        return $this->pdo->query('SELECT * FROM ' . $this->table . ' JOIN ' . $this->tableToJoin . ' ON ' .
+            $this->tableToJoin . '.' . $foreignKey . '=' . $this->table . '.' . $primaryKey . ' JOIN ' .
+            $this->secondTableToJoin . ' ON ' .
+            $this->secondTableToJoin . '.' . $secondForeignKey . '=' . $this->table . '.' . $primaryKey)->fetchAll();
     }
 }
