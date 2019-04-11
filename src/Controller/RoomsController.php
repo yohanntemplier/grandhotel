@@ -16,7 +16,7 @@ class RoomsController extends AbstractController
     public function index()
     {
         $roomsManager = new RoomsManager();
-        $rooms = $roomsManager->selectAllJoin('room_id', 'id');
+        $rooms = $roomsManager->selectAllDoubleJoin('room_id', 'id', 'room_id');
 
         return $this->twig->render('Rooms/index.html.twig', ['rooms' => $rooms]);
     }
