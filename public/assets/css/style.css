@@ -1,0 +1,31 @@
+
+/* Footer */
+.page-footer{
+    background-color: #2F3D40;
+}
+
+.logo{
+    width: 5em;
+}
+
+.contact{
+    padding-top: 12px;
+}
+
+.row{
+    color: #FFFFFF;
+}
+
+.logo1{
+    padding-bottom: 30px;
+}
+
+.logofooter{
+    width: 22em;
+  }
+
+.lien{
+    padding-top: 10px;
+    padding-left: 50px;
+}
+/* EndFooter */
