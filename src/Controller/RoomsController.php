@@ -25,6 +25,7 @@ class RoomsController extends AbstractController
         for ($i = 0; $i < count($photos); $i++) {
             unset($photos[$i]['id']);
             unset($photos[$i]['room_id']);
+            unset($photos[$i]['photo1']);
         }
 
 

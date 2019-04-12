@@ -1,4 +1,4 @@
-
+/*Général*/
 h1, h2 {
     color: #2d417a;
     font-family: Raleway, sans-serif;
@@ -18,7 +18,7 @@ body {
 li {
     list-style: circle;
 }
-
+/*rooms/index*/
 .roomCard {
     border-top: none;
     border-left: none;

@@ -2,7 +2,7 @@
 {% block title %}Chambres Grand Hôtel{% endblock %}
 {% block content %}
     <h1>Les chambres du Grand Hôtel d'Orléans</h1>
-    {% for key, room in rooms %}
+       {% for key, room in rooms %}
         <div class="card roomCard mb-3 mt-4">
 
             <div class="row m-0 align-items-center">
@@ -45,24 +45,14 @@
                             </div>
                         </div>
                         <div class="row justify-content-center">
+                            {% for photo in photos[key] %}
                             <div class="col-2 align-self-center pt-1 pb-1">
-                                <div data-toggle="modal" data-target="#modal{{ key }}2">
-                                    <img src="/assets/images/{{ room['photo2'] }}" class="card-img"
+                                <div data-toggle="modal" data-target="#modal{{ key }}{{ loop.index }}">
+                                    <img src="/assets/images/{{ photo }}" class="card-img"
                                          alt="photo chambre">
                                 </div>
                             </div>
-                            <div class="col-2 align-self-center pt-1 pb-1">
-                                <div data-toggle="modal" data-target="#modal{{ key }}3">
-                                    <img src="/assets/images/{{ room['photo3'] }}" class="card-img"
-                                         alt="photo chambre">
-                                </div>
-                            </div>
-                            <div class="col-2 align-self-center pt-1 pb-1">
-                                <div data-toggle="modal" data-target="#modal{{ key }}4">
-                                    <img src="/assets/images/{{ room['photo4'] }}" class="card-img"
-                                         alt="photo chambre">
-                                </div>
-                            </div>
+                           {% endfor %}
                         </div>
                     </div>
                 </div>
@@ -76,28 +66,16 @@
                         <img src="/assets/images/{{ room['photo1'] }}" class="card-img m-0" alt="photo chambre">
                     </div>
                 {% endif %}
-                <div class="modal fade" id="modal{{ key }}2" tabindex="-1" role="dialog">
+    {% for photo in photos[key] %}
+                <div class="modal fade" id="modal{{ key }}{{ loop.index }}" tabindex="-1" role="dialog">
                     <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
                         <div class="modal-content">
-                            <img src="/assets/images/{{ room['photo2'] }}" alt="photo chambre">
+                            <img src="/assets/images/{{ photo }}" alt="photo chambre">
                         </div>
                     </div>
                 </div>
-                <div class="modal fade" id="modal{{ key }}3" tabindex="-1" role="dialog">
-                    <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
-                        <div class="modal-content">
-                            <img src="/assets/images/{{ room['photo3'] }}" alt="photo chambre">
-                        </div>
-                    </div>
+        {% endfor %}
                 </div>
-                <div class="modal fade" id="modal{{ key }}4" tabindex="-1" role="dialog">
-                    <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
-                        <div class="modal-content">
-                            <img src="/assets/images/{{ room['photo4'] }}" alt="photo chambre">
-                        </div>
-                    </div>
-                </div>
-            </div>
         </div>
     {% endfor %}
 {% endblock %}
