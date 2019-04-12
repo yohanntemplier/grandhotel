@@ -17,12 +17,19 @@
                 <div class="col-md-8">
                     <div class="card-body">
                         <h2 class="card-title text-center">{{ room['name'] }}</h2>
-                        <p class="card-text">{{ room['description'] }}</p>
+                        <div class="row font-weight-bold">
+                            <p class="card-text text-right col-6">{{ room['price'] }} €</p>
+                            <p class="card-text text-right col-6">{{ room['area'] }} m²</p>
+                        </div>
+                        <div class="row">
+                            <p class="card-text">{{ room['description'] }}</p>
+                        </div>
                         <div class="services">
                             <div class="row mb-3 mt-4">
                                 <h3 class="col text-center"> Services</h3>
                             </div>
                             <div class="card-text row">
+
                                 <ul class="col-4 text-center">
                                     <li>{{ room['caracteristic1'] }}</li>
                                     <li>{{ room['caracteristic2'] }}</li>
