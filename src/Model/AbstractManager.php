@@ -110,6 +110,4 @@ abstract class AbstractManager
 
         return $this->pdo->query('SELECT * FROM ' . $this->secondTableToJoin)->fetchAll();
     }
-
-
 }
