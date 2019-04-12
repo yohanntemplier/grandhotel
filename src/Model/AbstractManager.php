@@ -77,6 +77,7 @@ abstract class AbstractManager
 
 
     /**
+     * get one table joined with two other tables
      * @param string $foreignKey
      * @param string $primaryKey
      * @param string $secondForeignKey
@@ -89,4 +90,26 @@ abstract class AbstractManager
             $this->secondTableToJoin . ' ON ' .
             $this->secondTableToJoin . '.' . $secondForeignKey . '=' . $this->table . '.' . $primaryKey)->fetchAll();
     }
+
+    /**
+     * get one of the two tables joined
+     * @return array
+     */
+    public function selectAllFromFirstJoined(): array
+    {
+
+        return $this->pdo->query('SELECT * FROM ' . $this->tableToJoin)->fetchAll();
+    }
+
+    /**
+     * get the second of the two tables joined
+     * @return array
+     */
+    public function selectAllFromSecondJoined(): array
+    {
+
+        return $this->pdo->query('SELECT * FROM ' . $this->secondTableToJoin)->fetchAll();
+    }
+
+
 }

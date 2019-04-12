@@ -15,9 +15,27 @@ class RoomsController extends AbstractController
      */
     public function index()
     {
+
         $roomsManager = new RoomsManager();
         $rooms = $roomsManager->selectAllDoubleJoin('room_id', 'id', 'room_id');
+        $roomsPhotosManager = new RoomsManager();
+        $photos = $roomsPhotosManager->selectAllFromFirstJoined();
 
-        return $this->twig->render('Rooms/index.html.twig', ['rooms' => $rooms]);
+
+        for ($i = 0; $i < count($photos); $i++) {
+            unset($photos[$i]['id']);
+            unset($photos[$i]['room_id']);
+        }
+
+
+        $roomCaracteristicsManager = new RoomsManager();
+        $caracteristics = $roomCaracteristicsManager->selectAllFromSecondJoined();
+
+        for ($i = 0; $i < count($caracteristics); $i++) {
+            unset($caracteristics[$i]['id']);
+            unset($caracteristics[$i]['room_id']);
+        }
+        return $this->twig->render('Rooms/index.html.twig', ['rooms' => $rooms, 'photos' => $photos,
+            'caracteristics' => $caracteristics]);
     }
 }

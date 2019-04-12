@@ -16,7 +16,7 @@ body {
 }
 
 li {
-    list-style: none;
+    list-style: circle;
 }
 
 .roomCard {

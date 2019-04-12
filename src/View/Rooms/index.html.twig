@@ -2,8 +2,6 @@
 {% block title %}Chambres Grand Hôtel{% endblock %}
 {% block content %}
     <h1>Les chambres du Grand Hôtel d'Orléans</h1>
-
-
     {% for key, room in rooms %}
         <div class="card roomCard mb-3 mt-4">
 
@@ -13,7 +11,6 @@
                         <img src="/assets/images/{{ room['photo1'] }}" class="card-img m-0" alt="photo chambre">
                     </div>
                 {% endif %}
-
                 <div class="col-md-8">
                     <div class="card-body">
                         <h2 class="card-title text-center">{{ room['name'] }}</h2>
@@ -29,20 +26,22 @@
                                 <h3 class="col text-center"> Services</h3>
                             </div>
                             <div class="card-text row">
-
-                                <ul class="col-4 text-center">
-                                    <li>{{ room['caracteristic1'] }}</li>
-                                    <li>{{ room['caracteristic2'] }}</li>
-                                </ul>
-                                <ul class="col-4 text-center">
-                                    <li>{{ room['caracteristic3'] }}</li>
-                                    <li>{{ room['caracteristic4'] }}</li>
-                                </ul>
-                                <ul class="col-4 text-center">
-
-                                    <li>{{ room['caracteristic5'] }}</li>
-                                    <li>{{ room['caracteristic6'] }}</li>
-                                </ul>
+                                {% for caracteristic in caracteristics[key] %}
+                                    {% if caracteristic is null %}
+                                    {% else %}
+                                        {% if loop.index0 is even %}
+                                            <ul class="col-4 text-center">
+                                            <li>{{ caracteristic }}</li>
+                                        {% endif %}
+                                        {% if loop.index0 is odd %}
+                                            <li>{{ caracteristic }}</li>
+                                            </ul>
+                                        {% endif %}
+                                        {% if loop.last and loop.index0 is even %}
+                                            </ul>
+                                        {% endif %}
+                                    {% endif %}
+                                {% endfor %}
                             </div>
                         </div>
                         <div class="row justify-content-center">
@@ -102,4 +101,3 @@
         </div>
     {% endfor %}
 {% endblock %}
-
