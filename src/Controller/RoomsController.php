@@ -8,6 +8,8 @@ use App\Model\RoomsManager;
 class RoomsController extends AbstractController
 {
     /**
+     * returns a triple array with the rooms, the photos, and the caracteristics.
+     * destroys some data that we don't need in the array, to make easier the for in the viewpage
      * @return string
      * @throws \Twig_Error_Loader
      * @throws \Twig_Error_Runtime
