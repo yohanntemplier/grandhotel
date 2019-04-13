@@ -1,6 +1,6 @@
 /*Général*/
 h1, h2 {
-    color: #2d417a;
+    color: #2F3D40;
     font-family: Raleway, sans-serif;
     font-size: 26pt;
 }
@@ -23,12 +23,12 @@ li {
     border-top: none;
     border-left: none;
     border-right: none;
-    border-bottom-color: #2d417a;
+    border-bottom-color: #2F3D40;
     border-bottom-width: medium;
 }
 
 .services {
-    background-color: #2d417a;
+    background-color: #2F3D40;
     color: whitesmoke;
 
 
