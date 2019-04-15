@@ -15,9 +15,11 @@ body {
     font-size: 16pt;
 }
 
+
 li {
     list-style: circle;
 }
+
 /*rooms/index*/
 .roomCard {
     border-top: none;
@@ -32,4 +34,18 @@ li {
     color: whitesmoke;
 
 
+}
+
+.imageCarouselPageChambres {
+    width: 50vw;
+    height: 35vw;
+}
+
+@media (max-width: 768px) {
+
+    .imageCarouselPageChambres {
+        width: 50vw;
+        height: 35vw;
+        margin-left: 25%;
+    }
 }

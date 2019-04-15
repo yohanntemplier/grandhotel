@@ -13,9 +13,9 @@ class RoomsManager extends AbstractManager
     /**
      * Gives the name to join
      */
-    const TABLETOJOIN ='room_photo';
+    const TABLETOJOIN = 'room_photo';
 
-    const SECONDTABLETOJOIN='room_caracteristic';
+    const SECONDTABLETOJOIN = 'room_caracteristic';
 
     /**
      *  Initializes this class.
