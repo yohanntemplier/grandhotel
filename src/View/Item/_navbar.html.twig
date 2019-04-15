@@ -1,8 +1,6 @@
 {% block header %}
-    <div class="container-fluid">
-    <nav class="navbar  navbar-expand-lg ">
-        <div class="row">
-        <a class="navbar-brand" href="../public/index.php">Le Grand Hôtel</a>
+    <nav class="navbar navbar-expand-lg nav-pills flex-column flex-sm-row">
+      <a class="navbar-brand ml-3" href="../public/index.php">Le Grand Hôtel</a>
         <button class="navbar-toggler navbar-dark" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -23,14 +21,16 @@
                 <li class="nav-item">
                     <a class="nav-link " href="#">Contact</a>
                 </li>
+
                 <li class="nav-item">
+                    <div class="reservation">
                     <a class="nav-link" href="https://www.contact-hotel.com/hotel-france/1753/grand-hotel-orleans.htm">Réservation</a>
+                    </div>
                 </li>
+
             </ul>
         </div>
-        </div>
     </nav>
-    </div>
 {% endblock %}
 
 {% block title %}{% endblock %}
