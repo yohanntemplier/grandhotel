@@ -4,14 +4,10 @@
     <h1>Les chambres du Grand Hôtel d'Orléans</h1>
     {% for key, room in rooms %}
         <div class="card roomCard mb-3 pb-3 mt-4">
-
             <div class="row m-0 align-items-center">
                 {% if key is odd %}
                     <div class="d-none d-md-block col-md-6 p-0">
-
-
                         <div id="carouselExampleIndicators{{ key }}" class="carousel slide" data-ride="carousel">
-
                             <div class="carousel-inner">
                                 <div class="carousel-item active">
                                     <img class="imageCarouselPageChambres" src="/assets/images/{{ room['photo1'] }}"
@@ -41,8 +37,6 @@
                                 <span class="sr-only">Next</span>
                             </a>
                         </div>
-
-
                     </div>
                 {% endif %}
                 <div class="col-md-6">
@@ -61,33 +55,26 @@
                             </div>
                             <div class="card-text row">
                                 {% for caracteristic in caracteristics[key] %}
-                                    {% if caracteristic is null %}
-                                    {% else %}
-                                        {% if loop.index is odd %}
-                                            <ul class="col-12 col-lg-4 text-center">
+                                    {% if loop.index0 is even %}
+                                        <ul class="col-4 text-center">
+                                        {% if caracteristic !='' %}
                                             <li>{{ caracteristic }}</li>
-                                            {% if loop.last %}
-                                                </ul>
-                                            {% endif %}
                                         {% endif %}
-                                        {% if loop.index is even %}
+                                    {% endif %}
+                                    {% if loop.index0 is odd %}
+                                        {% if caracteristic !='' %}
                                             <li>{{ caracteristic }}</li>
-                                            </ul>
                                         {% endif %}
-
+                                        </ul>
                                     {% endif %}
                                 {% endfor %}
                             </div>
                         </div>
-
                     </div>
                 </div>
                 {% if key is not odd %}
                     <div class="md-block col-md-6 p-0">
-
-
                         <div id="carouselExampleIndicators{{ key }}" class="carousel slide" data-ride="carousel">
-
                             <div class="carousel-inner ">
                                 <div class="carousel-item active ">
                                     <img class=" imageCarouselPageChambres" src="/assets/images/{{ room['photo1'] }}"
@@ -117,16 +104,11 @@
                                 <span class="sr-only">Next</span>
                             </a>
                         </div>
-
-
                     </div>
                 {% endif %}
                 {% if key is odd %}
                     <div class="d-block d-md-none col-md-6 p-0">
-
-
                         <div id="carouselExampleIndicators{{ key }}bis" class="carousel slide" data-ride="carousel">
-
                             <div class="carousel-inner">
                                 <div class="carousel-item active">
                                     <img class="imageCarouselPageChambres" src="/assets/images/{{ room['photo1'] }}"
@@ -156,12 +138,8 @@
                                 <span class="sr-only">Next</span>
                             </a>
                         </div>
-
-
                     </div>
-
                 {% endif %}
-
             </div>
         </div>
     {% endfor %}
