@@ -41,4 +41,6 @@ class RoomsController extends AbstractController
         return $this->twig->render('Rooms/index.html.twig', ['rooms' => $rooms, 'photos' => $photos,
             'caracteristics' => $caracteristics]);
     }
+
+
 }
