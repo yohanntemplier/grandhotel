@@ -1,3 +1,43 @@
+/* Navbar */
+
+.navbar{
+    background-color: #2F3B40;
+    margin-bottom: 10px;
+    font-family: "Dancing Script";
+
+}
+
+.navbar-brand{
+    font-size: xx-large;
+    margin-left: 200px;
+    margin-right: 80px;
+}
+
+.navbar-brand:hover{
+    text-decoration: underline;
+    color: whitesmoke;
+}
+
+.navbar-light{
+    color: whitesmoke;
+}
+
+a {
+    font-size: xx-large;
+    color: whitesmoke;
+
+}
+
+.nav-link:hover{
+    text-decoration: underline;
+    color:  whitesmoke;
+}
+
+
+
+.nav-item{
+    margin-right: 80px;
+}
 
 /* Footer */
 .page-footer{
@@ -10,11 +50,9 @@
 
 .contact{
     padding-top: 12px;
-}
-
-.row{
     color: #FFFFFF;
 }
+
 
 .logo1{
     padding-bottom: 30px;
