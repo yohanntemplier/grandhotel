@@ -1,8 +1,10 @@
+
 /*CarrouselIndex*/
+
 .carousel img {
     background-size: cover;
-    width: 100%;
-    height: 500px;
+    width: auto;
+    height: 400px;
 }
 /* EndCarrouselIndex*/
 
