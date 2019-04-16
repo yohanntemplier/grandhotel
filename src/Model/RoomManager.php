@@ -3,22 +3,13 @@
 
 namespace App\Model;
 
-class RoomsManager extends AbstractManager
+class RoomManager extends AbstractManager
 {
 
-        /**
+    /**
      * Gives the table name
      */
     const TABLE = 'room';
-
-    /**
-     * Gives the name to join
-     */
-    const TABLETOJOIN = 'room_photo';
-    /**
-     * give the name of the second table joined
-     */
-    const SECONDTABLETOJOIN = 'room_caracteristic';
 
 
     /**
@@ -29,19 +20,23 @@ class RoomsManager extends AbstractManager
      * @var string
      */
     protected $tableToJoin;
-
+    /**
+     * @var string
+     */
     protected $secondTableToJoin;
 
-
+    /**
+     * RoomManager constructor
+     */
     public function __construct()
     {
         parent::__construct(self::TABLE);
-        $this->tableToJoin = self::TABLETOJOIN;
-        $this->secondTableToJoin = self::SECONDTABLETOJOIN;
+        $this->tableToJoin = 'room_photo';
+        $this->secondTableToJoin = 'room_caracteristic';
     }
 
     /**
-     * get one table joined with two other tables
+     * get the table rooms joined with the tables photos and caracteristic
      * @param string $foreignKey
      * @param string $primaryKey
      * @param string $secondForeignKey
@@ -56,7 +51,7 @@ class RoomsManager extends AbstractManager
     }
 
     /**
-     * get one of the two tables joined without ids
+     * retourne table photos without ids
      * @return array
      */
     public function selectQuiteAllFromFirstJoined(): array
@@ -66,7 +61,7 @@ class RoomsManager extends AbstractManager
     }
 
     /**
-     * get the second of the two tables joined without ids
+     * get the table caracteristics
      * @return array
      */
     public function selectQuiteAllFromSecondJoined(): array

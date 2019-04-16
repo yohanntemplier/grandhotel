@@ -3,9 +3,9 @@
 
 namespace App\Controller;
 
-use App\Model\RoomsManager;
+use App\Model\RoomManager;
 
-class RoomsController extends AbstractController
+class RoomController extends AbstractController
 {
     /**
      * returns a triple array with the rooms, the photos, and the caracteristics.
@@ -18,16 +18,11 @@ class RoomsController extends AbstractController
     public function index()
     {
 
-        $roomsManager = new RoomsManager();
-        $rooms = $roomsManager->selectAllDoubleJoin('room_id', 'id', 'room_id');
-        $roomsPhotosManager = new RoomsManager();
-        $photos = $roomsPhotosManager->selectQuiteAllFromFirstJoined();
+        $roomManager = new RoomManager();
+        $rooms = $roomManager->selectAllDoubleJoin('room_id', 'id', 'room_id');
 
-
-
-
-
-        $caracteristics = $roomsManager->selectQuiteAllFromSecondJoined();
+        $photos = $roomManager->selectQuiteAllFromFirstJoined();
+        $caracteristics = $roomManager->selectQuiteAllFromSecondJoined();
 
         for ($i = 0; $i < count($caracteristics); $i++) {
             unset($caracteristics[$i]['id']);
