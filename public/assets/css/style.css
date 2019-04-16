@@ -35,7 +35,7 @@ body {
 
 }
 
-.imageCarouselPageChambres {
+.carouselPictureRoomPage {
     width: 50vw;
     height: 35vw;
 }
@@ -73,7 +73,7 @@ body {
 
 @media (max-width: 768px) {
 
-    .imageCarouselPageChambres {
+    .carouselPictureRoomPage {
         width: 50vw;
         height: 35vw;
         margin-left: 25%;
