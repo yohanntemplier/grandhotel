@@ -28,3 +28,18 @@
 /* EndFooter */
 
 /*access on homepage*/
+
+.media-body{
+    text-align: justify;
+
+}
+
+h2{
+    font-size: 60px;
+    font-family: "Dancing Script";
+}
+
+.mt-0{
+    text-align: center;
+    padding-bottom: 70px;
+}
