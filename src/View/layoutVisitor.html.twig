@@ -1,12 +1,13 @@
 {% extends 'layout.html.twig' %}
 
-{% block header %}
-    {% include('/_navbar') %}
+{#{% block header %}
+    {% include('_navbar.html.twig') %}
+{% endblock %}#}
+
+{% block content %}
+    {% include('Home/contactAccueil.html.twig') %}
 {% endblock %}
 
-{% block contact %}
-    {% include('/Home/contactAccueil') %}
-
 {% block footer %}
-    {% include('/_footer.html.twig') %}
+    {% include('Item/_footer.html.twig') %}
 {% endblock %}
