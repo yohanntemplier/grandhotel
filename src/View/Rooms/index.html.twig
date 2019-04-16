@@ -1,4 +1,4 @@
-{% extends 'layout.html.twig' %}
+{% extends 'layoutVisitor.html.twig' %}
 {% block title %}Chambres Grand Hôtel{% endblock %}
 {% block content %}
     <h1>Les chambres du Grand Hôtel d'Orléans</h1>
@@ -62,12 +62,12 @@
                                     {% if loop.index0 is even %}
                                         <ul class="col-12 col-lg-4 text-center">
                                         {% if caracteristic !='' %}
-                                            <li>{{ caracteristic }}</li>
+                                            <li class="services">{{ caracteristic }}</li>
                                         {% endif %}
                                     {% endif %}
                                     {% if loop.index0 is odd %}
                                         {% if caracteristic !='' %}
-                                            <li>{{ caracteristic }}</li>
+                                            <li class="services">{{ caracteristic }}</li>
                                         {% endif %}
                                         </ul>
                                     {% endif %}

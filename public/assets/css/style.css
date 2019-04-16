@@ -17,9 +17,6 @@ body {
 }
 
 
-li {
-    list-style: circle;
-}
 
 /*rooms/index*/
 .roomCard {
@@ -32,7 +29,8 @@ li {
 
 .services {
     background-color: #2F3D40;
-    color: color: #FFFFFF;
+    color: #FFFFFF;
+    list-style: circle;
 
 
 }
