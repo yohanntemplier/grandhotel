@@ -26,24 +26,14 @@ abstract class AbstractManager
      * @var string
      */
     protected $className;
-    /**
-     * @var string
-     */
-    protected $tableToJoin;
-
-    protected $secondTableToJoin;
 
     /**
      * AbstractManager constructor.
      * @param string $table
-     * @param string $tableToJoin
-     * @param string $secondTableToJoin
      */
-    public function __construct(string $table, string $tableToJoin = '', string $secondTableToJoin = '')
+    public function __construct(string $table)
     {
         $this->table = $table;
-        $this->tableToJoin = $tableToJoin;
-        $this->secondTableToJoin = $secondTableToJoin;
         $this->className = __NAMESPACE__ . '\\' . ucfirst($table);
         $this->pdo = (new Connection())->getPdoConnection();
     }
@@ -73,41 +63,5 @@ abstract class AbstractManager
         $statement->execute();
 
         return $statement->fetch();
-    }
-
-
-    /**
-     * get one table joined with two other tables
-     * @param string $foreignKey
-     * @param string $primaryKey
-     * @param string $secondForeignKey
-     * @return array
-     */
-    public function selectAllDoubleJoin(string $foreignKey, string $primaryKey, string $secondForeignKey): array
-    {
-        return $this->pdo->query('SELECT * FROM ' . $this->table . ' JOIN ' . $this->tableToJoin . ' ON ' .
-            $this->tableToJoin . '.' . $foreignKey . '=' . $this->table . '.' . $primaryKey . ' JOIN ' .
-            $this->secondTableToJoin . ' ON ' .
-            $this->secondTableToJoin . '.' . $secondForeignKey . '=' . $this->table . '.' . $primaryKey)->fetchAll();
-    }
-
-    /**
-     * get one of the two tables joined
-     * @return array
-     */
-    public function selectAllFromFirstJoined(): array
-    {
-
-        return $this->pdo->query('SELECT * FROM ' . $this->tableToJoin)->fetchAll();
-    }
-
-    /**
-     * get the second of the two tables joined
-     * @return array
-     */
-    public function selectAllFromSecondJoined(): array
-    {
-
-        return $this->pdo->query('SELECT * FROM ' . $this->secondTableToJoin)->fetchAll();
     }
 }

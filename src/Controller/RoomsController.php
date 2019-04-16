@@ -21,18 +21,13 @@ class RoomsController extends AbstractController
         $roomsManager = new RoomsManager();
         $rooms = $roomsManager->selectAllDoubleJoin('room_id', 'id', 'room_id');
         $roomsPhotosManager = new RoomsManager();
-        $photos = $roomsPhotosManager->selectAllFromFirstJoined();
+        $photos = $roomsPhotosManager->selectQuiteAllFromFirstJoined();
 
 
-        for ($i = 0; $i < count($photos); $i++) {
-            unset($photos[$i]['id']);
-            unset($photos[$i]['room_id']);
-            unset($photos[$i]['photo1']);
-        }
 
 
-        $roomCaracteristicsManager = new RoomsManager();
-        $caracteristics = $roomCaracteristicsManager->selectAllFromSecondJoined();
+
+        $caracteristics = $roomsManager->selectQuiteAllFromSecondJoined();
 
         for ($i = 0; $i < count($caracteristics); $i++) {
             unset($caracteristics[$i]['id']);
