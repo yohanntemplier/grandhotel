@@ -19,10 +19,10 @@ class RoomController extends AbstractController
     {
 
         $roomManager = new RoomManager();
-        $rooms = $roomManager->selectAllDoubleJoin('room_id', 'id', 'room_id');
+        $rooms = $roomManager->selectAllTheTables('room_id', 'id', 'room_id');
 
-        $photos = $roomManager->selectQuiteAllFromFirstJoined();
-        $caracteristics = $roomManager->selectQuiteAllFromSecondJoined();
+        $photos = $roomManager->selectAllThePicturesWithoutIds();
+        $caracteristics = $roomManager->selectAllTheCaracteristicsWithoutIds();
 
         for ($i = 0; $i < count($caracteristics); $i++) {
             unset($caracteristics[$i]['id']);

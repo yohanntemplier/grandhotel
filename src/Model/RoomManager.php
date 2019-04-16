@@ -42,7 +42,7 @@ class RoomManager extends AbstractManager
      * @param string $secondForeignKey
      * @return array
      */
-    public function selectAllDoubleJoin(string $foreignKey, string $primaryKey, string $secondForeignKey): array
+    public function selectAllTheTables(string $foreignKey, string $primaryKey, string $secondForeignKey): array
     {
         return $this->pdo->query('SELECT * FROM ' . $this->table . ' JOIN ' . $this->tableToJoin . ' ON ' .
             $this->tableToJoin . '.' . $foreignKey . '=' . $this->table . '.' . $primaryKey . ' JOIN ' .
@@ -54,17 +54,17 @@ class RoomManager extends AbstractManager
      * retourne table photos without ids
      * @return array
      */
-    public function selectQuiteAllFromFirstJoined(): array
+    public function selectAllThePicturesWithoutIds(): array
     {
 
         return $this->pdo->query('SELECT photo1, photo2, photo3, photo4 FROM ' . $this->tableToJoin)->fetchAll();
     }
 
     /**
-     * get the table caracteristics
+     * get the table caracteristics without ids
      * @return array
      */
-    public function selectQuiteAllFromSecondJoined(): array
+    public function selectAllTheCaracteristicsWithoutIds(): array
     {
 
         return $this->pdo->query('SELECT * FROM ' . $this->secondTableToJoin)->fetchAll();
