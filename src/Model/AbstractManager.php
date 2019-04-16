@@ -6,9 +6,8 @@
  * Time: 20:52
  * PHP version 7
  */
-namespace App\Model;
 
-use App\Model\Connection;
+namespace App\Model;
 
 /**
  * Abstract class handling default manager.
@@ -19,7 +18,6 @@ abstract class AbstractManager
      * @var \PDO
      */
     protected $pdo; //variable de connexion
-
     /**
      * @var string
      */
@@ -29,9 +27,8 @@ abstract class AbstractManager
      */
     protected $className;
 
-
     /**
-     * Initializes Manager Abstract class.
+     * AbstractManager constructor.
      * @param string $table
      */
     public function __construct(string $table)
@@ -54,7 +51,7 @@ abstract class AbstractManager
     /**
      * Get one row from database by ID.
      *
-     * @param  int $id
+     * @param int $id
      *
      * @return array
      */
