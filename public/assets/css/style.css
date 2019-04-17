@@ -3,7 +3,7 @@
 .navbar{
     background-color: #2F3B40;
     margin-bottom: 10px;
-    font-family: "Dancing Script";
+    font-family: "Dancing Script", sans-serif;
 }
 
 .navbar-brand{
@@ -56,6 +56,29 @@
 .nav-item{
     margin-right: 30px;
 }
+
+/*CarrouselIndex*/
+
+.picture img {
+    object-fit: cover;
+    height: 450px;
+    filter: brightness(50%);
+}
+
+.text h5 {
+    color: #FFFFF;
+    font-size: 60px;
+    font-family: "Dancing Script", sans-serif;
+}
+
+.text p{
+    color: #FFFFF;
+    font-size: 30px;
+    font-family: "The Girl Next Door", sans-serif;
+}
+
+/* EndCarrouselIndex*/
+
 
 /*Général*/
 h1{
@@ -117,6 +140,7 @@ body {
 .contact{
     padding-top: 12px;
     color: #FFFFFF;
+    font-family: "The Girl Next Door", sans-serif;
 }
 
 
@@ -125,12 +149,14 @@ body {
 }
 
 .logofooter{
-    width: 22em;
+    width: 20em;
+    object-fit: cover;
+    padding-right: 90px;
   }
 
 .lien{
-    padding-top: 10px;
     padding-left: 50px;
+    padding-bottom: 20px;
 }
 /* EndFooter */
 
