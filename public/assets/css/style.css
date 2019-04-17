@@ -13,6 +13,14 @@
     color: whitesmoke;
 }
 
+.navbar-brand-resa{
+    font-size: xx-large;
+   /margin-left: 5px;
+    margin-left: 200px;
+    color: whitesmoke;
+    background-color: red;
+}
+
 .navbar-brand:hover{
     text-decoration: underline;
     color: whitesmoke;
@@ -55,15 +63,19 @@
 
 
 /*Général*/
-h1, h2 {
-    color: #2F3D40;
-    font-family: Raleway, sans-serif;
-    font-size: 26pt;
+h1{
+    font-family: "Dancing Script";
+    font-size: 90px;
+}
+
+h2{
+    font-size: 60px;
+    font-family: "Dancing Script";
 }
 
 h3 {
-    font-size: 22pt;
-    font-family: Raleway, sans-serif;
+    font-size: 30pt;
+    font-family: "Dancing Script";
 }
 
 body {
@@ -129,17 +141,14 @@ body {
 
 .text-localisation{
     text-align: justify;
+    font-family: "The Girl Next Door";
+    font-size: 25px;
 
-}
-
-h2{
-    font-size: 60px;
-    font-family: "Dancing Script";
 }
 
 .title-localisation{
     text-align: center;
-    padding-bottom: 70px;
+    padding-bottom: 50px;
 }
 
 @media (max-width: 768px) {
@@ -152,5 +161,6 @@ h2{
 
 
 }
+
 
 
