@@ -54,6 +54,50 @@
 /* EndCarrouselIndex*/
 
 
+/*Général*/
+h1, h2 {
+    color: #2F3D40;
+    font-family: Raleway, sans-serif;
+    font-size: 26pt;
+}
+
+h3 {
+    font-size: 22pt;
+    font-family: Raleway, sans-serif;
+}
+
+body {
+    font-family: Source Sans Pro, sans-serif;
+    font-size: 16pt;
+}
+
+
+
+/*rooms/index*/
+.roomCard {
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom-color: #2F3D40;
+    border-bottom-width: medium;
+}
+
+.services {
+    background-color: #2F3D40;
+    color: #FFFFFF;
+    list-style: circle;
+
+
+}
+
+.carouselPictureRoomPage {
+    width: 50vw;
+    height: 35vw;
+}
+
+
+
+
 /* Footer */
 .page-footer{
     background-color: #2F3D40;
@@ -83,8 +127,6 @@
 }
 /* EndFooter */
 
-/*access on homepage*/
-
 .media-body{
     text-align: justify;
 
@@ -99,3 +141,16 @@ h2{
     text-align: center;
     padding-bottom: 70px;
 }
+
+@media (max-width: 768px) {
+
+    .carouselPictureRoomPage {
+        width: 50vw;
+        height: 35vw;
+        margin-left: 25%;
+    }
+
+
+}
+
+
