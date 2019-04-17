@@ -2,7 +2,7 @@
 {% block title %}Chambres Grand Hôtel{% endblock %}
 {% block content %}
     <h1>Les chambres du Grand Hôtel d'Orléans</h1>
-    {% for key, room in rooms %}
+       {% for key, room in rooms %}
         <div class="card roomCard mb-3 pb-3 mt-4">
             <div class="row m-4 align-items-start CarouselPageChambres{% if key is even %}d-flex flex-row-reverse {% endif %}">
                 <div class="col-md-6 ml-auto mr-auto">
@@ -13,16 +13,16 @@
                         </div>
 
                         <div class="row">
-                            <p class="card-text text-center">{{ room['description'] }}</p>
+                            <p class=" col-12 pb-5 card-text text-left">{{ room['description'] }}</p>
                         </div>
                         <div class="services p-3 m-0">
                             <div class="row mb-3 mt-4">
                                 <h3 class="col text-center"> Services</h3>
                             </div>
-                            <div class="card-text row">
+                            <div class="card-text row p-4">
                                 {% for caracteristic in caracteristics[key] %}
                                     {% if loop.index0 is even %}
-                                        <ul class="col-12 col-lg-4 text-center">
+                                        <ul class="col-12 col-lg-4">
                                         {% if caracteristic !='' %}
                                             <li class="services">{{ caracteristic }}</li>
                                         {% endif %}

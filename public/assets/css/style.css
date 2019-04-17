@@ -92,25 +92,21 @@ h3 {
 }
 
 body {
-    font-family: Source Sans Pro, sans-serif;
-    font-size: 16pt;
+    font-family: "The Girl Next Door", sans-serif;
+    font-size: 20pt;
 }
 
 
 
 /*rooms/index*/
 .roomCard {
-    border-top: none;
-    border-left: none;
-    border-right: none;
-    border-bottom-color: #2F3D40;
-    border-bottom-width: medium;
+    border: none;
 }
-
 .services {
     background-color: #2F3D40;
     color: #FFFFFF;
     list-style: circle;
+    border-radius: 0.6vw;
 
 
 }
@@ -118,6 +114,7 @@ body {
 .carouselPictureRoomPage {
     width: auto;
     height: 35vw;
+
 }
 
 
