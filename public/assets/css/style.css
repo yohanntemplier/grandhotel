@@ -52,13 +52,26 @@
     width: 200px;
 }
 
-/*CarrouselIndex
+/*CarrouselIndex*/
 
-.carousel img {
-    background-size: cover;
-    width: auto;
-    height: 400px;
-}*/
+.picture img {
+    object-fit: cover;
+    height: 450px;
+    filter: brightness(50%);
+}
+
+.text h5 {
+    color: #FFFFF;
+    font-size: 60px;
+    font-family: "Dancing Script", sans-serif;
+}
+
+.text p{
+    color: #FFFFF;
+    font-size: 30px;
+    font-family: "The Girl Next Door", sans-serif;
+}
+
 /* EndCarrouselIndex*/
 
 
@@ -122,6 +135,7 @@ body {
 .contact{
     padding-top: 12px;
     color: #FFFFFF;
+    font-family: "The Girl Next Door", sans-serif;
 }
 
 
@@ -130,12 +144,14 @@ body {
 }
 
 .logofooter{
-    width: 22em;
+    width: 20em;
+    object-fit: cover;
+    padding-right: 90px;
   }
 
 .lien{
-    padding-top: 10px;
     padding-left: 50px;
+    padding-bottom: 20px;
 }
 /* EndFooter */
 
