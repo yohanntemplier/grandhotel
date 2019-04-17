@@ -69,7 +69,7 @@ h1{
 }
 
 h2{
-    font-size: 60px;
+    font-size: 3vw;
     font-family: "Dancing Script", sans-serif;
 }
 
@@ -103,7 +103,7 @@ body {
 }
 
 .carouselPictureRoomPage {
-    width: 50vw;
+    width: auto;
     height: 35vw;
 }
 
@@ -151,16 +151,10 @@ body {
     padding-bottom: 50px;
 }
 
-@media (max-width: 768px) {
+.roomPrice{
 
-    .carouselPictureRoomPage {
-        width: 50vw;
-        height: 35vw;
-        margin-left: 25%;
-    }
-
-
+    font-size: 3vw;
+    font-family: "Dancing Script", sans-serif;
 }
-
 
 
