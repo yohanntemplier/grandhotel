@@ -2,27 +2,27 @@
 {% block title %}Chambres Grand Hôtel{% endblock %}
 {% block content %}
     <h1>Les chambres du Grand Hôtel d'Orléans</h1>
-    {% for key, room in rooms %}
+           {% for key, room in rooms %}
         <div class="card roomCard mb-3 pb-3 mt-4">
-            <div class="row m-0 align-items-center CarouselPageChambres{% if key is even %}d-flex flex-row-reverse {% endif %}">
-                <div class="col-md-6">
+            <div class="row m-4 align-items-start CarouselPageChambres{% if key is even %}d-flex flex-row-reverse {% endif %}">
+                <div class="col-md-6 ml-auto mr-auto">
                     <div class="card-body">
-                        <h2 class="card-title text-center mb-5 pb-5">{{ room['name'] }}</h2>
-                        <div class="row font-weight-bold">
-                            <p class="card-text text-right col-5">{{ room['price'] }} €</p>
-                            <p class="card-text text-right col-5">{{ room['area'] }} m²</p>
-                        </div>
                         <div class="row">
-                            <p class="card-text">{{ room['description'] }}</p>
+                            <h2 class="card-title text-center mb-5 pb-5 col-10">{{ room['name'] }}</h2>
+                            <h2 class="card-title text-center mb-2 pb-2 roomPrice col-2">{{ room['price'] }} €</h2>
                         </div>
-                        <div class="services">
+
+                        <div class="row">
+                            <p class=" col-12 pb-5 card-text text-left">{{ room['description'] }}</p>
+                        </div>
+                        <div class="services p-3 m-0">
                             <div class="row mb-3 mt-4">
                                 <h3 class="col text-center"> Services</h3>
                             </div>
-                            <div class="card-text row">
+                            <div class="card-text row p-4">
                                 {% for caracteristic in caracteristics[key] %}
                                     {% if loop.index0 is even %}
-                                        <ul class="col-12 col-lg-4 text-center">
+                                        <ul class="col-12 col-lg-4">
                                         {% if caracteristic !='' %}
                                             <li class="services">{{ caracteristic }}</li>
                                         {% endif %}
@@ -38,8 +38,9 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-6 p-0">
-                    <div id="carouselExampleIndicators{{ key }}" class="carousel slide" data-ride="carousel">
+
+                <div class="col-md-5 col-12 col-sm-m-0 ml-auto mr-auto text-center">
+                    <div id="carouselExampleIndicators{{ key }}" class="carousel slide m-4" data-ride="carousel">
                         <div class="carousel-inner">
                             {% for photo in photos[key] %}
                                 <div class="carousel-item {% if loop.first %}active{% endif %}">
@@ -49,12 +50,14 @@
                                 </div>
                             {% endfor %}
                         </div>
-                        <a class="carousel-control-prev" href="#carouselExampleIndicators{{ key }}" role="button"
+                        <a class="carousel-control-prev col-d-none" href="#carouselExampleIndicators{{ key }}"
+                           role="button"
                            data-slide="prev">
                             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                             <span class="sr-only">Previous</span>
                         </a>
-                        <a class="carousel-control-next" href="#carouselExampleIndicators{{ key }}" role="button"
+                        <a class="carousel-control-next col-d-none" href="#carouselExampleIndicators{{ key }}"
+                           role="button"
                            data-slide="next">
                             <span class="carousel-control-next-icon" aria-hidden="true"></span>
                             <span class="sr-only">Next</span>
