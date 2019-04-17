@@ -63,11 +63,13 @@
 .text h5 {
     color: #FFFFF;
     font-size: 60px;
+    font-family: "Dancing Script", sans-serif;
 }
 
 .text p{
     color: #FFFFF;
     font-size: 30px;
+    font-family: "The Girl Next Door", sans-serif;
 }
 
 /* EndCarrouselIndex*/
@@ -133,6 +135,7 @@ body {
 .contact{
     padding-top: 12px;
     color: #FFFFFF;
+    font-family: "The Girl Next Door", sans-serif;
 }
 
 
@@ -147,8 +150,8 @@ body {
   }
 
 .lien{
-    padding-top: 10px;
     padding-left: 50px;
+    padding-bottom: 20px;
 }
 /* EndFooter */
 
