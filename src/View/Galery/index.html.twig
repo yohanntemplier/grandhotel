@@ -1,0 +1,18 @@
+{% extends 'layoutVisitor.html.twig' %}
+
+{% block content %}
+<div class="galerytitle">
+    <h2>Notre galerie photo</h2>
+</div>
+
+    {% for card in cards %}
+
+    <div class="card col-lg-4 col-sm-8 col-md-5">
+        <img src="{{ card.picture }}" class="card-img-top img-thumbnail" alt="{{ card.title }}">
+        <div class="card-body col-lg-3">
+            <p class="card-title">{{ card.title }}</p>
+        </div>
+    </div>
+
+    {% endfor %}
+{% endblock %}
