@@ -127,7 +127,7 @@ body {
 }
 /* EndFooter */
 
-.media-body{
+.text-localisation{
     text-align: justify;
 
 }
@@ -137,7 +137,7 @@ h2{
     font-family: "Dancing Script";
 }
 
-.mt-0{
+.title-localisation{
     text-align: center;
     padding-bottom: 70px;
 }
