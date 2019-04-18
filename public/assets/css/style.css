@@ -55,12 +55,18 @@
 
 /*GaleryPage*/
 
+
 .galerytitle h2{
     text-align: center;
     font-family: "Dancing Script", sans-serif;
     font-size: 80px;
 }
 
+.card-body {
+    text-align: center;
+    font-family: "The Girl Next Door", sans-serif;
+    font-size: 30px;
+}
 /* EndGaleryPage*/
 
 /*Général*/

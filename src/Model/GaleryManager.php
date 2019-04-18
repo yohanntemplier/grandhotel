@@ -12,7 +12,7 @@ namespace App\Model;
 /**
  *
  */
-class ItemManager extends AbstractManager
+class GaleryManager extends AbstractManager
 {
     /**
      *
