@@ -3,15 +3,36 @@
 .navbar{
     background-color: #2F3B40;
     margin-bottom: 10px;
-    font-family: "Dancing Script";
+    font-family: "Dancing Script", sans-serif;
 }
 
 .navbar-brand{
-    font-size: xx-large;
+    font-size: 40pt;
     margin-left: 5px;
     margin-right: 50px;
     color: whitesmoke;
 }
+
+.navbar-brand-resa{
+    font-size: xx-large;
+    color: black;
+}
+
+.btn {
+    background-color: #FFFFFF;
+
+}
+
+.resa-btn{
+
+
+}
+
+.navbar-brand-resa:hover{
+    text-decoration: underline;
+    color: darkslateblue;
+}
+
 
 .navbar-brand:hover{
     text-decoration: underline;
@@ -21,7 +42,6 @@
 .nav-link{
     font-size: xx-large;
     color: whitesmoke;
-    margin-left: 20px;
 }
 
 .nav-link:hover{
@@ -34,23 +54,29 @@
 }
 
 .nav-item{
-    margin-right: 100px;
-}
-
-.reservation{
-    border: 1px solid whitesmoke;
-    margin-left: auto;
-    margin-right: auto;
-    width: 200px;
+    margin-right: 30px;
 }
 
 /*CarrouselIndex*/
 
-.carousel img {
-    background-size: cover;
-    width: auto;
-    height: 400px;
+.picture img {
+    object-fit: cover;
+    height: 450px;
+    filter: brightness(50%);
 }
+
+.text h5 {
+    color: #FFFFF;
+    font-size: 60px;
+    font-family: "Dancing Script", sans-serif;
+}
+
+.text p{
+    color: #FFFFF;
+    font-size: 30px;
+    font-family: "The Girl Next Door", sans-serif;
+}
+
 /* EndCarrouselIndex*/
 
 /*GaleryPage*/
@@ -70,44 +96,45 @@
 /* EndGaleryPage*/
 
 /*Général*/
-h1, h2 {
-    color: #2F3D40;
-    font-family: Raleway, sans-serif;
-    font-size: 26pt;
+h1{
+    font-family: "Dancing Script", sans-serif;
+    font-size: 90px;
+}
+
+h2{
+    font-size: 35pt;
+    font-family: "Dancing Script", sans-serif;
 }
 
 h3 {
-    font-size: 22pt;
-    font-family: Raleway, sans-serif;
+    font-size: 30pt;
+    font-family: "Dancing Script", sans-serif;
 }
 
 body {
-    font-family: Source Sans Pro, sans-serif;
-    font-size: 16pt;
+    font-family: "The Girl Next Door", sans-serif;
+    font-size: 20pt;
 }
 
 
 
 /*rooms/index*/
 .roomCard {
-    border-top: none;
-    border-left: none;
-    border-right: none;
-    border-bottom-color: #2F3D40;
-    border-bottom-width: medium;
+    border: none;
 }
-
 .services {
     background-color: #2F3D40;
     color: #FFFFFF;
     list-style: circle;
+    border-radius: 0.6vw;
 
 
 }
 
 .carouselPictureRoomPage {
-    width: 50vw;
+    width: auto;
     height: 35vw;
+
 }
 
 
@@ -125,6 +152,7 @@ body {
 .contact{
     padding-top: 12px;
     color: #FFFFFF;
+    font-family: "The Girl Next Door", sans-serif;
 }
 
 
@@ -133,39 +161,38 @@ body {
 }
 
 .logofooter{
-    width: 22em;
+    width: 20em;
+    object-fit: cover;
+    padding-right: 90px;
   }
 
 .lien{
-    padding-top: 10px;
     padding-left: 50px;
+    padding-bottom: 20px;
 }
 /* EndFooter */
 
-.media-body{
+.text-localisation{
     text-align: justify;
+    font-family: "The Girl Next Door", sans-serif;
+    font-size: 25px;
 
 }
 
-h2{
-    font-size: 60px;
-    font-family: "Dancing Script";
-}
-
-.mt-0{
+.title-localisation{
     text-align: center;
-    padding-bottom: 70px;
+    padding-bottom: 50px;
 }
 
-@media (max-width: 768px) {
 
-    .carouselPictureRoomPage {
-        width: 50vw;
-        height: 35vw;
-        margin-left: 25%;
-    }
-
-
+.media-map{
+    margin-top: 55%;
 }
+
+
+    .roomPrice{
+    font-size: 3vw;
+    font-family: "Dancing Script", sans-serif;}
+
 
 
