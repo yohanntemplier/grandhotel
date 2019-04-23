@@ -81,7 +81,7 @@ h1{
 }
 
 h2{
-    font-size: 60px;
+    font-size: 35pt;
     font-family: "Dancing Script", sans-serif;
 }
 
@@ -99,24 +99,21 @@ body {
 
 /*rooms/index*/
 .roomCard {
-    border-top: none;
-    border-left: none;
-    border-right: none;
-    border-bottom-color: #2F3D40;
-    border-bottom-width: medium;
+    border: none;
 }
-
 .services {
     background-color: #2F3D40;
     color: #FFFFFF;
     list-style: circle;
+    border-radius: 0.6vw;
 
 
 }
 
 .carouselPictureRoomPage {
-    width: 50vw;
+    width: auto;
     height: 35vw;
+
 }
 
 
@@ -166,20 +163,15 @@ body {
     padding-bottom: 50px;
 }
 
+
 .media-map{
     margin-top: 55%;
 }
 
-@media (max-width: 768px) {
 
-    .carouselPictureRoomPage {
-        width: 50vw;
-        height: 35vw;
-        margin-left: 25%;
-    }
-
-
-}
+    .roomPrice{
+    font-size: 3vw;
+    font-family: "Dancing Script", sans-serif;}
 
 
 
