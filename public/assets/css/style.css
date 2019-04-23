@@ -72,3 +72,23 @@
     padding-left: 50px;
 }
 /* EndFooter */
+
+/*Contact&access*/
+
+.col-form-contact{
+    border-right-style: solid;
+}
+
+.media-map{
+    margin-left: 25%;
+}
+
+.underline{
+    border-bottom-style: solid;
+}
+
+/*.jumbotron {
+    background-image: url("https://www.univ-orleans.fr/sites/default/files/Polytech/images/loire.jpg");
+    background-size: 100%;
+
+} */

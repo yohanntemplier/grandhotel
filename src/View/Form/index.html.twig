@@ -1,0 +1,75 @@
+{% extends 'layoutVisitor.html.twig' %}
+
+{% block content %}
+
+    <div class="container-fluid">
+
+        <div class="jumbotron">
+            <h1 class="display-4">Contact et Accès</h1>
+            <p class="lead">Bienvenue au Grand Hôtel Orléans.</p>
+        </div>
+
+        <div class="row">
+        <div class="col-form-contact col-6">
+            <h2>Contactez-nous</h2>
+            <form>
+                <div class="form-group col-6">
+                    <label for="lastname">Nom</label>
+                    <input type="text" class="form-control" id="lastname" aria-describedby="lastnameHelp">
+                    <small id="lastnameHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                </div>
+                <div class="form-group col-6">
+                    <label for="firstname">Prénom</label>
+                    <input type="text" class="form-control" id="firstname" aria-describedby="firstnameHelp">
+                </div>
+                <div class="form-group col-6">
+                    <label for="message">Votre message</label>
+                    <textarea class="form-control" id="message" rows="3"></textarea>
+                </div>
+            </form>
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+
+        </div>
+        <div class="col-6">
+            <h2>Accès</h2>
+            <div class="media-map">
+                <iframe width="425" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://www.openstreetmap.org/export/embed.html?bbox=1.9008252024650576%2C47.90348899695832%2C1.9043657183647158%2C47.90498319909306&amp;layer=mapnik&amp;marker=47.90423520437858%2C1.9025954604148865"></iframe><br/>
+            </div>
+            <div class="row">
+                <div class="col-10">
+                    <img src="/assets/images/voiture-logo.png">
+                    En voiture, vous pourrez vous garez au parking Cheval Rouge
+                    <div class="row">
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-10">
+                    <img src="/assets/images/train-logo.png">
+                    En train, par la gare d'Orléans qui vous déposera directement au centre ville.
+                    <div class="row">
+                        <div class="col-3">
+                        </div>
+                        <div class="underline col-6">
+                        </div>
+                        <div class="col-3">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-10">
+                    <img src="/assets/images/tram-logo.png">
+                    En tram, à l'arrêt République.
+                    <div class="row">
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    </div>
+
+{% endblock %}
