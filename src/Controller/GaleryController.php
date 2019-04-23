@@ -8,10 +8,11 @@
 
 namespace App\Controller;
 
-use App\Model\ItemManager;
+use App\Model\GaleryManager;
 
-class HomeController extends AbstractController
+class GaleryController extends AbstractController
 {
+
     /**
      * Display home page
      *
@@ -22,6 +23,9 @@ class HomeController extends AbstractController
      */
     public function index()
     {
-        return $this->twig->render('Home/index.html.twig');
+        $galeryManager=new GaleryManager();
+        $cards = $galeryManager->selectAll();
+
+        return $this->twig->render('Galery/index.html.twig', ['cards' => $cards]);
     }
 }
