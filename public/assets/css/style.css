@@ -76,6 +76,29 @@
 
 /* EndCarrouselIndex*/
 
+/*Accueil_Services*/
+
+.option{
+    margin-bottom: 2em;
+    text-align: center;
+}
+
+.homeServices{
+    margin-top: 2em;
+    margin-bottom: 2em;
+}
+
+.icone{
+    max-width: 8%;
+    margin-right: 0.5em;
+}
+
+.service{
+    margin-left: 3em;
+}
+
+/*end Acceuil_Services*/
+
 /*GaleryPage*/
 
 .galery{
