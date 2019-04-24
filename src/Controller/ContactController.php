@@ -9,13 +9,13 @@
 
 namespace App\Controller;
 
-use App\Model\FormManager;
+use App\Model\ContactManager;
 
 /**
  * Class FormController
  *
  */
-class FormController extends AbstractController
+class ContactController extends AbstractController
 {
     /**
      * Display item listing
@@ -27,6 +27,6 @@ class FormController extends AbstractController
      */
     public function index()
     {
-        return $this->twig->render('Form/index.html.twig');
+        return $this->twig->render('Contact/index.html.twig');
     }
 }

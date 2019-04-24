@@ -14,7 +14,7 @@ namespace App\Model;
  */
 
 
-class FormManager extends AbstractManager
+class ContactManager extends AbstractManager
 {
     /**
      *
