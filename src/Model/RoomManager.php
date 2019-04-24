@@ -37,10 +37,10 @@ class RoomManager extends AbstractManager
     public function selectCaracteristics(string $roomName):array
     {
         return $this->pdo->query(
-            "SELECT  `room_caracteristic`.`caracteristic_name` FROM `room`
-    JOIN `room_caracteristic` ON `room_caracteristic`.`room_id` = `room.id`
-    JOIN `caracteristic` ON `room_caracteristic`.`caracteristic_id` = `caracteristic`.`id` WHERE
-    `room`.`name` = '$roomName';"
+            "SELECT  caracteristic.caracteristic_name FROM room
+    JOIN room_caracteristic ON room_caracteristic.room_id = room.id
+    JOIN caracteristic ON room_caracteristic.caracteristic_id = caracteristic.id WHERE
+    room.name = '$roomName';"
         )->fetchAll();
     }
 
@@ -52,8 +52,8 @@ class RoomManager extends AbstractManager
     public function selectPhotos(string $roomName):array
     {
         return $this->pdo->query(
-            "SELECT `room_photo`.`photo_name` FROM `room_photo` JOIN `room` ON
-    `room_photo`.`room_id` = `room`.`id` WHERE `room`.`name` ='$roomName';"
+            "SELECT room_photo.photo_name FROM room_photo JOIN room ON
+    room_photo.room_id = room.id WHERE room.name ='$roomName';"
         )->fetchAll();
     }
 }
