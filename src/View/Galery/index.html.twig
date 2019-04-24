@@ -8,9 +8,9 @@
     <div class="galery">
     <div class="row justify-content-around">
         {% for card in cards %}
-        <div class="card col-lg-3 col-sm-8 col-md-5">
+        <div class="card card-gallery col-lg-3 col-sm-8 col-md-5">
             <img src="/assets/images/galerie/{{ card.picture }}" class="img-thumbnail" alt="{{ card.title }}">
-            <div class="card-body">
+            <div class="card-body card-body-gallery">
             <p class="card-title">{{ card.title }}</p>
             </div>
         </div>
