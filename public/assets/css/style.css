@@ -229,9 +229,24 @@ body {
 }
 
 
-    .roomPrice{
+.roomPrice{
     font-size: 3vw;
     font-family: "Dancing Script", sans-serif;}
 
+
+/*descption*/
+.description{
+    margin-bottom: 2em;
+}
+
+.description p {
+    text-align: center;
+}
+
+.description h2{
+    text-align: center;
+    margin-bottom: 1em;
+    margin-top: 1em;
+}
 
 
