@@ -2,7 +2,6 @@
 
 .navbar{
     background-color: #2F3B40;
-    margin-bottom: 10px;
     font-family: "Dancing Script", sans-serif;
 }
 
@@ -54,7 +53,7 @@
 /*CarrouselIndex*/
 
 .carousel{
-    margin-top: -1em;
+
 }
 
 .picture img {
@@ -164,6 +163,7 @@ body {
 /* Footer */
 .page-footer{
     background-color: #2F3D40;
+    margin-top: 1em;
 }
 
 .logo{
