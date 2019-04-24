@@ -95,6 +95,7 @@
 
 .service{
     margin-left: 3em;
+    padding-left: 45px;
 }
 
 /*end Acceuil_Services*/
@@ -211,11 +212,11 @@ body {
     color: #FFFFFF;
     font-family: "Dancing Script", sans-serif;
     font-size: 3.5em;
-    padding-top: 40px;
+    padding-top: 35px;
   }
 
 .lien{
-    padding-top: 25px;
+    padding-top: 20px;
     padding-left: 80px;
 }
 /* EndFooter */
