@@ -2,7 +2,7 @@
 {% block title %}Chambres Grand Hôtel{% endblock %}
 {% block content %}
     <h1>Les chambres du Grand Hôtel d'Orléans</h1>
-           {% for key, room in rooms %}
+    {% for key, room in rooms %}
         <div class="card roomCard mb-3 pb-3 mt-4">
             <div class="row m-4 align-items-start CarouselPageChambres{% if key is even %}d-flex flex-row-reverse {% endif %}">
                 <div class="col-md-6 ml-auto mr-auto">
@@ -24,12 +24,12 @@
                                     {% if loop.index0 is even %}
                                         <ul class="col-12 col-lg-4">
                                         {% if caracteristic !='' %}
-                                            <li class="services">{{ caracteristic }}</li>
+                                            <li class="services">{{ caracteristic.caracteristic_name }}</li>
                                         {% endif %}
                                     {% endif %}
                                     {% if loop.index0 is odd %}
                                         {% if caracteristic !='' %}
-                                            <li class="services">{{ caracteristic }}</li>
+                                            <li class="services">{{ caracteristic.caracteristic_name }}</li>
                                         {% endif %}
                                         </ul>
                                     {% endif %}
@@ -45,8 +45,9 @@
                             {% for photo in photos[key] %}
                                 <div class="carousel-item {% if loop.first %}active{% endif %}">
                                     <img class="carouselPictureRoomPage"
-                                         src="/assets/images/rooms/{{ photo }}"
+                                         src="/assets/images/rooms/{{ photo.photo_name }}"
                                          alt="photo chambre">
+
                                 </div>
                             {% endfor %}
                         </div>
