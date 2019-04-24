@@ -3,9 +3,7 @@
 
 namespace App\Controller;
 
-use App\Model\SeminaireManager;
-
-class SeminaireController extends AbstractController
+class SeminarController extends AbstractController
 {
     /**
      * Display home page
@@ -17,6 +15,6 @@ class SeminaireController extends AbstractController
      */
     public function index()
     {
-        return $this->twig->render('Seminaire/index.html.twig');
+        return $this->twig->render('Seminar/index.html.twig');
     }
 }
