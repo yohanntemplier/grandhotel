@@ -59,7 +59,7 @@
 .picture img {
     object-fit: cover;
     height: 450px;
-    filter: brightness(50%);
+    filter: brightness(80%);
 }
 
 .text h5 {
@@ -95,6 +95,7 @@
 
 .service{
     margin-left: 3em;
+    padding-left: 45px;
 }
 
 /*end Acceuil_Services*/
@@ -108,7 +109,7 @@
     margin-right: 2em;
 }
 
-.card{
+.card-gallery{
     margin-bottom: 2em;
     margin-left: 1em;
     margin-right: 1em;
@@ -125,7 +126,7 @@
     margin-bottom: 1.5em;
 }
 
-.card-body {
+.card-body-gallery {
     text-align: center;
     font-family: "Roboto", sans-serif;
     font-size: 30px;
@@ -135,6 +136,7 @@
     object-fit: cover;
     margin-top: 20px;
 }
+
 /* EndGaleryPage*/
 
 /*Général*/
@@ -187,13 +189,15 @@ body {
 .page-footer{
     background-color: #2F3D40;
     margin-top: 1em;
+    padding-bottom: 20px;
 }
 
 .logo{
-    width: 5em;
+    width: 3em;
 }
 
 .contact{
+    font-size: 20px;
     padding-top: 12px;
     color: #FFFFFF;
     font-family: "Roboto", sans-serif;
@@ -201,18 +205,20 @@ body {
 
 
 .logo1{
-    padding-bottom: 30px;
+   padding-bottom: 30px;
 }
 
+
 .logofooter{
-    width: 20em;
-    object-fit: cover;
-    padding-right: 90px;
+    color: #FFFFFF;
+    font-family: "Dancing Script", sans-serif;
+    font-size: 3.5em;
+    padding-top: 35px;
   }
 
 .lien{
-    padding-left: 50px;
-    padding-bottom: 20px;
+    padding-top: 20px;
+    padding-left: 80px;
 }
 /* EndFooter */
 
