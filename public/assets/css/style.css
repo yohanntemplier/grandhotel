@@ -68,7 +68,7 @@
 .text p{
     color: #FFFFF;
     font-size: 30px;
-    font-family: "The Girl Next Door", sans-serif;
+    font-family: "Roboto", sans-serif;
 }
 
 /* EndCarrouselIndex*/
@@ -101,7 +101,7 @@
 
 .card-body {
     text-align: center;
-    font-family: "The Girl Next Door", sans-serif;
+    font-family: "Roboto", sans-serif;
     font-size: 30px;
 }
 
@@ -120,6 +120,7 @@ h1{
 h2{
     font-size: 35pt;
     font-family: "Dancing Script", sans-serif;
+    text-align: center;
 }
 
 h3 {
@@ -128,7 +129,7 @@ h3 {
 }
 
 body {
-    font-family: "The Girl Next Door", sans-serif;
+    font-family: "Roboto", sans-serif;
     font-size: 20pt;
 }
 
@@ -168,7 +169,7 @@ body {
 .contact{
     padding-top: 12px;
     color: #FFFFFF;
-    font-family: "The Girl Next Door", sans-serif;
+    font-family: "Roboto", sans-serif;
 }
 
 
@@ -190,7 +191,7 @@ body {
 
 .text-localisation{
     text-align: justify;
-    font-family: "The Girl Next Door", sans-serif;
+    font-family: "Roboto", sans-serif;
     font-size: 25px;
 
 }
@@ -208,7 +209,30 @@ body {
 
     .roomPrice{
     font-size: 3vw;
-    font-family: "Dancing Script", sans-serif;}
+    font-family: "Dancing Script", sans-serif;
+    }
 
+.jumbotron-fluid{
+    background: url("/assets/images/seminaire/reunion.jpg");
+    height: 15em;
 
+}
 
+.col-seminaire-bis{
+    margin-left: 5em;
+    margin-right: 5em;
+}
+
+.col-seminaire-ter{
+    margin-left: 5em;
+    margin-right: 5em;
+}
+
+.title-seminaire{
+    text-align: center;
+    color: white;
+    vertical-align: central;
+}
+
+.row-seminaire{
+}
