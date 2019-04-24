@@ -2,7 +2,6 @@
 
 .navbar{
     background-color: #2F3B40;
-    margin-bottom: 10px;
     font-family: "Dancing Script", sans-serif;
 }
 
@@ -53,6 +52,10 @@
 
 /*CarrouselIndex*/
 
+.carousel{
+
+}
+
 .picture img {
     object-fit: cover;
     height: 450px;
@@ -68,7 +71,7 @@
 .text p{
     color: #FFFFF;
     font-size: 30px;
-    font-family: "The Girl Next Door", sans-serif;
+    font-family: "Roboto", sans-serif;
 }
 
 /* EndCarrouselIndex*/
@@ -101,7 +104,7 @@
 
 .card-body {
     text-align: center;
-    font-family: "The Girl Next Door", sans-serif;
+    font-family: "Roboto", sans-serif;
     font-size: 30px;
 }
 
@@ -128,7 +131,8 @@ h3 {
 }
 
 body {
-    font-family: "The Girl Next Door", sans-serif;
+    background-image: url("/assets/images/halftone.png");
+    font-family: "Roboto", sans-serif;
     font-size: 20pt;
 }
 
@@ -159,6 +163,7 @@ body {
 /* Footer */
 .page-footer{
     background-color: #2F3D40;
+    margin-top: 1em;
 }
 
 .logo{
@@ -168,7 +173,7 @@ body {
 .contact{
     padding-top: 12px;
     color: #FFFFFF;
-    font-family: "The Girl Next Door", sans-serif;
+    font-family: "Roboto", sans-serif;
 }
 
 
@@ -190,8 +195,9 @@ body {
 
 .text-localisation{
     text-align: justify;
-    font-family: "The Girl Next Door", sans-serif;
+    font-family: "Roboto", sans-serif;
     font-size: 25px;
+    margin-top: 2em;
 
 }
 
@@ -211,7 +217,7 @@ body {
     font-family: "Dancing Script", sans-serif;}
 
 
-/*descption*/
+/*description*/
 .description{
     margin-bottom: 2em;
 }
