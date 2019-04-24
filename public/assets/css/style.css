@@ -59,7 +59,7 @@
 .picture img {
     object-fit: cover;
     height: 450px;
-    filter: brightness(50%);
+    filter: brightness(80%);
 }
 
 .text h5 {
@@ -164,13 +164,15 @@ body {
 .page-footer{
     background-color: #2F3D40;
     margin-top: 1em;
+    padding-bottom: 20px;
 }
 
 .logo{
-    width: 5em;
+    width: 3em;
 }
 
 .contact{
+    font-size: 20px;
     padding-top: 12px;
     color: #FFFFFF;
     font-family: "Roboto", sans-serif;
@@ -178,18 +180,20 @@ body {
 
 
 .logo1{
-    padding-bottom: 30px;
+   padding-bottom: 30px;
 }
 
+
 .logofooter{
-    width: 20em;
-    object-fit: cover;
-    padding-right: 90px;
+    color: #FFFFFF;
+    font-family: "Dancing Script", sans-serif;
+    font-size: 3.5em;
+    padding-top: 40px;
   }
 
 .lien{
-    padding-left: 50px;
-    padding-bottom: 20px;
+    padding-top: 25px;
+    padding-left: 80px;
 }
 /* EndFooter */
 
