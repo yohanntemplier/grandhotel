@@ -17,8 +17,6 @@ use App\Model\FormManager;
  */
 class FormController extends AbstractController
 {
-
-
     /**
      * Display item listing
      *

@@ -77,15 +77,13 @@
 
 .col-form-contact{
     border-right-style: solid;
-}
 
-.media-map{
-    margin-left: 25%;
 }
 
 
-/*.jumbotron {
-    background-image: url("https://www.univ-orleans.fr/sites/default/files/Polytech/images/loire.jpg");
+.jumbotron {
+    background-image: url("../images/gares.jpg");
     background-size: 100%;
+    height: 30em;
 
-} */
+}
