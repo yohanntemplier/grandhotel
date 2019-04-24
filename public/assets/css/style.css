@@ -109,7 +109,7 @@
     margin-right: 2em;
 }
 
-.card{
+.card-gallery{
     margin-bottom: 2em;
     margin-left: 1em;
     margin-right: 1em;
@@ -126,7 +126,7 @@
     margin-bottom: 1.5em;
 }
 
-.card-body {
+.card-body-gallery {
     text-align: center;
     font-family: "Roboto", sans-serif;
     font-size: 30px;
