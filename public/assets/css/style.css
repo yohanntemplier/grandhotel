@@ -184,7 +184,13 @@ body {
 
 /*weekend*/
 
+.card-weekend{
 
+}
+
+.card-body-weekend{
+    text-align: center;
+}
 /*endweekend*/
 
 
