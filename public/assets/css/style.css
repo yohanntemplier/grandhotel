@@ -132,8 +132,8 @@
 }
 
 .img-thumbnail {
-    object-fit: cover;
-    margin-top: 20px;
+   object-fit: cover;
+   margin-top: 20px;
 }
 /* EndGaleryPage*/
 
@@ -180,7 +180,21 @@ body {
 
 }
 
+/*weekend*/
+.card-body-weekend{
+    text-align: center;
+    font-family: "Roboto", sans-serif;
+    font-size: 30px;
 
+}
+
+.card-weekend{
+    margin-bottom: 2em;
+    margin-left: 1em;
+    margin-right: 1em;
+}
+
+/*endweekend*/
 
 
 /* Footer */
