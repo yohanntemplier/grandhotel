@@ -148,6 +148,7 @@ h1{
 h2{
     font-size: 35pt;
     font-family: "Dancing Script", sans-serif;
+    text-align: center;
 }
 
 h3 {
@@ -156,7 +157,9 @@ h3 {
 }
 
 body {
+
     background-image: url("/assets/images/halftone.png");
+
     font-family: "Roboto", sans-serif;
     font-size: 20pt;
 }
@@ -243,8 +246,19 @@ body {
 
 .roomPrice{
     font-size: 3vw;
-    font-family: "Dancing Script", sans-serif;}
+    font-family: "Dancing Script", sans-serif;
+    }
 
+.jumbotron{
+    background: url("/assets/images/seminaire/reunion.jpg");
+    height: 10em;
+
+}
+
+.col-seminaire-bis{
+    margin-left: 5em;
+    margin-right: 5em;
+}
 
 /*description*/
 .description{
@@ -262,3 +276,14 @@ body {
 }
 
 
+
+.col-seminaire-ter{
+    margin-left: 5em;
+    margin-right: 5em;
+}
+
+.title-seminaire{
+    text-align: center;
+    color: white;
+    vertical-align: central;
+}
