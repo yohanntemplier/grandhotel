@@ -243,9 +243,9 @@ body {
     font-family: "Dancing Script", sans-serif;
     }
 
-.jumbotron-fluid{
+.jumbotron{
     background: url("/assets/images/seminaire/reunion.jpg");
-    height: 5em;
+    height: 10em;
 
 }
 
