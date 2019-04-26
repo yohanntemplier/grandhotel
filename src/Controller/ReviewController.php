@@ -33,7 +33,6 @@ class ReviewController extends AbstractController
     {
         $reviewManager = new ReviewManager();
         $reviews = $reviewManager->selectAllOnLine();
-
         return $this->twig->render(
             'Review/index.html.twig',
             ['reviews' => $reviews, 'maximumGrade' => self::MAXIMUM_GRADE]

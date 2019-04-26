@@ -27,7 +27,10 @@ class ReviewManager extends AbstractManager
         parent::__construct(self::TABLE);
     }
 
-
+    /**
+     *Selects all the reviews that administrator agreed that it could be published
+     * @return array
+     */
     public function selectAllOnLine()
     {
         return $this->pdo->query('SELECT name, comment, grade, date FROM review WHERE online =1;')->fetchAll();
