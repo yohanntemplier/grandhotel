@@ -19,15 +19,11 @@ use App\Services\CleanForm;
  */
 class ReviewController extends AbstractController
 {
-    const FORM_RULES = [
-        "nameMaxCharacters" => 25,
-        "reviewMaxCharacters" => 500,
-        "minimumGrade" => 1,
-        "maximumGrade" => 5];
+    const MAXIMUM_GRADE = 5;
 
 
     /**
-     * Displays the reviews which are accepted
+     * * Displays the reviews which are accepted
      * @return string
      * @throws \Twig\Error\LoaderError
      * @throws \Twig\Error\RuntimeError
@@ -40,7 +36,7 @@ class ReviewController extends AbstractController
 
         return $this->twig->render(
             'Review/index.html.twig',
-            ['reviews' => $reviews, 'rules' => self::FORM_RULES, 'server' => $_SERVER]
+            ['reviews' => $reviews, 'maximumGrade' => self::MAXIMUM_GRADE, 'server' => $_SERVER]
         );
     }
 }

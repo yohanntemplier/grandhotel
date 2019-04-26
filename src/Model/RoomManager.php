@@ -41,6 +41,7 @@ class RoomManager extends AbstractManager
      * @param string $primaryKey
      * @param string $secondForeignKey
      * @return array
+     *
      */
     public function selectAllTheTables(string $foreignKey, string $primaryKey, string $secondForeignKey): array
     {
