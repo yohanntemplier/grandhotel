@@ -36,7 +36,7 @@ class ReviewController extends AbstractController
 
         return $this->twig->render(
             'Review/index.html.twig',
-            ['reviews' => $reviews, 'maximumGrade' => self::MAXIMUM_GRADE, 'server' => $_SERVER]
+            ['reviews' => $reviews, 'maximumGrade' => self::MAXIMUM_GRADE]
         );
     }
 }
