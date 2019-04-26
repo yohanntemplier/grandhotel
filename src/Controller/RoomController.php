@@ -19,13 +19,15 @@ class RoomController extends AbstractController
         $caracteristicsPerRoom = [];
 
         $roomManager = new RoomManager();
-        $rooms = $roomManager->selectTableRoom();
-        foreach ($rooms as $key => $room) {
-            $caracteristicsPerRoom[] = $roomManager->selectCaracteristics($room['name']);
-            $photosPerRoom[] = $roomManager->selectPhotos($room['name']);
+        $rooms = $roomManager->selectAll();
+        foreach ($rooms as $room) {
+            $caracteristicsPerRoom[] = $roomManager->selectCaracteristics($room['id']);
+            $photosPerRoom[] = $roomManager->selectPhotos($room['id']);
         }
 
-        return $this->twig->render('Rooms/index.html.twig', ['rooms' => $rooms, 'photos' => $photosPerRoom,
+        return $this->twig->render('Rooms/index.html.twig', [
+            'rooms' => $rooms,
+            'photos' => $photosPerRoom,
             'caracteristics' => $caracteristicsPerRoom]);
     }
 }
