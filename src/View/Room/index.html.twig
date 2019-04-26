@@ -4,32 +4,32 @@
     <h1>Les chambres du Grand Hôtel d'Orléans</h1>
     {% for key, room in rooms %}
         <div class="card roomCard mb-3 pb-3 mt-4">
-            <div class="row m-4 align-items-start CarouselPageChambres{% if loop.index1 is even %}d-flex flex-row-reverse {% endif %}">
+            <div class="row m-4 align-items-start CarouselPageChambres
+            {% if loop.index1 is even %}d-flex flex-row-reverse {% endif %}">
                 <div class="col-md-6 ml-auto mr-auto">
                     <div class="card-body">
                         <div class="row">
-                            <h2 class="card-title text-center mb-5 pb-5 col-10">{{ room['name'] }}</h2>
-                            <h2 class="card-title text-center mb-2 pb-2 roomPrice col-2">{{ room['price'] }} €</h2>
+                            <h2 class="card-title  text-center mb-5 pb-5 col-10">{{ room['name'] }}</h2>
+                            <p class="card-title mb-2 pb-2 roomPrice col-2">{{ room['price'] }} €</p>
                         </div>
-
                         <div class="row">
                             <p class=" col-12 pb-5 card-text text-left">{{ room['description'] }}</p>
                         </div>
                         <div class="services p-3 m-0">
                             <div class="row mb-3 mt-4">
-                                <h3 class="col text-center"> Services</h3>
+                                <h3 class="col"> Services</h3>
                             </div>
                             <div class="card-text row p-4">
                                 {% for caracteristic in caracteristics[key] %}
                                     {% if loop.index0 is even %}
                                         <ul class="col-12 col-lg-4">
                                         {% if caracteristic !='' %}
-                                            <li class="services">{{ caracteristic.caracteristic_name }}</li>
+                                            <li class="services text-left">{{ caracteristic.caracteristic_name }}</li>
                                         {% endif %}
                                     {% endif %}
                                     {% if loop.index0 is odd %}
                                         {% if caracteristic !='' %}
-                                            <li class="services">{{ caracteristic.caracteristic_name }}</li>
+                                            <li class="services text-left">{{ caracteristic.caracteristic_name }}</li>
                                         {% endif %}
                                         </ul>
                                     {% endif %}
@@ -38,7 +38,6 @@
                         </div>
                     </div>
                 </div>
-
                 <div class="col-md-5 col-12 col-sm-m-0 ml-auto mr-auto text-center">
                     <div id="carouselExampleIndicators{{ key }}" class="carousel slide m-4" data-ride="carousel">
                         <div class="carousel-inner">
@@ -47,7 +46,6 @@
                                     <img class="carouselPictureRoomPage"
                                          src="/assets/images/rooms/{{ photo.photo_name }}"
                                          alt="photo chambre">
-
                                 </div>
                             {% endfor %}
                         </div>
@@ -65,8 +63,6 @@
                         </a>
                     </div>
                 </div>
-
-
             </div>
         </div>
     {% endfor %}
