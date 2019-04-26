@@ -79,13 +79,13 @@
 /*Accueil_Services*/
 
 .option{
-    margin-bottom: 2em;
+    margin-bottom: 3em;
     text-align: center;
 }
 
 .homeServices{
     margin-top: 2em;
-    margin-bottom: 2em;
+    margin-bottom: 3em;
 }
 
 .icone{
@@ -261,7 +261,7 @@ body {
 
 /*description*/
 .description{
-    margin-bottom: 2em;
+    margin-bottom: 3em;
 }
 
 
