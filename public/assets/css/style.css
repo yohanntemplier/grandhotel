@@ -138,6 +138,11 @@
 .img-thumbnail {
     object-fit: cover;
     margin-top: 20px;
+    filter: opacity(40%);
+}
+
+.img-thumbnail:hover{
+    filter: brightness(100%);
 }
 
 /* EndGaleryPage*/
