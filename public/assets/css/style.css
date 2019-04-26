@@ -2,7 +2,6 @@
 
 .navbar{
     background-color: #2F3B40;
-    margin-bottom: 10px;
     font-family: "Dancing Script", sans-serif;
 }
 
@@ -53,10 +52,14 @@
 
 /*CarrouselIndex*/
 
+.carousel{
+
+}
+
 .picture img {
     object-fit: cover;
     height: 450px;
-    filter: brightness(50%);
+    filter: brightness(80%);
 }
 
 .text h5 {
@@ -68,10 +71,34 @@
 .text p{
     color: #FFFFF;
     font-size: 30px;
-    font-family: "The Girl Next Door", sans-serif;
+    font-family: "Roboto", sans-serif;
 }
 
 /* EndCarrouselIndex*/
+
+/*Accueil_Services*/
+
+.option{
+    margin-bottom: 2em;
+    text-align: center;
+}
+
+.homeServices{
+    margin-top: 2em;
+    margin-bottom: 2em;
+}
+
+.icone{
+    max-width: 8%;
+    margin-right: 0.5em;
+}
+
+.service{
+    margin-left: 3em;
+    padding-left: 45px;
+}
+
+/*end Acceuil_Services*/
 
 /*GaleryPage*/
 
@@ -82,7 +109,7 @@
     margin-right: 2em;
 }
 
-.card{
+.card-gallery{
     margin-bottom: 2em;
     margin-left: 1em;
     margin-right: 1em;
@@ -99,9 +126,9 @@
     margin-bottom: 1.5em;
 }
 
-.card-body {
+.card-body-gallery {
     text-align: center;
-    font-family: "The Girl Next Door", sans-serif;
+    font-family: "Roboto", sans-serif;
     font-size: 30px;
 }
 
@@ -109,6 +136,7 @@
     object-fit: cover;
     margin-top: 20px;
 }
+
 /* EndGaleryPage*/
 
 /*Général*/
@@ -120,6 +148,7 @@ h1{
 h2{
     font-size: 35pt;
     font-family: "Dancing Script", sans-serif;
+    text-align: center;
 }
 
 h3 {
@@ -128,7 +157,10 @@ h3 {
 }
 
 body {
-    font-family: "The Girl Next Door", sans-serif;
+
+    background-image: url("/assets/images/halftone.png");
+
+    font-family: "Roboto", sans-serif;
     font-size: 20pt;
 }
 
@@ -159,39 +191,45 @@ body {
 /* Footer */
 .page-footer{
     background-color: #2F3D40;
+    margin-top: 1em;
+    padding-bottom: 20px;
 }
 
 .logo{
-    width: 5em;
+    width: 3em;
 }
 
 .contact{
+    font-size: 20px;
     padding-top: 12px;
     color: #FFFFFF;
-    font-family: "The Girl Next Door", sans-serif;
+    font-family: "Roboto", sans-serif;
 }
 
 
 .logo1{
-    padding-bottom: 30px;
+   padding-bottom: 30px;
 }
 
+
 .logofooter{
-    width: 20em;
-    object-fit: cover;
-    padding-right: 90px;
+    color: #FFFFFF;
+    font-family: "Dancing Script", sans-serif;
+    font-size: 3.5em;
+    padding-top: 35px;
   }
 
 .lien{
-    padding-left: 50px;
-    padding-bottom: 20px;
+    padding-top: 20px;
+    padding-left: 80px;
 }
 /* EndFooter */
 
 .text-localisation{
     text-align: justify;
-    font-family: "The Girl Next Door", sans-serif;
+    font-family: "Roboto", sans-serif;
     font-size: 25px;
+    margin-top: 2em;
 
 }
 
@@ -208,10 +246,21 @@ body {
 
 .roomPrice{
     font-size: 3vw;
-    font-family: "Dancing Script", sans-serif;}
+    font-family: "Dancing Script", sans-serif;
+    }
 
+.jumbotron{
+    background: url("/assets/images/seminaire/reunion.jpg");
+    height: 10em;
 
-/*descption*/
+}
+
+.col-seminaire-bis{
+    margin-left: 5em;
+    margin-right: 5em;
+}
+
+/*description*/
 .description{
     margin-bottom: 2em;
 }
@@ -227,3 +276,14 @@ body {
 }
 
 
+
+.col-seminaire-ter{
+    margin-left: 5em;
+    margin-right: 5em;
+}
+
+.title-seminaire{
+    text-align: center;
+    color: white;
+    vertical-align: central;
+}
