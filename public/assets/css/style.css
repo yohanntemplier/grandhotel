@@ -249,6 +249,17 @@ body {
     font-family: "Dancing Script", sans-serif;
     }
 
+/*seminaire*/
+
+.seminar{
+    margin-bottom: 3em;
+}
+
+.seminartitle{
+    margin-top: 2em;
+    margin-bottom: 2em;
+}
+
 .jumbotron{
     background: url("/assets/images/seminaire/reunion.jpg");
     height: 10em;
@@ -259,6 +270,8 @@ body {
     margin-left: 5em;
     margin-right: 5em;
 }
+
+/*endseminaire*/
 
 /*description*/
 .description{
