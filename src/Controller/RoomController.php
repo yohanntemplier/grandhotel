@@ -25,7 +25,7 @@ class RoomController extends AbstractController
             $photosPerRoom[] = $roomManager->selectPhotos($room['id']);
         }
 
-        return $this->twig->render('Rooms/index.html.twig', [
+        return $this->twig->render('Room/index.html.twig', [
             'rooms' => $rooms,
             'photos' => $photosPerRoom,
             'caracteristics' => $caracteristicsPerRoom]);
