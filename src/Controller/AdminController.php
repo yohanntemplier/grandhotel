@@ -9,7 +9,7 @@ use App\Services\CleanForm;
 class AdminController extends AbstractController
 {
 
-    public function addroom()
+    public function addRoom()
     {
         $formRules = ['roomNameMaxLength' => 50,
             'descriptionMaxLength' => 300,
