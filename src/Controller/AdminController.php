@@ -7,6 +7,13 @@ use App\Services\CleanForm;
 
 class AdminController extends AbstractController
 {
+    /**
+     * Displays the review page, shows all the reviews, and a form permits to change the review status online/offline
+     * @return string
+     * @throws \Twig\Error\LoaderError
+     * @throws \Twig\Error\RuntimeError
+     * @throws \Twig\Error\SyntaxError
+     */
     public function review()
     {
         $ids=[];
