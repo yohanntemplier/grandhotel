@@ -5,6 +5,7 @@
             <h1 class="ml-3 pb-5 pt-3">Gérer les commentaires clients</h1>
             {% for review in reviews %}
                 <div id="{{ review.id }}" class="row m-0 pt-3 pb-2 border-top border-bottom align-items-center {% if loop.index is odd %}bg-light{% endif %}">
+                    <p class="col-2 text-body">Date : {{ review.date }}<p>
                     <p class="col-2 text-body">Pseudonyme : {{ review.name }}<p>
                     <p class="col-2 text-body">Note donnée : {{ review.grade }}<p>
                     <p class="col-2 text-body">{{ review.comment }}<p>

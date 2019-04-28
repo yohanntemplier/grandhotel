@@ -14,6 +14,20 @@ class AdminReviewManager extends AbstractManager
         parent::__construct(self::TABLE);
     }
 
+    /**
+     * Get all rows from database, ordered by id.
+     *
+     * @return array
+     */
+    public function selectAllReviews(): array
+    {
+        return $this->pdo->query("SELECT * FROM $this->table ORDER BY `id` DESC")->fetchAll();
+    }
+
+    /**
+     * Changes the status (online= 1, offline=0) of the review.
+     * @return bool
+     */
     public function update(): bool
     {
         // prepared request

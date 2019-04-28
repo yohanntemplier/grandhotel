@@ -12,7 +12,7 @@ class AdminController extends AbstractController
         $ids=[];
         $errors = [];
         $adminReviewManager = new AdminReviewManager();
-        $reviews = $adminReviewManager->selectAll();
+        $reviews = $adminReviewManager->selectAllReviews();
         foreach ($reviews as $review) {
             $ids[] = $review['id'];
         }
