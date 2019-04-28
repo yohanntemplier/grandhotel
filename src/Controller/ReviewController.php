@@ -9,14 +9,8 @@
 
 namespace App\Controller;
 
-use App\Model\ItemManager;
 use App\Model\ReviewManager;
-use App\Services\CleanForm;
 
-/**
- * Class ReviewController
- *
- */
 class ReviewController extends AbstractController
 {
     const MAXIMUM_GRADE = 5;
