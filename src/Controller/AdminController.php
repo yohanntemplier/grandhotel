@@ -8,7 +8,13 @@ use App\Services\CleanForm;
 
 class AdminController extends AbstractController
 {
-
+    /**
+     * Displays the page addroom, checks the form, and sends the items in the database.
+     * @return string
+     * @throws \Twig\Error\LoaderError
+     * @throws \Twig\Error\RuntimeError
+     * @throws \Twig\Error\SyntaxError
+     */
     public function addRoom()
     {
         $formRules = ['roomNameMaxLength' => 50,
@@ -25,10 +31,10 @@ class AdminController extends AbstractController
 
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $postData = $_POST;
-
+            $postData['name']=$CleanForm->trim($postData['name']);
+            $postData['description']=$CleanForm->trim($postData['description']);
             $errors = $CleanForm->checkIfEmpty($postData, 'name', $errors);
             $errors = $CleanForm->checkIfEmpty($postData, 'description', $errors);
-
             $errors = $CleanForm->checkMaxLength(
                 $postData['name'],
                 $errors,
