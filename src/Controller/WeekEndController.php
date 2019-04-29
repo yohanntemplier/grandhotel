@@ -11,7 +11,7 @@ namespace App\Controller;
 class WeekEndController extends AbstractController
 {
     /**
-     * Display home page
+     * Display week end page
      *
      * @return string
      * @throws \Twig\Error\LoaderError
