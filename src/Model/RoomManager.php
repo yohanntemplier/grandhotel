@@ -7,6 +7,7 @@ class RoomManager extends AbstractManager
      * Gives the table name
      */
     const TABLE = 'room';
+
     /**
      * RoomManager constructor
      */
@@ -15,14 +16,31 @@ class RoomManager extends AbstractManager
         parent::__construct(self::TABLE);
     }
     /**
-     * Selects the photos for one room
-     * @param int $roomId
+     * Selects the caracteristics data for one room
+     * @param string $roomId
      * @return array
      */
-    public function selectPhotos(int $roomId): array
+    public function selectCaracteristics(string $roomId): array
     {
         return $this->pdo->query(
-            "SELECT * FROM room_photo WHERE room_id ='$roomId';"
+            "SELECT  caracteristic_name FROM room
+    JOIN room_caracteristic AS rc ON rc.room_id = room.id
+    JOIN caracteristic ON rc.caracteristic_id = caracteristic.id 
+    WHERE room.id = '$roomId';"
+        )->fetchAll();
+    }
+
+    /**
+     * Selects the photos for one room
+     * @param string $roomId
+     * @return array
+     */
+    public function selectPhotos(string $roomId): array
+    {
+        return $this->pdo->query(
+            "SELECT photo_name FROM room_photo AS rp JOIN room ON
+    rp.room_id = room.id 
+    WHERE room.id ='$roomId';"
         )->fetchAll();
     }
 }
