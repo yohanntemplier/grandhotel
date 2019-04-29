@@ -13,17 +13,17 @@ class ContactManager extends AbstractManager
 {
     const TABLE = 'formulaire';
 
-public function __construct()
-{
-    parent::__construct(self::TABLE);
-}
+    public function __construct()
+    {
+        parent::__construct(self::TABLE);
+    }
 
-public function selectFormValues()
-{
-    return $this->pdo->query('SELECT * FROM formulaire;') -> fetchAll();
-}
+    public function selectFormValues()
+    {
+        return $this->pdo->query('SELECT * FROM formulaire;')->fetchAll();
+    }
 
-public function insert(array $data) :void
+    public function insert(array $data): void
     {
         $statement = $this->pdo->prepare("INSERT INTO `formulaire` (`firstname`, `mail`, `message`)
         VALUES (:firstname, :mail, :message);");
