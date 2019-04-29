@@ -66,6 +66,6 @@ class ContactController extends AbstractController
                 header('location: #');
             }
         }
-        return $this->twig->render('Contact/index.html.twig');
+        return $this->twig->render('Contact/index.html.twig', ['errors' => $errors]);
     }
 }
