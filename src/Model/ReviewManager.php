@@ -17,6 +17,7 @@ class ReviewManager extends AbstractManager
      *
      */
     const TABLE = 'review';
+
     /**
      *  Initializes this class.
      */
@@ -44,5 +45,14 @@ class ReviewManager extends AbstractManager
         $statement->bindValue('date', $today, \PDO::PARAM_STR);
         $statement->bindValue('online', 0, \PDO::PARAM_INT);
         $statement->execute();
+    } 
+      /**
+     *Selects all the reviews that administrator agreed that it could be published
+     * @return array
+     */
+    public function selectAllOnLine()
+    {
+        return $this->pdo->query('SELECT name, comment, grade, date FROM review WHERE online =1;')->fetchAll();
+
     }
 }

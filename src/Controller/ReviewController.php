@@ -26,11 +26,13 @@ class ReviewController extends AbstractController
 
     /**
      * displays the add review page, checks and send the form to the database.
+
      * @return string
      * @throws \Twig\Error\LoaderError
      * @throws \Twig\Error\RuntimeError
      * @throws \Twig\Error\SyntaxError
      */
+
     public function addReview()
     {
         $authorizedGrades = [];
@@ -70,6 +72,14 @@ class ReviewController extends AbstractController
         return $this->twig->render(
             'Review/addreview.html.twig',
             ['postdata' => $postData, 'errors' => $errors, 'rules' => self::FORM_RULES]
+          }
+    public function index()
+    {
+        $reviewManager = new ReviewManager();
+        $reviews = $reviewManager->selectAllOnLine();
+        return $this->twig->render(
+            'Review/index.html.twig',
+            ['reviews' => $reviews, 'maximumGrade' => self::MAXIMUM_GRADE]
         );
     }
 }
