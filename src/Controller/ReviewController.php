@@ -33,6 +33,10 @@ class ReviewController extends AbstractController
      */
     public function addReview()
     {
+        $authorizedGrades = [];
+        for ($i = self::FORM_RULES['minimumGrade']; $i <= self::FORM_RULES['maximumGrade']; $i++) {
+            $authorizedGrades[] = $i;
+        }
         $errors = [];
         $postData = [];
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
@@ -54,17 +58,12 @@ class ReviewController extends AbstractController
                 self::FORM_RULES['reviewMaxCharacters'],
                 'review'
             );
-            $errors = $cleanForm->checkGrade(
-                $postData,
-                $errors,
-                self::FORM_RULES['minimumGrade'],
-                self::FORM_RULES['maximumGrade'],
-                'grade'
-            );
-
+            if (isset($postData['grade'])) {
+                $errors = $cleanForm->checkifInArray($postData['grade'], $errors, $authorizedGrades, 'grade');
+            }
             if ((empty($errors) && (!empty($postData)))) {
-                $ReviewManager = new ReviewManager();
-                $ReviewManager->insert($postData);
+                $reviewManager = new ReviewManager();
+                $reviewManager->insert($postData);
                 header('location:index/?success=true&');
             }
         }
