@@ -2,48 +2,42 @@
 
 namespace App\Controller;
 
+use mysql_xdevapi\Exception;
+
 class MailController
 {
 
 }
-  /*  function sendMail($subject,$sendto,$body,$targetpath = null)
+/*function sendMail($subject, $sendto, $body, $targetpath = null)
+{
 
-    {
+    try {
+        $transport = \Swift_SmtpTransport::newInstance();
 
-        try {
+        $message = Swift_Message::newInstance();
 
-            $transport = \Swift_SmtpTransport::newInstance();
+        $message->setTo($sendto);
 
-            $message = Swift_Message::newInstance();
+        $message->setSubject($subject);
 
-            $message->setTo($sendto);
+        $message->setBody($body);
 
-            $message->setSubject($subject);
+        $message->setFrom("shahroznawaz156@gmail.com", "Shahroze Nawaz");
 
-            $message->setBody($body);
+        if (!empty($targetpath)) {
+            $message->attach(Swift_Attachment::fromPath($targetpath));
+        }
 
-            $message->setFrom("shahroznawaz156@gmail.com", "Shahroze Nawaz");
+        $mailer = Swift_Mailer::newInstance($transport);
 
-            if (!empty($targetpath)) {
+        $result = $mailer->send($message);
 
-                $message->attach(Swift_Attachment::fromPath($targetpath));
-
-            }
-
-            $mailer = Swift_Mailer::newInstance($transport);
-
-            $result = $mailer->send($message);
-
-            if ($result) {
-
-                echo "Number of emails sent: $result";
-
-            } else {
-
-                echo "Couldn't send email";
-
-            }
-
-        } catch {
-
-        }*/
+        if ($result) {
+            echo "Number of emails sent: $result";
+        } else {
+            echo "Couldn't send email";
+        }
+    } catch (Exception $exception) {
+        echo $exception->getMessage();
+    }
+}*/

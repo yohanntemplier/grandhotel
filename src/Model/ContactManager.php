@@ -9,67 +9,27 @@
 
 namespace App\Model;
 
-/**
- *
- */
-
-
 class ContactManager extends AbstractManager
 {
-    /**
-     *
-     */
-    const TABLE = 'item';
+    const TABLE = 'formulaire';
 
-    /**
-     *  Initializes this class.
-     */
-    public function __construct()
+public function __construct()
+{
+    parent::__construct(self::TABLE);
+}
+
+public function selectFormValues()
+{
+    return $this->pdo->query('SELECT * FROM formulaire;') -> fetchAll();
+}
+
+public function insert(array $data) :void
     {
-        parent::__construct(self::TABLE);
-    }
-
-
-    /**
-     * @param array $item
-     * @return int
-     */
-    public function insert(array $item): int
-    {
-        // prepared request
-        $statement = $this->pdo->prepare("INSERT INTO $this->table (`title`) VALUES (:title)");
-        $statement->bindValue('title', $item['title'], \PDO::PARAM_STR);
-
-        if ($statement->execute()) {
-            return (int)$this->pdo->lastInsertId();
-        }
-    }
-
-
-    /**
-     * @param int $id
-     */
-    public function delete(int $id): void
-    {
-        // prepared request
-        $statement = $this->pdo->prepare("DELETE FROM $this->table WHERE id=:id");
-        $statement->bindValue('id', $id, \PDO::PARAM_INT);
+        $statement = $this->pdo->prepare("INSERT INTO `formulaire` (`firstname`, `mail`, `message`)
+        VALUES (:firstname, :mail, :message);");
+        $statement->bindValue('firstname', $data['firstname'], \PDO::PARAM_STR);
+        $statement->bindValue('mail', $data['mail'], \PDO::PARAM_STR);
+        $statement->bindValue('message', $data['message'], \PDO::PARAM_STR);
         $statement->execute();
-    }
-
-
-    /**
-     * @param array $item
-     * @return bool
-     */
-    public function update(array $item):bool
-    {
-
-        // prepared request
-        $statement = $this->pdo->prepare("UPDATE $this->table SET `title` = :title WHERE id=:id");
-        $statement->bindValue('id', $item['id'], \PDO::PARAM_INT);
-        $statement->bindValue('title', $item['title'], \PDO::PARAM_STR);
-
-        return $statement->execute();
     }
 }
