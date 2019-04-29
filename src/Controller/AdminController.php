@@ -19,11 +19,11 @@ class AdminController extends AbstractController
         $errors = [];
         $adminReviewManager = new AdminReviewManager();
         $reviews = $adminReviewManager->selectAllReviews();
-        $postData['id'] = '';
+        $postData=[];
 
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             foreach ($_POST as $key => $value) {
-                $postData[$key] = trim($value);
+                $postData[$key]=$value;
             }
             $cleanForm = new CleanForm();
             $errors = $cleanForm->checkIfBool($errors, $postData['id']);
