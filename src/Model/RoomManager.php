@@ -1,6 +1,4 @@
 <?php
-
-
 namespace App\Model;
 
 class RoomManager extends AbstractManager
@@ -10,7 +8,6 @@ class RoomManager extends AbstractManager
      */
     const TABLE = 'room';
 
-
     /**
      * RoomManager constructor
      */
@@ -18,7 +15,6 @@ class RoomManager extends AbstractManager
     {
         parent::__construct(self::TABLE);
     }
-
     /**
      * Selects the caracteristics data for one room
      * @param string $roomId
