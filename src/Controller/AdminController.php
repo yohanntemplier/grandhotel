@@ -7,9 +7,18 @@ use App\Services\AddPictures;
 use App\Services\CleanForm;
 use App\Model\AdminReviewManager;
 
-
 class AdminController extends AbstractController
 {
+   /**Initializes the admin index.
+     * @return string
+     * @throws \Twig\Error\LoaderError
+     * @throws \Twig\Error\RuntimeError
+     * @throws \Twig\Error\SyntaxError
+     */
+ public function index()
+    {
+        return $this->twig->render('Admin/index.html.twig');
+    }
     /**
      * Displays the page addroom, checks the form, and sends the items in the database.
      * @return string
@@ -114,6 +123,7 @@ class AdminController extends AbstractController
      * @throws \Twig\Error\RuntimeError
      * @throws \Twig\Error\SyntaxError
      */
+
     public function rooms()
     {
         $adminRoomManager = new AdminRoomManager();
