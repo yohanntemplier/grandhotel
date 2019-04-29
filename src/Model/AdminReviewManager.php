@@ -26,14 +26,15 @@ class AdminReviewManager extends AbstractManager
 
     /**
      * Changes the status (online= 1, offline=0) of the review.
+     * @param array $postData
      * @return bool
      */
-    public function update(): bool
+    public function update(array $postData): bool
     {
         // prepared request
         $statement = $this->pdo->prepare("UPDATE $this->table SET `online` = :online WHERE id=:id");
-        $statement->bindValue('id', $_POST['id'], \PDO::PARAM_INT);
-        $statement->bindValue('online', $_POST['online'], \PDO::PARAM_BOOL);
+        $statement->bindValue('id', $postData['id'], \PDO::PARAM_INT);
+        $statement->bindValue('online', $postData['online'], \PDO::PARAM_BOOL);
         return $statement->execute();
     }
 }

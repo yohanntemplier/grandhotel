@@ -28,7 +28,7 @@ class AdminController extends AbstractController
             $cleanForm = new CleanForm();
             $errors = $cleanForm->checkIfBool($errors, $postData['id']);
             if (empty($errors)) {
-                $adminReviewManager->update();
+                $adminReviewManager->update($postData);
                 header('location:/Admin/review/?success=true&id=' . $postData['id'] . '#' . $postData['id']);
             }
         }
