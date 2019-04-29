@@ -19,6 +19,9 @@
 
 .btn-resa{
     background-color: white;
+    position: absolute;
+    right: 0;
+    margin-right: 1em;
 }
 
 .navbar-brand-resa:hover{
@@ -79,13 +82,13 @@
 /*Accueil_Services*/
 
 .option{
-    margin-bottom: 2em;
+    margin-bottom: 3em;
     text-align: center;
 }
 
 .homeServices{
     margin-top: 2em;
-    margin-bottom: 2em;
+    margin-bottom: 3em;
 }
 
 .icone{
@@ -135,6 +138,11 @@
 .img-thumbnail {
     object-fit: cover;
     margin-top: 20px;
+    filter: opacity(40%);
+}
+
+.img-thumbnail:hover{
+    filter: brightness(100%);
 }
 
 /* EndGaleryPage*/
@@ -158,8 +166,7 @@ h3 {
 
 body {
 
-    background-image: url("/assets/images/halftone.png");
-
+    background-image: url("/assets/images/ricepaper2.png");
     font-family: "Roboto", sans-serif;
     font-size: 20pt;
 }
@@ -249,6 +256,21 @@ body {
     font-family: "Dancing Script", sans-serif;
     }
 
+/*seminaire*/
+
+.seminar{
+    margin-bottom: 3em;
+}
+
+.seminartitle{
+    margin-top: 3em;
+    margin-bottom: 4em;
+}
+
+.seminartitle h2{
+    font-size: 80px;
+}
+
 .jumbotron{
     background: url("/assets/images/seminaire/reunion.jpg");
     height: 10em;
@@ -260,21 +282,27 @@ body {
     margin-right: 5em;
 }
 
+/*endseminaire*/
+
 /*description*/
 .description{
-    margin-bottom: 2em;
+    margin-bottom: 3em;
 }
 
-.description p {
-    text-align: center;
-}
 
-.description h2{
+.description h1{
     text-align: center;
     margin-bottom: 1em;
     margin-top: 1em;
 }
 
+
+hr{
+    width: 75%;
+    color:#2F3B40;
+    height: 25px;
+    size: 25px;
+}
 
 
 .col-seminaire-ter{
