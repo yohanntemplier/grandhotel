@@ -27,32 +27,33 @@ class AdminRoomManager extends AbstractManager
     /**
      * Transfers the room data to the database
      * @param array $data
-     * @param int $roomId
+     * @return int
      */
-    public function insert(array $data, int $roomId): void
+    public function insert(array $data): int
     {
         // prepared request
-        $statement = $this->pdo->prepare("INSERT INTO `room` (`id` ,`name` , `description` , `price`)
-        VALUES ( :id, :name, :description, :price );");
-        $statement->bindValue('id', $roomId, \PDO::PARAM_INT);
+        $statement = $this->pdo->prepare("INSERT INTO `room` (`name` , `description` , `price`)
+        VALUES ( :name, :description, :price );");
         $statement->bindValue('name', $data['name'], \PDO::PARAM_STR);
         $statement->bindValue('description', $data['description'], \PDO::PARAM_STR);
         $statement->bindValue('price', $data['price'], \PDO::PARAM_INT);
         $statement->execute();
+        if ($statement->execute()) {
+            return (int)$this->pdo->lastInsertId();
+        }
     }
 
     /**
      * transfers the caracteristic data to the database
      * @param array $data
-     * @param int $roomId
      */
-    public function insertCaracteristics(array $data, int $roomId): void
+    public function insertCaracteristics(array $data): void
     {
-        foreach ($data as $caracteristic) {
+        foreach ($data['caracteristic'] as $caracteristic) {
             $statement = $this->pdo->prepare("INSERT INTO `room_caracteristic`
             (`room_id`,`caracteristic_id`)
             VALUES(:room_id, :caracteristic_id);");
-            $statement->bindValue('room_id', $roomId, \PDO::PARAM_STR);
+            $statement->bindValue('room_id', $data['roomId'], \PDO::PARAM_STR);
             $statement->bindValue('caracteristic_id', $caracteristic, \PDO::PARAM_INT);
             $statement->execute();
         }

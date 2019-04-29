@@ -22,34 +22,32 @@ class AdminController extends AbstractController
             'acceptedFiles' => ['jpg', 'jpeg', 'gif', 'png'],
             'fileSizeMaxKBytes' => 200];
         $adminRoomManager = new AdminRoomManager();
-        $CleanForm = new CleanForm();
+        $cleanForm = new CleanForm();
         $addPictures = new AddPictures();
         $errors = [];
         $caracteristics = $adminRoomManager->selectAllCaracteristics();
-        $rooms = $adminRoomManager->selectAll();
-        $roomNewId = $rooms[count($rooms) - 1]['id'] + 1;
 
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $postData = $_POST;
-            $postData['name']=$CleanForm->trim($postData['name']);
-            $postData['description']=$CleanForm->trim($postData['description']);
-            $errors = $CleanForm->checkIfEmpty($postData, 'name', $errors);
-            $errors = $CleanForm->checkIfEmpty($postData, 'description', $errors);
-            $errors = $CleanForm->checkMaxLength(
+            $postData['name'] = $cleanForm->trim($postData['name']);
+            $postData['description'] = $cleanForm->trim($postData['description']);
+            $errors = $cleanForm->checkIfEmpty($postData, 'name', $errors);
+            $errors = $cleanForm->checkIfEmpty($postData, 'description', $errors);
+            $errors = $cleanForm->checkMaxLength(
                 $postData['name'],
                 $errors,
                 $formRules['roomNameMaxLength'],
                 'name'
             );
-            $errors = $CleanForm->checkMaxLength(
+            $errors = $cleanForm->checkMaxLength(
                 $postData['description'],
                 $errors,
                 $formRules['descriptionMaxLength'],
                 'description'
             );
-            $errors = $CleanForm->checkPrice($postData, $errors);
+            $errors = $cleanForm->checkPrice($postData, $errors);
             if (isset($postData['caracteristic'])) {
-                $errors = $CleanForm->checkCaracteristics($postData['caracteristic'], $caracteristics, $errors);
+                $errors = $cleanForm->checkCaracteristics($postData['caracteristic'], $caracteristics, $errors);
             }
             if ($_FILES) {
                 $errors = $addPictures->checkType($formRules['acceptedFiles'], $errors);
@@ -58,9 +56,10 @@ class AdminController extends AbstractController
             if (empty($errors)) {
                 $photos = $addPictures->changePhotoName();
                 $addPictures->transferFiles($photos);
-                $adminRoomManager->insert($postData, $roomNewId);
-                $adminRoomManager->insertCaracteristics($postData['caracteristic'], $roomNewId);
-                $adminRoomManager->addPhotosNamesInDatabase($photos, $roomNewId);
+                $lastRoomId = $adminRoomManager->insert($postData);
+                $postData['roomId'] = $lastRoomId;
+                $adminRoomManager->insertCaracteristics($postData);
+                $adminRoomManager->addPhotosNamesInDatabase($photos, $lastRoomId);
                 header('location:../Admin/rooms?success=true');
             }
         }
