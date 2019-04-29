@@ -16,27 +16,27 @@ class AdminController extends AbstractController
      */
     public function review()
     {
-        $ids=[];
         $errors = [];
         $adminReviewManager = new AdminReviewManager();
         $reviews = $adminReviewManager->selectAllReviews();
-        foreach ($reviews as $review) {
-            $ids[] = $review['id'];
-        }
+        $postData['id'] = '';
+
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+            foreach ($_POST as $key => $value) {
+                $postData[$key] = trim($value);
+            }
             $cleanForm = new CleanForm();
-            $errors = $cleanForm->checkId($_POST['id'], $ids, $errors);
-            $errors = $cleanForm->checkIfBool($errors, $_POST['id']);
+            $errors = $cleanForm->checkIfBool($errors, $postData['id']);
             if (empty($errors)) {
                 $adminReviewManager->update();
-                header('location:/Admin/review/?success=true&id=' . $_POST['id'] . '#' . $_POST['id']);
+                header('location:/Admin/review/?success=true&id=' . $postData['id'] . '#' . $postData['id']);
             }
         }
         return $this->twig->render(
             'Admin/review.html.twig',
             ['reviews' => $reviews,
                 'errors' => $errors,
-                'get' => $_GET]
+                'get' => $_GET,]
         );
     }
 }
