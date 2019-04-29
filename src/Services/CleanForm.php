@@ -24,9 +24,9 @@ class CleanForm
      * @param string $itemToTrim
      * @return string
      */
-    public function trim(string $itemToTrim):string
+    public function trim(string $itemToTrim): string
     {
-        $itemToTrim= trim($itemToTrim);
+        $itemToTrim = trim($itemToTrim);
         return $itemToTrim;
     }
 
@@ -42,6 +42,20 @@ class CleanForm
     {
         if (strlen($postData) > $maxLength) {
             $errors[$key]['length'] = 'Cette rubrique ne doit pas dépasser ' . $maxLength . ' caractères.';
+        }
+        return $errors;
+    }
+
+    /**
+     * Checks if a bool is returned by $_POST
+     * @param array $errors
+     * @param int $id
+     * @return array
+     */
+    public function checkIfBool(array $errors, int $id): array
+    {
+        if (!in_array($_POST['online'], [0, 1])) {
+            $errors[$id] = "Le champ n'est pas rempli correctement.";
         }
         return $errors;
     }
@@ -70,7 +84,7 @@ class CleanForm
      */
     public function checkCaracteristics(array $caracteristics, array $existingCaracteristics, array $errors): array
     {
-        $caracteristicsIds=[];
+        $caracteristicsIds = [];
         foreach ($existingCaracteristics as $existingCaracteristic) {
             $caracteristicsIds[] = $existingCaracteristic['id'];
         }
@@ -79,6 +93,24 @@ class CleanForm
             if (!in_array($caracteristic, $caracteristicsIds)) {
                 $errors['caracteristic'][$key] = "Cette caractéristique n'existe pas.";
             }
+        }
+        return $errors;
+    }
+
+
+    /**
+     * Checks if a value is in an array. If no, returns an error.
+     * @param string $dataToCheck
+     * @param array $errors
+     * @param array $inArray
+     * @param string $errorName
+     * @return array
+     */
+    public function checkifInArray(string $dataToCheck, array $errors, array $inArray, string $errorName): array
+    {
+        if (!in_array($dataToCheck, $inArray)) {
+            $errors[$errorName] = 'La valeur saisie ne fait pas partie des valeurs suivantes: ' .
+                implode(" ou ", $inArray) . '.';
         }
         return $errors;
     }

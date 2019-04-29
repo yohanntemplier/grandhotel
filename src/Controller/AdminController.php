@@ -5,6 +5,8 @@ namespace App\Controller;
 use App\Model\AdminRoomManager;
 use App\Services\AddPictures;
 use App\Services\CleanForm;
+use App\Model\AdminReviewManager;
+
 
 class AdminController extends AbstractController
 {
@@ -15,6 +17,7 @@ class AdminController extends AbstractController
      * @throws \Twig\Error\RuntimeError
      * @throws \Twig\Error\SyntaxError
      */
+
     public function addRoom()
     {
         $formRules = ['roomNameMaxLength' => 50,
@@ -69,5 +72,52 @@ class AdminController extends AbstractController
                 'formRules' => $formRules,
                 'caracteristics' => $caracteristics]
         );
+    }
+
+    /**
+     * Displays the review page, shows all the reviews, and a form permits to change the review status online/offline
+     * Displays the page addroom, checks the form, and sends the items in the database.
+     * @return string
+     * @throws \Twig\Error\LoaderError
+     * @throws \Twig\Error\RuntimeError
+     * @throws \Twig\Error\SyntaxError
+     */
+    public function review()
+    {
+        $errors = [];
+        $adminReviewManager = new AdminReviewManager();
+        $reviews = $adminReviewManager->selectAllReviews();
+        $postData = [];
+
+        if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+            foreach ($_POST as $key => $value) {
+                $postData[$key] = $value;
+            }
+            $cleanForm = new CleanForm();
+            $errors = $cleanForm->checkIfBool($errors, $postData['id']);
+            if (empty($errors)) {
+                $adminReviewManager->update($postData);
+                header('location:/Admin/review/?success=true&id=' . $postData['id'] . '#' . $postData['id']);
+            }
+        }
+        return $this->twig->render(
+            'Admin/review.html.twig',
+            ['reviews' => $reviews,
+                'errors' => $errors,
+                'get' => $_GET,]
+        );
+    }
+
+    /**Gives the existing rooms in database
+     * @return string
+     * @throws \Twig\Error\LoaderError
+     * @throws \Twig\Error\RuntimeError
+     * @throws \Twig\Error\SyntaxError
+     */
+    public function rooms()
+    {
+        $adminRoomManager = new AdminRoomManager();
+        $rooms = $adminRoomManager->selectAll();
+        return $this->twig->render('Admin/rooms.html.twig', ['rooms' => $rooms]);
     }
 }

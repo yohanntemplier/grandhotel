@@ -39,10 +39,11 @@ class AdminRoomManager extends AbstractManager
         $statement->bindValue('price', $data['price'], \PDO::PARAM_INT);
         $statement->execute();
         if ($statement->execute()) {
-            return (int)$this->pdo->lastInsertId();
+            $lastInsertId = $this->pdo->lastInsertId();
         }
+        return $lastInsertId;
     }
-
+    
     /**
      * transfers the caracteristic data to the database
      * @param array $data
