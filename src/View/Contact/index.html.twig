@@ -16,7 +16,7 @@
                 <div class="form-group col-6">
                     <label for="firstname">Prénom</label>
                     <input type="text" class="form-control" id="firstname" aria-describedby="firstnameHelp" name="firstname"
-                           value="{{ postData["firstname"] }}" required>
+                           value="{{ postData["firstname"] }}">
                     <small class="text-danger font-weight-bold">{{ errors[firstname]["empty"] }}</small>
                     <small class="text-danger font-weight-bold">{{ errors[firstname]["length"] }}</small>
                 </div>
@@ -24,7 +24,7 @@
                 <div class="row  justify-content-center">
                 <div class="form-group col-6">
                     <label for="email">Adresse mail</label>
-                    <input type="email" class="form-control" id="email" aria-describedby="emailHelp" name="email"
+                    <input type="email" class="form-control" id="email" aria-describedby="emailHelp" name="mail"
                            value="{{ postData["mail"] }}" required>
                     <small class="text-danger font-weight-bold">{{ errors[mail]["empty"] }}</small>
                     <small class="text-danger font-weight-bold">{{ errors[mail]["length"] }}</small>
@@ -38,7 +38,6 @@
                     <small class="text-danger font-weight-bold">{{ errors[message]["length"] }}</small>
                 </div>
                 </div>
-            </form>
             <div class="row  justify-content-center">
                 <button type="submit" class="btn btn-primary">Submit</button>
             </div>
