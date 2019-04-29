@@ -1,7 +1,9 @@
 {% extends 'layoutVisitor.html.twig' %}
 {% block title %}Chambres Grand Hôtel{% endblock %}
 {% block content %}
-    <h1>Les chambres du Grand Hôtel d'Orléans</h1>
+    <div class ="roomtitle">
+    <h2>Les chambres du Grand Hôtel d'Orléans</h2>
+    </div>
     {% for key, room in rooms %}
         <div class="card roomCard mb-3 pb-3 mt-4">
             <div class="row m-4 align-items-start CarouselPageChambres
@@ -43,9 +45,7 @@
                         <div class="carousel-inner">
                             {% for photo in photos[key] %}
                                 <div class="carousel-item {% if loop.first %}active{% endif %}">
-                                    <img class="carouselPictureRoomPage"
-                                         src="/assets/images/rooms/{{ photo.photo_name }}"
-                                         alt="photo chambre">
+                                    <img class="carouselPictureRoomPage" src="/assets/images/rooms/{{ photo.photo_name }}" alt="photo chambre">
                                 </div>
                             {% endfor %}
                         </div>
@@ -67,3 +67,4 @@
         </div>
     {% endfor %}
 {% endblock %}
+
