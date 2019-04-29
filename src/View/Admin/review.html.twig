@@ -1,0 +1,41 @@
+{% extends 'layoutAdmin.html.twig' %}
+{% block title %} Gérer les commentaires clients{% endblock %}
+    {% block content %}
+        <div class="container-fluid">
+            <h1 class="ml-3 pb-5 pt-3">Gérer les commentaires clients</h1>
+            {% for review in reviews %}
+                <div id="{{ review.id }}"
+                     class="row m-0 pt-3 pb-2 border-top border-bottom align-items-center {% if loop.index is odd %}bg-light{% endif %}">
+                    <p class="col-2 text-body">Date : {{ review.date }}<p>
+                    <p class="col-2 text-body">Pseudonyme : {{ review.name }}<p>
+                    <p class="col-2 text-body">Note donnée : {{ review.grade }}<p>
+                    <p class="col-2 text-body">{{ review.comment }}<p>
+                        {% if review.online ==1 %}
+                    <p class="col-2 text-body">Publié sur le site</p>
+                    <form method="post">
+                        <input type="number" hidden name="id" value="{{ review.id }}">
+                        <input type="number" hidden name="online" value="0">
+                        <div class="col-2">
+                            <button class="btn btn-dark" type="submit" role="button">cacher</button>
+                        </div>
+                    </form>
+                {% else %}
+                    <p class="col-2 text-body">Non publié</p>
+                    <form method="post">
+                        <input type="number" hidden name="id" value="{{ review.id }}">
+                        <input type="number" hidden name="online" value="1">
+                        <div class="col-2">
+                            <button class="btn btn-success" type="submit" role="button">Publier</button>
+                        </div>
+                    </form>
+                    {% endif %}
+                    {% if get.id == review.id %}
+                        <div class="col-11 text-success text-center">Votre modification a bien été prise en compte</div>
+                    {% endif %}
+                </div>
+                {% if errors.id %}
+                    <div class="row alert text-alert">{{ errors.id }}</div>
+                {% endif %}
+            {% endfor %}
+        </div>
+    {% endblock %}
