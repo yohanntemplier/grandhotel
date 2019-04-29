@@ -22,8 +22,7 @@ class RoomManager extends AbstractManager
     public function selectPhotos(int $roomId): array
     {
         return $this->pdo->query(
-            "SELECT * FROM room_photo
-            WHERE room_id ='$roomId';"
+            "SELECT * FROM room_photo WHERE room_id ='$roomId';"
         )->fetchAll();
     }
 }
