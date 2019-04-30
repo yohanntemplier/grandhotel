@@ -26,7 +26,6 @@ class ReviewController extends AbstractController
 
     /**
      * displays the add review page, checks and send the form to the database.
-
      * @return string
      * @throws \Twig\Error\LoaderError
      * @throws \Twig\Error\RuntimeError
@@ -45,7 +44,7 @@ class ReviewController extends AbstractController
             $cleanForm = new CleanForm();
             foreach ($_POST as $key => $rubric) {
                 $postData[$key] = trim($rubric);
-                $errors = $cleanForm->checkIfEmpty($rubric, $errors, $key);
+                $errors = $cleanForm->checkIfEmpty($postData, $key, $errors);
             }
             $errors =
                 $cleanForm->checkMaxLength(
@@ -60,8 +59,10 @@ class ReviewController extends AbstractController
                 self::FORM_RULES['reviewMaxCharacters'],
                 'review'
             );
-            if (isset($postData['grade'])) {
+            if (!empty($postData['grade'])) {
                 $errors = $cleanForm->checkifInArray($postData['grade'], $errors, $authorizedGrades, 'grade');
+            } else {
+                $errors['grade'] = 'Ce champ doit être rempli';
             }
             if ((empty($errors) && (!empty($postData)))) {
                 $reviewManager = new ReviewManager();
@@ -72,14 +73,16 @@ class ReviewController extends AbstractController
         return $this->twig->render(
             'Review/addreview.html.twig',
             ['postdata' => $postData, 'errors' => $errors, 'rules' => self::FORM_RULES]
-          }
+        );
+    }
+
     public function index()
     {
         $reviewManager = new ReviewManager();
         $reviews = $reviewManager->selectAllOnLine();
         return $this->twig->render(
             'Review/index.html.twig',
-            ['reviews' => $reviews, 'maximumGrade' => self::MAXIMUM_GRADE]
+            ['reviews' => $reviews, 'maximumGrade' => self::FORM_RULES['maximumGrade']]
         );
     }
 }
