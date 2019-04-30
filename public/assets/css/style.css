@@ -195,7 +195,7 @@ body {
 }
 
 
-.roomtitle h2{
+.roomtitle h1{
     text-align: center;
     font-family: "Dancing Script", sans-serif;
     font-size: 80px;
@@ -209,7 +209,7 @@ body {
 
 /*weekend*/
 
-.weekendtitle h2{
+.weekendtitle h1{
     text-align: center;
     font-family: "Dancing Script", sans-serif;
     font-size: 80px;
@@ -251,6 +251,10 @@ body {
 
 }
 
+.weekend{
+    margin-left: 3.5em;
+}
+
 .buttontext:hover{
     display: none;
 }
@@ -259,9 +263,6 @@ body {
 }
 .modal-title-week{
     font-size: 30px;
-}
-.weekendpage{
-    margin-right: -8em;
 }
 
 .buttontext h2{
@@ -361,16 +362,16 @@ body {
     margin-bottom: 3em;
 }
 
-.seminartitle{
-    margin-top: 3em;
-    margin-bottom: 4em;
-}
 
-.seminartitle h2{
+.seminartitle h1{
+    text-align: center;
+    font-family: "Dancing Script", sans-serif;
     font-size: 80px;
+    margin-top: 1em;
+    margin-bottom: 1.5em;
 }
 
-.jumbotron{
+.jumbotron-seminar{
     background: url("/assets/images/seminaire/reunion.jpg");
     height: 10em;
 
@@ -426,14 +427,29 @@ hr{
 }
 
 
-.jumbotron {
-    background-image: url("../images/gares(1).jpg");
-    background-size: 100%;
-    height: 13em;
+.jumbotron-contact{
+    background: url("../images/gares(1).jpg");
+    height: 10em;
+    margin-left: -0.55em;
+    margin-right: -0.55em;
 
 }
 
 .row-form{
     margin-top: 90px;
 }
+.contact-title h1{
+    text-align: center;
+    font-family: "Dancing Script", sans-serif;
+    font-size: 80px;
+    margin-top: 1em;
+    margin-bottom: 1.5em;
+}
+
+
+
+
+
+
+
 

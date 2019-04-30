@@ -8,11 +8,8 @@
 
 namespace App\Controller;
 
-use App\Model\GaleryManager;
-
 class GaleryController extends AbstractController
 {
-
     /**
      * Display home page
      *
@@ -23,9 +20,6 @@ class GaleryController extends AbstractController
      */
     public function index()
     {
-        $galeryManager=new GaleryManager();
-        $cards = $galeryManager->selectAll();
-
-        return $this->twig->render('Galery/index.html.twig', ['cards' => $cards]);
+        return $this->twig->render('Galery/index.html.twig');
     }
 }
