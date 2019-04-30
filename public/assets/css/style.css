@@ -183,10 +183,20 @@ body {
     border: none;
 }
 .services {
-    background-color: rgba(47,61,64,0.6);
-    color: #FFFFFF;
+    background-color: rgba(47,61,64,0.1);
+    color: #2F3B40;
     list-style: disc;
-    border-radius: 0.6vw;
+    border-radius: 0.3vw;
+}
+
+.list-caracteristic{
+    padding-left: 70px;
+
+}
+
+.services h3{
+    text-align: center;
+    font-size: 50px;
 }
 
 .carouselPictureRoomPage {
