@@ -67,8 +67,8 @@ class AdminController extends AbstractController
                 $errors = $addPictures->checkSize($errors, $formRules['fileSizeMaxKBytes']);
             }
             if (empty($errors)) {
-                $photos = $addPictures->changePhotoName();
-                $addPictures->transferFiles($photos);
+                $photos['pictures'] = $addPictures->changePhotoName();
+                $addPictures->transferFiles($photos['pictures']);
                 $lastRoomId = $adminRoomManager->insert($postData);
                 $postData['roomId'] = $lastRoomId;
                 if (isset($postData['caracteristic'])) {
