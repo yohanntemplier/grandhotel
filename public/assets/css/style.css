@@ -183,9 +183,9 @@ body {
     border: none;
 }
 .services {
-    background-color: #2F3D40;
+    background-color: rgba(47,61,64,0.6);
     color: #FFFFFF;
-    list-style: circle;
+    list-style: disc;
     border-radius: 0.6vw;
 }
 
@@ -202,6 +202,9 @@ body {
     margin-bottom: 1.5em;
 }
 
+.card-text li{
+    background-color: rgba(47,61,64,0);
+}
 
 /* Footer */
 .page-footer{
