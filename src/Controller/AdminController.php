@@ -83,7 +83,7 @@ class AdminController extends AbstractController
             'Admin/addroom.html.twig',
             ['errors' => $errors,
                 'formRules' => $formRules,
-                'caracteristics' => $caracteristics]
+                'caracteristics' => $caracteristics,]
         );
     }
 
@@ -143,8 +143,8 @@ class AdminController extends AbstractController
                 $addPictures->deleteImage($image);
             }
             $adminRoomManager->delete($postData['id']);
-            header('location:/Admin/rooms');
+            header('location:/Admin/rooms/?success=true');
         }
-        return $this->twig->render('Admin/rooms.html.twig', ['rooms' => $rooms]);
+        return $this->twig->render('Admin/rooms.html.twig', ['rooms' => $rooms,'get'=>$_GET]);
     }
 }
