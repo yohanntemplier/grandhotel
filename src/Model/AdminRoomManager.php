@@ -64,7 +64,7 @@ class AdminRoomManager extends AbstractManager
      */
     public function addPhotosNamesInDatabase(array $photos): void
     {
-        foreach ($photos as $photo) {
+        foreach ($photos['pictures'] as $photo) {
             $statement = $this->pdo->prepare("INSERT INTO `room_photo`
             (`room_id`,`photo_name`)
             VALUES (:room_id, :photo_name);");
