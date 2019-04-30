@@ -4,14 +4,15 @@
 <body>
     <div class="container-fluid">
 
-        <div class="jumbotron-contact"></div>
+
+        <div class="jumbotron jumbotron-contact"></div>
         <div class="contact-title">
         <h1>Contact et Accès</h1>
         </div>
         <div class="row">
         <div class="col-form-contact col-lg-6">
             <h2>Contactez-nous</h2>
-            {% if get.id == review.id %}
+            {% if get.success == true %}
                 <div class="col-11 text-success text-center">Votre modification a bien été prise en compte</div>
             {% endif %}
             <form method="post" action="">
