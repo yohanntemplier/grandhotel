@@ -74,7 +74,7 @@ class AdminController extends AbstractController
                 if (isset($postData['caracteristic'])) {
                     $adminRoomManager->insertCaracteristics($postData);
                 }
-                $photos['roomId']=$lastRoomId;
+                $photos['roomId'] = $lastRoomId;
                 $adminRoomManager->addPhotosNamesInDatabase($photos);
                 header('location:../Admin/rooms/?success=true');
             }
@@ -132,6 +132,20 @@ class AdminController extends AbstractController
     {
         $adminRoomManager = new AdminRoomManager();
         $rooms = $adminRoomManager->selectAll();
+
+
+        if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+            $postData = $_POST;
+            $addPictures = new AddPictures();
+            $photos = $adminRoomManager->selectPhotoToDelete($postData['id']);
+            foreach ($photos as $photo) {
+                $image = 'assets/images/rooms/' . $photo;
+                $addPictures->deleteImage($image);
+            }
+            $adminRoomManager->delete($postData['id']);
+
+            header('location:/Admin/rooms');
+        }
         return $this->twig->render('Admin/rooms.html.twig', ['rooms' => $rooms]);
     }
 }
