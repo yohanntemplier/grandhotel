@@ -29,14 +29,6 @@ class CleanForm
         $itemToTrim= trim($itemToTrim);
         return $itemToTrim;
     }
-
-    public function trim(string $itemToTrim): string
-    {
-        $itemToTrim = trim($itemToTrim);
-        return $itemToTrim;
-    }
-
-
     /**
      * checks if the concerned rubric is filled with less than the number of caracters authorized
      * @param string $postData
