@@ -67,8 +67,8 @@ class AdminController extends AbstractController
                 $errors = $addPictures->checkSize($errors, $formRules['fileSizeMaxKBytes']);
             }
             if (empty($errors)) {
-                $photos = $addPictures->changePhotoName();
-                $addPictures->transferFiles($photos);
+                $photos['pictures'] = $addPictures->changePhotoName();
+                $addPictures->transferFiles($photos['pictures']);
                 $lastRoomId = $adminRoomManager->insert($postData);
                 $postData['roomId'] = $lastRoomId;
                 if (isset($postData['caracteristic'])) {
@@ -83,7 +83,7 @@ class AdminController extends AbstractController
             'Admin/addroom.html.twig',
             ['errors' => $errors,
                 'formRules' => $formRules,
-                'caracteristics' => $caracteristics]
+                'caracteristics' => $caracteristics,]
         );
     }
 
@@ -143,8 +143,8 @@ class AdminController extends AbstractController
                 $addPictures->deleteImage($image);
             }
             $adminRoomManager->delete($postData['id']);
-            header('location:/Admin/rooms');
+            header('location:/Admin/rooms/?success=true');
         }
-        return $this->twig->render('Admin/rooms.html.twig', ['rooms' => $rooms]);
+        return $this->twig->render('Admin/rooms.html.twig', ['rooms' => $rooms,'get'=>$_GET]);
     }
 }
