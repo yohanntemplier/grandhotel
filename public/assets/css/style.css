@@ -183,10 +183,20 @@ body {
     border: none;
 }
 .services {
-    background-color: rgba(47,61,64,0.6);
-    color: #FFFFFF;
+    background-color: rgba(47,61,64,0.1);
+    color: #2F3B40;
     list-style: disc;
-    border-radius: 0.6vw;
+    border-radius: 0.3vw;
+}
+
+.list-caracteristic{
+    padding-left: 70px;
+
+}
+
+.services h3{
+    text-align: center;
+    font-size: 50px;
 }
 
 .carouselPictureRoomPage {
@@ -209,13 +219,20 @@ body {
 
 /*weekend*/
 
-.weekendtitle h1{
+.jumbotron-weekend{
+
+    background: url("../images/orleans.jpg");
+    height: 10em;
+}
+
+.jumbotron-weekend h1{
     text-align: center;
     font-family: "Dancing Script", sans-serif;
     font-size: 80px;
-    margin-top: 1em;
-    margin-bottom: 1.5em;
+    color: #FFFFFF;
+    padding-top: 70px;
 }
+
 
 .typetitle h2{
     text-align: left;
@@ -359,27 +376,38 @@ body {
 /*seminaire*/
 
 .seminar{
-    margin-bottom: 3em;
+    margin-bottom: 4em;
 }
 
-
-.seminartitle h1{
-    text-align: center;
-    font-family: "Dancing Script", sans-serif;
-    font-size: 80px;
-    margin-top: 1em;
-    margin-bottom: 1.5em;
-}
 
 .jumbotron-seminar{
     background: url("/assets/images/seminaire/reunion.jpg");
     height: 10em;
+    margin-bottom: 4em;
+}
 
+.seminar-title h1{
+    text-align: center;
+    font-family: "Dancing Script", sans-serif;
+    font-size: 80px;
+    color: #FFFFFF;
+    padding-top: 70px;
 }
 
 .col-seminaire-bis{
-    margin-left: 5em;
-    margin-right: 5em;
+    margin-left: 4em;
+    margin-right: 4em;
+}
+
+.col-seminaire-ter{
+    margin-left: 4em;
+    margin-right: 4em;
+}
+
+.title-seminaire{
+    text-align: center;
+    color: white;
+    vertical-align: central;
 }
 
 /*endseminaire*/
@@ -402,18 +430,6 @@ hr{
     color:#2F3B40;
     height: 25px;
     size: 25px;
-}
-
-
-.col-seminaire-ter{
-    margin-left: 5em;
-    margin-right: 5em;
-}
-
-.title-seminaire{
-    text-align: center;
-    color: white;
-    vertical-align: central;
 }
 
 /* EndFooter */

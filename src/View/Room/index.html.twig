@@ -21,6 +21,7 @@
                             <div class="row mb-3 mt-4">
                                 <h3 class="col"> Services</h3>
                             </div>
+                            <div class ="list-caracteristic">
                             <div class="card-text row p-4">
                                 {% for caracteristic in caracteristics[key] %}
                                     {% if loop.index0 is even %}
@@ -36,6 +37,7 @@
                                         </ul>
                                     {% endif %}
                                 {% endfor %}
+                            </div>
                             </div>
                         </div>
                     </div>
