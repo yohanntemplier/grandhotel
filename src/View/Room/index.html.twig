@@ -1,11 +1,13 @@
 {% extends 'layoutVisitor.html.twig' %}
 {% block title %}Chambres Grand Hôtel{% endblock %}
 {% block content %}
+    <div class ="roomtitle">
     <h1>Les chambres du Grand Hôtel d'Orléans</h1>
+    </div>
     {% for key, room in rooms %}
         <div class="card roomCard mb-3 pb-3 mt-4">
             <div class="row m-4 align-items-start CarouselPageChambres
-            {% if loop.index1 is even %}d-flex flex-row-reverse {% endif %}">
+            {% if loop.index0 is even %}d-flex flex-row-reverse {% endif %}">
                 <div class="col-md-6 ml-auto mr-auto">
                     <div class="card-body">
                         <div class="row">
@@ -43,9 +45,7 @@
                         <div class="carousel-inner">
                             {% for photo in photos[key] %}
                                 <div class="carousel-item {% if loop.first %}active{% endif %}">
-                                    <img class="carouselPictureRoomPage"
-                                         src="/assets/images/rooms/{{ photo.photo_name }}"
-                                         alt="photo chambre">
+                                    <img class="carouselPictureRoomPage" src="/assets/images/rooms/{{ photo.photo_name }}" alt="photo chambre">
                                 </div>
                             {% endfor %}
                         </div>
@@ -67,3 +67,4 @@
         </div>
     {% endfor %}
 {% endblock %}
+

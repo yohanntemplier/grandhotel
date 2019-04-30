@@ -8,10 +8,10 @@
 
 namespace App\Controller;
 
-class GaleryController extends AbstractController
+class WeekEndController extends AbstractController
 {
     /**
-     * Display home page
+     * Display week end page
      *
      * @return string
      * @throws \Twig\Error\LoaderError
@@ -20,6 +20,6 @@ class GaleryController extends AbstractController
      */
     public function index()
     {
-        return $this->twig->render('Galery/index.html.twig');
+        return $this->twig->render('WeekEnd/index.html.twig');
     }
 }
