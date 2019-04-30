@@ -1,19 +1,13 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: aurelwcs
- * Date: 08/04/19
- * Time: 18:40
- */
+
 
 namespace App\Controller;
 
 use App\Model\RoomManager;
 
-class HomeController extends AbstractController
+class RoomController extends AbstractController
 {
     /**
-     * Display home page
      * @return string
      * @throws \Twig\Error\LoaderError
      * @throws \Twig\Error\RuntimeError
@@ -22,11 +16,18 @@ class HomeController extends AbstractController
     public function index()
     {
         $photosPerRoom = [];
+        $caracteristicsPerRoom = [];
+
         $roomManager = new RoomManager();
         $rooms = $roomManager->selectAll();
         foreach ($rooms as $room) {
+            $caracteristicsPerRoom[] = $roomManager->selectCaracteristics($room['id']);
             $photosPerRoom[] = $roomManager->selectPhotos($room['id']);
         }
-        return $this->twig->render('Home/index.html.twig', ['rooms' => $rooms, 'photos' => $photosPerRoom]);
+
+        return $this->twig->render('Room/index.html.twig', [
+            'rooms' => $rooms,
+            'photos' => $photosPerRoom,
+            'caracteristics' => $caracteristicsPerRoom]);
     }
 }
