@@ -73,4 +73,25 @@ class AdminRoomManager extends AbstractManager
             $statement->execute();
         }
     }
+
+    public function delete(int $id): void
+    {
+        // prepared request
+        $statement = $this->pdo->prepare("DELETE FROM $this->table WHERE id=:id");
+        $statement->bindValue('id', $id, \PDO::PARAM_INT);
+        $statement->execute();
+    }
+
+    /**
+     * @param string $roomId
+     * @return array
+     */
+    public function selectPhotoToDelete(string $roomId): array
+    {
+        return $this->pdo->query(
+            "SELECT photo_name FROM room_photo AS rp JOIN room ON
+    rp.room_id = room.id 
+    WHERE room.id ='$roomId';"
+        )->fetchAll();
+    }
 }
