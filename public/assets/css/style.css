@@ -192,7 +192,89 @@ body {
 
 }
 
+/*weekend*/
 
+.weekendtitle h2{
+    text-align: center;
+    font-family: "Dancing Script", sans-serif;
+    font-size: 80px;
+    margin-top: 1em;
+    margin-bottom: 1.5em;
+}
+
+.typetitle h2{
+    text-align: left;
+    font-family: "Dancing Script", sans-serif;
+    font-size: 50px;
+    margin-top: 1em;
+    margin-bottom: 1.5em;
+    text-decoration-line: underline;
+}
+
+.card-weekend {
+    margin-bottom: 4em;
+}
+
+.card-img-weekend{
+    max-width: 400px;
+}
+
+.card-img-weekend:hover{
+    filter: brightness(40%);
+}
+
+.card-img-weekend1{
+    max-width: 400px;
+}
+
+.card-img-weekend1{
+    filter: brightness(40%);
+}
+
+.card-img-weekend1:hover{
+    filter: brightness(100%);
+
+}
+
+.buttontext:hover{
+    display: none;
+}
+.text-modal p{
+    font-size: 25px;
+}
+.modal-title-week{
+    font-size: 30px;
+}
+.weekendpage{
+    margin-right: -8em;
+}
+
+.buttontext h2{
+    position: absolute;
+    top: 45%;
+    font-size: 40px;
+    padding-left: 20px;
+    color: #FFFFFF;
+}
+
+.buttontext1 h2{
+    position: absolute;
+    top: 45%;
+    font-size: 40px;
+    padding-left: 100px;
+    color: #FFFFFF;
+}
+
+.buttontext2 h2{
+    position: absolute;
+    top: 45%;
+    font-size: 40px;
+    padding-left: 70px;
+    color: #FFFFFF;
+
+}
+
+/*endweekend*/
 
 
 /* Footer */
