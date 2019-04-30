@@ -139,11 +139,10 @@ class AdminController extends AbstractController
             $addPictures = new AddPictures();
             $photos = $adminRoomManager->selectPhotoToDelete($postData['id']);
             foreach ($photos as $photo) {
-                $image = 'assets/images/rooms/' . $photo;
+                $image = 'assets/images/rooms/' . $photo['photo_name'];
                 $addPictures->deleteImage($image);
             }
             $adminRoomManager->delete($postData['id']);
-
             header('location:/Admin/rooms');
         }
         return $this->twig->render('Admin/rooms.html.twig', ['rooms' => $rooms]);
