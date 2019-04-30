@@ -63,9 +63,9 @@ class ContactController extends AbstractController
             );
             if (empty($errors)) {
                 $contactManager->insert($postData);
-                header('location: #');
+                header('location:index/?success=true&');
             }
         }
-        return $this->twig->render('Contact/index.html.twig', ['errors' => $errors]);
+        return $this->twig->render('Contact/index.html.twig', ['errors' => $errors, 'get' => $_GET,]);
     }
 }
