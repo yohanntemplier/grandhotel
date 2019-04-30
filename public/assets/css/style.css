@@ -209,13 +209,27 @@ body {
 
 /*weekend*/
 
-.weekendtitle h1{
+.jumbotron-weekend{
+
+    background: url("../images/orleans.jpg");
+    height: 10em;
+}
+
+.jumbotron-weekend h1{
     text-align: center;
     font-family: "Dancing Script", sans-serif;
     font-size: 80px;
-    margin-top: 1em;
-    margin-bottom: 1.5em;
+    color: #FFFFFF;
+    padding-top: 70px;
 }
+
+/*.weekendtitle h1{
+    text-align: center;
+    font-family: "Dancing Script", sans-serif;
+    font-size: 80px;
+    margin-top: 2em;
+    color: #FFFFFF;
+}*/
 
 .typetitle h2{
     text-align: left;
