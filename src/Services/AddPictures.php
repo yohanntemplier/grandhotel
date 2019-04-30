@@ -70,4 +70,14 @@ class AddPictures
             }
         }
     }
+
+    /**
+     * @param string $image
+     */
+    public function deleteImage(string $image): void
+    {
+        if (file_exists($image)) {
+            (unlink($image));
+        }
+    }
 }
