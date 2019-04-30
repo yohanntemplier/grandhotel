@@ -428,11 +428,11 @@ hr{
 
 
 .jumbotron-contact{
-    background: url("../images/gares(1).jpg");
     height: 10em;
     margin-left: -0.55em;
     margin-right: -0.55em;
-
+    background-image: url("../images/orlnight.jpg");
+    background-size: cover;
 }
 
 .row-form{
@@ -446,8 +446,22 @@ hr{
     margin-bottom: 1.5em;
 }
 
+.btn-form{
+    background-color: #2F3B40;
+    color: white;
+}
 
+.list-access{
+    font-size: 13px;
+}
+.p-form{
+    font-size: 18px;
+}
 
+.title-form{
+    color: white;
+    text-align: center;
+}
 
 
 
