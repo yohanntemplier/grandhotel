@@ -18,18 +18,17 @@ class CleanForm
         }
         return $errors;
     }
-
     /**
      * trims the item.
      * @param string $itemToTrim
      * @return string
      */
-    public function trim(string $itemToTrim): string
+
+    public function trim(string $itemToTrim):string
     {
-        $itemToTrim = trim($itemToTrim);
+        $itemToTrim= trim($itemToTrim);
         return $itemToTrim;
     }
-
     /**
      * checks if the concerned rubric is filled with less than the number of caracters authorized
      * @param string $postData
@@ -45,7 +44,6 @@ class CleanForm
         }
         return $errors;
     }
-
     /**
      * Checks if a bool is returned by $_POST
      * @param array $errors
