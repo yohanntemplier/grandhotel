@@ -9,16 +9,17 @@ use App\Model\AdminReviewManager;
 
 class AdminController extends AbstractController
 {
-   /**Initializes the admin index.
+    /**Initializes the admin index.
      * @return string
      * @throws \Twig\Error\LoaderError
      * @throws \Twig\Error\RuntimeError
      * @throws \Twig\Error\SyntaxError
      */
- public function index()
+    public function index()
     {
         return $this->twig->render('Admin/index.html.twig');
     }
+
     /**
      * Displays the page addroom, checks the form, and sends the items in the database.
      * @return string
@@ -70,9 +71,12 @@ class AdminController extends AbstractController
                 $addPictures->transferFiles($photos);
                 $lastRoomId = $adminRoomManager->insert($postData);
                 $postData['roomId'] = $lastRoomId;
-                $adminRoomManager->insertCaracteristics($postData);
-                $adminRoomManager->addPhotosNamesInDatabase($photos, $lastRoomId);
-                header('location:../Admin/rooms?success=true');
+                if (isset($postData['caracteristic'])) {
+                    $adminRoomManager->insertCaracteristics($postData);
+                }
+                $photos['roomId']=$lastRoomId;
+                $adminRoomManager->addPhotosNamesInDatabase($photos);
+                header('location:../Admin/rooms/?success=true');
             }
         }
         return $this->twig->render(
