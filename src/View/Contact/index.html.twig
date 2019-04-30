@@ -5,13 +5,12 @@
     <div class="container-fluid">
 
         <div class="jumbotron">
-           <!-- <h1 class="display-4">Contact et Accès</h1> -->
         </div>
         <h1>Contact et Accès</h1>
         <div class="row">
         <div class="col-form-contact col-lg-6">
             <h2>Contactez-nous</h2>
-            {% if get.id == review.id %}
+            {% if get.success == true %}
                 <div class="col-11 text-success text-center">Votre modification a bien été prise en compte</div>
             {% endif %}
             <form method="post" action="">
