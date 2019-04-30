@@ -195,7 +195,7 @@ body {
 }
 
 
-.roomtitle h2{
+.roomtitle h1{
     text-align: center;
     font-family: "Dancing Script", sans-serif;
     font-size: 80px;
@@ -209,7 +209,7 @@ body {
 
 /*weekend*/
 
-.weekendtitle h2{
+.weekendtitle h1{
     text-align: center;
     font-family: "Dancing Script", sans-serif;
     font-size: 80px;
@@ -263,8 +263,6 @@ body {
 }
 .modal-title-week{
     font-size: 30px;
-}
-.weekendpage{
 }
 
 .buttontext h2{
@@ -364,13 +362,13 @@ body {
     margin-bottom: 3em;
 }
 
-.seminartitle{
-    margin-top: 3em;
-    margin-bottom: 4em;
-}
 
-.seminartitle h2{
+.seminartitle h1{
+    text-align: center;
+    font-family: "Dancing Script", sans-serif;
     font-size: 80px;
+    margin-top: 1em;
+    margin-bottom: 1.5em;
 }
 
 .jumbotron-seminar{
@@ -440,4 +438,18 @@ hr{
 .row-form{
     margin-top: 90px;
 }
+.contact-title h1{
+    text-align: center;
+    font-family: "Dancing Script", sans-serif;
+    font-size: 80px;
+    margin-top: 1em;
+    margin-bottom: 1.5em;
+}
+
+
+
+
+
+
+
 
