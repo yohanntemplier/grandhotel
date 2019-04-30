@@ -1,15 +1,17 @@
 {% extends 'layoutAdmin.html.twig' %}
 
 {% block content %}
-
     <div class="text-center"><a class="btn btn-success mt-5 mb-5" href="/Admin/addroom" role="button">Ajouter une
-            chambre</a></div>
+            chambre</a>
+        {% if get.success == 'true' %}
+            <p class="col-12 text-success"> Votre modification a bien été prise en compte</p></div>
+        {% endif %}
+
     {% for room in rooms %}
         <div class="row m-0 pt-3 pb-2 border-top border-bottom {% if loop.index is odd %}bg-light{% endif %}">
             <p class="col-2 text-body">{{ room.name }}<p>
-            <div class="col-2"><a class="btn btn-primary" href="#" role="button">Modifier</a></div>
-            <div class="col-2"><a class="btn btn-primary" href="#" role="button">supprimer</a></div>
-            <button type="button" class=" btn btn-primary " data-toggle="modal"
+            <button type="button" class=" ml-5 mr-5 btn btn-primary" href="#" role="button">Modifier</button>
+            <button type="button" class=" ml-5 mr-5 btn btn-primary " data-toggle="modal"
                     data-target="#modal{{ loop.index }}">
                 Supprimer la chambre
             </button>
