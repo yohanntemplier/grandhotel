@@ -27,9 +27,9 @@ class AdminRoomManager extends AbstractManager
     /**
      * Transfers the room data to the database
      * @param array $data
-     * @return int
+     * @return string
      */
-    public function insert(array $data): int
+    public function insert(array $data)
     {
         // prepared request
         $statement = $this->pdo->prepare("INSERT INTO `room` (`name` , `description` , `price`)
@@ -37,13 +37,11 @@ class AdminRoomManager extends AbstractManager
         $statement->bindValue('name', $data['name'], \PDO::PARAM_STR);
         $statement->bindValue('description', $data['description'], \PDO::PARAM_STR);
         $statement->bindValue('price', $data['price'], \PDO::PARAM_INT);
-        $statement->execute();
         if ($statement->execute()) {
-            $lastInsertId = $this->pdo->lastInsertId();
+            return $this->pdo->lastInsertId();
         }
-        return $lastInsertId;
     }
-    
+
     /**
      * transfers the caracteristic data to the database
      * @param array $data
@@ -63,15 +61,14 @@ class AdminRoomManager extends AbstractManager
     /**
      * transfers the photos names in the database (only the names, not the files!)
      * @param array $photos
-     * @param int $roomId
      */
-    public function addPhotosNamesInDatabase(array $photos, int $roomId): void
+    public function addPhotosNamesInDatabase(array $photos): void
     {
         foreach ($photos as $photo) {
             $statement = $this->pdo->prepare("INSERT INTO `room_photo`
             (`room_id`,`photo_name`)
             VALUES (:room_id, :photo_name);");
-            $statement->bindValue('room_id', $roomId, \PDO::PARAM_INT);
+            $statement->bindValue('room_id', $photos['roomId'], \PDO::PARAM_INT);
             $statement->bindValue('photo_name', $photo, \PDO::PARAM_STR);
             $statement->execute();
         }
