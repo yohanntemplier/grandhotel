@@ -121,7 +121,7 @@
 
 }
 
-.galerytitle h2{
+.galerytitle h1{
     text-align: center;
     font-family: "Dancing Script", sans-serif;
     font-size: 80px;
@@ -148,15 +148,12 @@
 /* EndGaleryPage*/
 
 /*Général*/
-h1{
-    font-family: "Dancing Script", sans-serif;
-    font-size: 90px;
-}
 
-h2{
-    font-size: 35pt;
-    font-family: "Dancing Script", sans-serif;
+h1{
     text-align: center;
+    font-family: "Dancing Script", sans-serif;
+    font-size: 80px;
+    margin-bottom: 1.5em;
 }
 
 h3 {
@@ -285,15 +282,15 @@ body {
 .buttontext h2{
     position: absolute;
     top: 45%;
-    font-size: 40px;
-    padding-left: 20px;
+    font-size: 30px;
+    padding-left: 40px;
     color: #FFFFFF;
 }
 
 .buttontext1 h2{
     position: absolute;
     top: 45%;
-    font-size: 40px;
+    font-size: 30px;
     padding-left: 100px;
     color: #FFFFFF;
 }
@@ -301,8 +298,8 @@ body {
 .buttontext2 h2{
     position: absolute;
     top: 45%;
-    font-size: 40px;
-    padding-left: 70px;
+    font-size: 30px;
+    padding-left: 80px;
     color: #FFFFFF;
 
 }
@@ -458,7 +455,6 @@ hr{
     text-align: center;
     font-family: "Dancing Script", sans-serif;
     font-size: 80px;
-    margin-top: 1em;
     margin-bottom: 1.5em;
 }
 
@@ -474,9 +470,10 @@ hr{
     font-size: 18px;
 }
 
-.title-form{
+.title-form {
     color: white;
     text-align: center;
+}
 
 /*review*/
 
