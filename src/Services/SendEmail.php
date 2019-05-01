@@ -1,19 +1,22 @@
 <?php
 
-
 namespace App\Services;
 
+use App\Controller\AbstractController;
 use Swift_Mailer;
 use Swift_Message;
 use Swift_SmtpTransport;
 
-class SendEmail
+class SendEmail extends AbstractController
 {
     /**
      * sends a message to the hotel mailbox
      * @param string $expeditorName
      * @param string $expeditorEmail
      * @param string $submitedMessage
+     * @throws \Twig\Error\LoaderError
+     * @throws \Twig\Error\RuntimeError
+     * @throws \Twig\Error\SyntaxError
      */
     public function sendEmail(string $expeditorName, string $expeditorEmail, string $submitedMessage): void
     {
@@ -28,13 +31,12 @@ class SendEmail
         $message->setFrom([APP_MAIL_USER => $expeditorName]);
         $message->addTo(APP_MAIL_USER, 'Vous');
 
-
-        $message->setBody($submitedMessage . '
-        
-        
-        Ce message vous a été envoyé par ' . $expeditorName . '. vous pouvez lui répondre sur '
-            . $expeditorEmail . ' .');
-
+        $message->setBody($this->twig->render(
+            'Email.html.twig',
+            ['expeditorName' => $expeditorName,
+                'expeditorEmail' => $expeditorEmail,
+                'submitedMessage' => $submitedMessage]
+        ), 'text/html');
         $mailer->send($message);
     }
 }
