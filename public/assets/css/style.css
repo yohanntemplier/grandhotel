@@ -150,10 +150,13 @@
 /*Général*/
 
 h1{
-    text-align: center;
     font-family: "Dancing Script", sans-serif;
-    font-size: 80px;
-    margin-bottom: 1.5em;
+    font-size: 90px;
+}
+h2{
+    font-size: 35pt;
+    font-family: "Dancing Script", sans-serif;
+    text-align: center;
 }
 
 h3 {
@@ -282,26 +285,23 @@ body {
 .buttontext h2{
     position: absolute;
     top: 45%;
-    font-size: 30px;
-    padding-left: 40px;
+    font-size: 40px;
+    padding-left: 20px;
     color: #FFFFFF;
 }
-
 .buttontext1 h2{
     position: absolute;
     top: 45%;
-    font-size: 30px;
+    font-size: 40px;
     padding-left: 100px;
     color: #FFFFFF;
 }
-
 .buttontext2 h2{
     position: absolute;
     top: 45%;
-    font-size: 30px;
-    padding-left: 80px;
+    font-size: 40px;
+    padding-left: 70px;
     color: #FFFFFF;
-
 }
 
 /*endweekend*/
@@ -477,6 +477,19 @@ hr{
 
 /*review*/
 
+.btn-review{
+    background-color: rgba(47,61,64,0.6);
+    color: #FFFFFF;
+    font-size: 25px;
+    margin-bottom: 5em;
+    margin-left: 30em;
+}
+
+.btn-review:hover{
+    color: #FFFFFF;
+    background-color: #2F3B40;
+}
+
 .card-review{
     margin-bottom: 3em;
     background-color: #FFFFFF;
@@ -506,7 +519,7 @@ hr{
 }
 
 .review{
-    font-size: 30px;
+    font-size: 25px;
     padding-top: 10px;
 
 }
@@ -516,5 +529,59 @@ hr{
 }
 
 
+/*addreview*/
+
+.addreview-title h1{
+    text-align: center;
+    font-family: "Dancing Script", sans-serif;
+    font-size: 80px;
+    margin-top: 1em;
+    margin-bottom: 1.5em;
+}
+
+.pseudo{
+    margin-bottom: 2em;
+}
+
+.comment{
+    margin-bottom: 2em;
+}
+
+.notation{
+    margin-bottom: 2em;
+}
+
+.notation input{
+    margin-left: 0.3em;
+    margin-right: 1em;
+}
 
 
+
+.btn-addreview{
+    background-color: rgba(47,61,64,0.6);
+    color: #FFFFFF;
+    font-size: 20px;
+    margin-right: 2em;
+}
+
+.btn-addreview:hover{
+    color: #FFFFFF;
+    background-color: #2F3B40;
+}
+
+.btn-addreview1{
+    background-color: rgba(47,61,64,0.6);
+    color: #FFFFFF;
+    font-size: 20px;
+    margin-left: 2em;
+}
+
+.btn-addreview1:hover{
+    color: #FFFFFF;
+    background-color: #2F3B40;
+}
+
+.summit-review{
+    margin-bottom: 2em;
+}
