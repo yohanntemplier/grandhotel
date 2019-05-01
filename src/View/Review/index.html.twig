@@ -11,10 +11,9 @@
         {% else %}
         <a class="btn btn-primary" href="/review/addreview" role="button">Partagez votre expérience</a>
         {% endif %}
-   <div class="row justify-content-around">
+        <div class="row justify-content-around">
             {% for review in reviews %}
-                <div class="card-review col-lg-5 col-md-12 col-sm-12">
-
+                    <div class="card-review col-lg-5 col-md-12 col-sm-12">
                         <div class="header-review">
                             <div class="card-header">
                             {{ review.name }} <div class="note">Note : {{ review.grade }}/{{ maximumGrade }}</div>
@@ -26,10 +25,8 @@
                                 <footer class="date">Date de publication:  {{ review.date }}</footer>
                             </blockquote>
                         </div>
-
-                </div>
+                    </div>
             {% endfor %}
-
         </div>
     </div>
 {% endblock %}
