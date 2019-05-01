@@ -1,0 +1,297 @@
+{% extends 'layoutVisitor.html.twig' %}
+
+{% block content %}
+    <div class="jumbotron-weekend">
+        <h1>Un Week-End à Orléans</h1>
+    </div>
+    <div class="weekendpage">
+    <div class="container-fluid">
+        <div class="weekend">
+
+            <div class="typetitle">
+                <h2>Les prochains évènements à Orléans</h2>
+            </div>
+
+            <div class="row justify-content-around">
+
+                <div class="card-weekend col-lg-4 col-md-6 col-sm-12">
+
+                        <div class="col-md-12">
+                            <button type="button" class = "btn">
+                            <img src="/assets/images/WE/jeanne.jpg" class="card-img-weekend" alt="jeanne d'arc" data-toggle="modal" data-target="#exampleModal"/>
+                            </button>
+                        </div>
+
+                    <!-- Modal -->
+                    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-lg" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title-week" id="exampleModalLabel">Fêtes Johanniques</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                </div>
+                                <div class="modal-body row">
+                                    <div class="col-lg-6 col-md-12">
+                                        <img src="/assets/images/WE/jeanne.jpg" class="card-img-top" alt="Jeanne d'arc" />
+                                    </div>
+                                    <div class="text-modal col-lg-6 col-md-12">
+                                        <p>Les fêtes johanniques d'Orléans sont une manifestation annuelle française célébrée à Orléans (Loiret) depuis 1431 ou 1432 pour fêter la délivrance, le 8 mai 1429, par Jeanne d'Arc et son armée, de la ville assiégée par les Anglais. Cette manifestation est inscrite depuis mars 2018 à l'inventaire du patrimoine culturel immatériel en France en tant que pratique rituelle et festive. </p>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card-weekend col-lg-4 col-md-6 col-sm-12">
+
+                    <div class="col-md-12">
+                        <button type="button" class = "btn">
+                            <img src="/assets/images/WE/jardins.jpg" class="card-img-weekend" alt="Affiche du festival parcours et jardins" data-toggle="modal" data-target="#exampleModal1"/>
+                        </button>
+                    </div>
+
+                    <!-- Modal -->
+                    <div class="modal fade" id="exampleModal1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-lg" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title-week" id="exampleModalLabel">Festival Parcours et Jardins</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                </div>
+                                <div class="modal-body row">
+                                    <div class="col-lg-6 col-md-12">
+                                        <img src="/assets/images/WE/jardins.jpg" class="card-img-top" alt="Affiche du festival parcours et jardins" />
+                                    </div>
+                                    <div class="text-modal col-lg-6 col-md-12">
+                                        <p>Le festival Parcours & Jardins est organisé chaque année depuis plus de 15 ans par l'association ABCD. Il se déroule du 17 au 19 mai dans le quartier Bourgogne, au cœur du vieille Orléans. Rues, ruelles, cours, jardins, porches, cours d'école, lieux publics, lieux privés, ... tous sont agités et égayer par les concerts, spectacles, performances et autre surprises proposées par une soixantaine d'artistes amateurs sur les trois jours du festival. </p>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card-weekend col-lg-4 col-md-6 col-sm-12">
+
+                    <div class="col-md-12">
+                        <button type="button" class = "btn">
+                            <img src="/assets/images/WE/glace.jpg" class="card-img-weekend" alt="Gala de danse sur glace" data-toggle="modal" data-target="#exampleModal2"/>
+                        </button>
+                    </div>
+
+                    <!-- Modal -->
+                    <div class="modal fade" id="exampleModal2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-lg" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title-week" id="exampleModalLabel">Gala de danse sur glace</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                </div>
+                                <div class="modal-body row">
+                                    <div class="col-lg-6 col-md-12">
+                                        <img src="/assets/images/WE/glace.jpg" class="card-img-top" alt="Gala de danse sur glace" />
+                                    </div>
+                                    <div class="text-modal col-lg-6 col-md-12">
+                                        <p>L'Association Sportive Orléanaise de Danse sur Glace organise chaque année son gala de clôture. Cette année le show aura lieu le 18 mai prochain à 20h30 à la Patinoire du Baron à Orléans. Sur le thème "Retour vers le Futur de l'ASODG" les patineurs petits et grands vont faire voyager plus de 600 spectateurs à travers le temps. Une chorale et un numéro de contorsion viendront alimenter cette soirée.... On vous attend nombreux !  </p>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card-weekend col-lg-4 col-md-6 col-sm-12">
+
+                    <div class="col-md-12">
+                        <button type="button" class = "btn">
+                            <img src="/assets/images/WE/biodiversite.jpg" class="card-img-weekend" alt="24h de biodiversite" data-toggle="modal" data-target="#exampleModal3"/>
+                        </button>
+                    </div>
+
+                    <!-- Modal -->
+                    <div class="modal fade" id="exampleModal3" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-lg" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title-week" id="exampleModalLabel">Les 24h de la biodiversité</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                </div>
+                                <div class="modal-body row">
+                                    <div class="col-lg-6 col-md-12">
+                                        <img src="/assets/images/WE/biodiversite.jpg" class="card-img-top" alt="24h de biodiversite" />
+                                    </div>
+                                    <div class="text-modal col-lg-6 col-md-12">
+                                        <p>Balades naturalistes, marches, expositions, conférences, ateliers découverte, initiations mais aussi contes, troc et vide-jardins, portes ouvertes, parcours, installations artistiques, accrobranche…. composent ce panel d’activités nature, culturelles, sportives et familiales à vivre en solo, entre amis ou en famille.  </p>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card-weekend col-lg-4 col-md-6 col-sm-12">
+
+                    <div class="col-md-12">
+                        <button type="button" class = "btn">
+                            <img src="/assets/images/WE/geomotifs.jpg" class="card-img-weekend" alt="geomotifs" data-toggle="modal" data-target="#exampleModal4"/>
+                        </button>
+                    </div>
+
+                    <!-- Modal -->
+                    <div class="modal fade" id="exampleModal4" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-lg" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title-week" id="exampleModalLabel">Géomotifs - jeu - application numérique</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                </div>
+                                <div class="modal-body row">
+                                    <div class="col-lg-6 col-md-12">
+                                        <img src="/assets/images/WE/geomotifs.jpg" class="card-img-top" alt="geomotifs" />
+                                    </div>
+                                    <div class="text-modal col-lg-6 col-md-12">
+                                        <p>Munis de votre téléphone, téléchargez l’application… vous voilà prêt pour une balade interactive dans la ville !</p>
+                                        <p>A votre rythme, suivez la géolocalisation pour trouver et collecter les motifs qui décorent nos monuments. Illustrations et textes vous en apprennent plus sur l’histoire d’Orléans et ses monuments remarquables.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card-weekend col-lg-4 col-md-6 col-sm-12">
+
+                    <div class="col-md-12">
+                        <button type="button" class = "btn">
+                            <img src="/assets/images/WE/archeologie.jpg" class="card-img-weekend" alt="journee de l'archeologie" data-toggle="modal" data-target="#exampleModal5"/>
+                        </button>
+                    </div>
+
+                    <!-- Modal -->
+                    <div class="modal fade" id="exampleModal5" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-lg" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title-week" id="exampleModalLabel">Les journées nationales de l'archéologie</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                </div>
+                                <div class="modal-body row">
+                                    <div class="col-lg-6 col-md-12">
+                                        <img src="/assets/images/WE/archeologie.jpg" class="card-img-top" alt="journee de l'archeologie" />
+                                    </div>
+                                    <div class="text-modal col-lg-6 col-md-12">
+                                        <p>Les archéologues du Pôle d’archéologie de la Ville d’Orléans ainsi que le Musée d’Histoire et d’Archéologie proposent, pour cette 10ème édition, d’accueillir le public au sein d’un véritable village de l’archéologie devant le musée d’Histoire et d’Archéologie d’Orléans.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="typetitle">
+                <h2>Sortir à Orléans</h2>
+            </div>
+
+            <div class="row justify-content-around">
+
+                <div class="card-weekend col-lg-4 col-md-6 col-sm-12">
+
+                    <div class="col-md-12">
+                        <button type="button" class = "btn">
+                            <img src="/assets/images/WE/cathedrale.jpg" class="card-img-weekend1" alt="cathedrale orleans" data-toggle="modal" data-target="#exampleModal6"/>
+                            <div class ="buttontext"><h2>La Cathédrale d'Orléans</h2></div>
+                        </button>
+                    </div>
+
+                    <!-- Modal -->
+                    <div class="modal fade" id="exampleModal6" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-lg" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title-week" id="exampleModalLabel">La cathédrale d'Orléans</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                </div>
+                                <div class="modal-body row">
+                                    <div class="col-lg-6 col-md-12">
+                                        <img src="/assets/images/WE/cathedrale.jpg" class="card-img-top" alt="cathedrale orleans" />
+                                    </div>
+                                    <div class="text-modal col-lg-6 col-md-12">
+                                        <p>La cathédrale Sainte-Croix est une cathédrale catholique romaine de type gothique située à Orléans dans le département du Loiret et la région Centre-Val de Loire. Elle est le siège épiscopal du diocèse d'Orléans. La cathédrale est dédiée à la Sainte Croix. La cathédrale Sainte-Croix d'Orléans fait l’objet d’un classement au titre des monuments historiques par la liste de 1862</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card-weekend col-lg-4 col-md-6 col-sm-12">
+
+                    <div class="col-md-12">
+                        <button type="button" class = "btn">
+                            <img src="/assets/images/WE/parc-floral.jpg" class="card-img-weekend1" alt="parc floral orleans" data-toggle="modal" data-target="#exampleModal7"/>
+                            <div class ="buttontext1"><h2>Le Parc Floral</h2></div>
+                        </button>
+                    </div>
+
+                    <!-- Modal -->
+                    <div class="modal fade" id="exampleModal7" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-lg" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title-week" id="exampleModalLabel">Le Parc Floral</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                </div>
+                                <div class="modal-body row">
+                                    <div class="col-lg-6 col-md-12">
+                                        <img src="/assets/images/WE/parc-floral.jpg" class="card-img-top" alt="parc floral orleans" />
+                                    </div>
+                                    <div class="text-modal col-lg-6 col-md-12">
+                                        <p>A découvrir en famille ou avec des amis, le Parc Floral de La Source programme chaque année des animations pour le grand public : Salon des Arts du jardin, conférences, spectacles nocturnes. Il organise des ateliers destinés aux enfants pour leur apprendre à observer, comprendre et respecter la nature. </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card-weekend col-lg-4 col-md-6 col-sm-12">
+
+                    <div class="col-md-12">
+                        <button type="button" class = "btn">
+                            <img src="/assets/images/WE/Ile-Charlemagne.jpg" class="card-img-weekend1" alt="Ile Charlemagne" data-toggle="modal" data-target="#exampleModal8"/>
+                            <div class ="buttontext2"><h2>L'Ile Charlemagne</h2></div>
+                        </button>
+                    </div>
+
+                    <!-- Modal -->
+                    <div class="modal fade" id="exampleModal8" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-lg" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title-week" id="exampleModalLabel">la base de loisirs de l'Ile Charlemagne</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                </div>
+                                <div class="modal-body row">
+                                    <div class="col-lg-6 col-md-12">
+                                        <img src="/assets/images/WE/Ile-Charlemagne.jpg" class="card-img-top" alt="Ile Charlemagne" />
+                                    </div>
+                                    <div class="text-modal col-lg-6 col-md-12">
+                                        <p>C'est un espace privilégié pour se détendre, faire du vélo, du jogging, pratiquer bon nombre d'activités nautiques. Le site comprend une vaste plaine de jeux pour les enfants et de nombreux terrains d'activité spécialisés : beach volley, basket, handball, minifootball, baseball, volley ball, ping pong, pétanque, paintball (3 terrains), accrobranche (un parc de 8 parcours) et aqua-parc.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    </div>
+{% endblock %}

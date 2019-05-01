@@ -2,16 +2,33 @@
 
 .navbar{
     background-color: #2F3B40;
-    margin-bottom: 10px;
-    font-family: "Dancing Script";
+    font-family: "Dancing Script", sans-serif;
 }
 
 .navbar-brand{
-    font-size: xx-large;
+    font-size: 40pt;
     margin-left: 5px;
     margin-right: 50px;
     color: whitesmoke;
 }
+
+.navbar-brand-resa{
+    font-size: xx-large;
+    color: black;
+}
+
+.btn-resa{
+    background-color: white;
+    position: absolute;
+    right: 0;
+    margin-right: 1em;
+}
+
+.navbar-brand-resa:hover{
+    text-decoration: underline;
+    color: darkslateblue;
+}
+
 
 .navbar-brand:hover{
     text-decoration: underline;
@@ -21,7 +38,6 @@
 .nav-link{
     font-size: xx-large;
     color: whitesmoke;
-    margin-left: 20px;
 }
 
 .nav-link:hover{
@@ -34,72 +50,475 @@
 }
 
 .nav-item{
-    margin-right: 100px;
-}
-
-.reservation{
-    border: 1px solid whitesmoke;
-    margin-left: auto;
-    margin-right: auto;
-    width: 200px;
+    margin-right: 30px;
 }
 
 /*CarrouselIndex*/
 
-.carousel img {
-    background-size: cover;
-    width: auto;
-    height: 400px;
+.carousel{
+
 }
+
+.picture img {
+    object-fit: cover;
+    height: 450px;
+    filter: brightness(80%);
+}
+
+.text h5 {
+    color: #FFFFF;
+    font-size: 60px;
+    font-family: "Dancing Script", sans-serif;
+}
+
+.text p{
+    color: #FFFFF;
+    font-size: 30px;
+    font-family: "Roboto", sans-serif;
+}
+
 /* EndCarrouselIndex*/
 
+/*Accueil_Services*/
+
+.option{
+    margin-bottom: 3em;
+    text-align: center;
+}
+
+.homeServices{
+    margin-top: 2em;
+    margin-bottom: 3em;
+}
+
+.icone{
+    max-width: 8%;
+    margin-right: 0.5em;
+}
+
+.service{
+    margin-left: 3em;
+    padding-left: 45px;
+}
+
+/*end Acceuil_Services*/
+
+/*GaleryPage*/
+
+.galery{
+    margin-top: 2em;
+    margin-bottom: 2em;
+    margin-left: 2em;
+    margin-right: 2em;
+}
+
+.card-gallery{
+    margin-bottom: 2em;
+    margin-left: 1em;
+    margin-right: 1em;
+    background-color: #2F3B40;
+    color: #FFFFFF;
+
+}
+
+.galerytitle h2{
+    text-align: center;
+    font-family: "Dancing Script", sans-serif;
+    font-size: 80px;
+    margin-top: 1em;
+    margin-bottom: 1.5em;
+}
+
+.card-body-gallery {
+    text-align: center;
+    font-family: "Roboto", sans-serif;
+    font-size: 30px;
+}
+
+.img-thumbnail {
+    object-fit: cover;
+    margin-top: 20px;
+    filter: opacity(40%);
+}
+
+.img-thumbnail:hover{
+    filter: brightness(100%);
+}
+
+/* EndGaleryPage*/
+
+/*Général*/
+h1{
+    font-family: "Dancing Script", sans-serif;
+    font-size: 90px;
+}
+
+h2{
+    font-size: 35pt;
+    font-family: "Dancing Script", sans-serif;
+    text-align: center;
+}
+
+h3 {
+    font-size: 30pt;
+    font-family: "Dancing Script", sans-serif;
+}
+
+body {
+
+    background-image: url("/assets/images/ricepaper2.png");
+    font-family: "Roboto", sans-serif;
+    font-size: 20pt;
+}
+
+
+
+/*rooms/index*/
+.roomPage{
+    margin-top: 2em;
+    margin-bottom: 3em;
+}
+
+.roomCard {
+    border: none;
+}
+.services {
+    background-color: rgba(47,61,64,0.1);
+    color: #2F3B40;
+    list-style: disc;
+    border-radius: 0.3vw;
+}
+
+.list-caracteristic{
+    padding-left: 70px;
+
+}
+
+.services h3{
+    text-align: center;
+    font-size: 50px;
+}
+
+.carouselPictureRoomPage {
+    max-width: 110%;
+    max-height: 35vm;
+}
+
+
+.roomtitle h1{
+    text-align: center;
+    font-family: "Dancing Script", sans-serif;
+    font-size: 80px;
+    margin-top: 1em;
+    margin-bottom: 1.5em;
+}
+
+.card-text li{
+    background-color: rgba(47,61,64,0);
+}
+
+/*weekend*/
+
+.jumbotron-weekend{
+
+    background: url("../images/orleans.jpg");
+    height: 10em;
+}
+
+.jumbotron-weekend h1{
+    text-align: center;
+    font-family: "Dancing Script", sans-serif;
+    font-size: 80px;
+    color: #FFFFFF;
+    padding-top: 70px;
+}
+
+
+.typetitle h2{
+    text-align: left;
+    font-family: "Dancing Script", sans-serif;
+    font-size: 50px;
+    margin-top: 1em;
+    margin-bottom: 1.5em;
+    text-decoration-line: underline;
+}
+
+.card-weekend {
+    margin-bottom: 4em;
+}
+
+.card-img-weekend{
+    max-width: 400px;
+}
+
+.card-img-weekend:hover{
+    filter: brightness(40%);
+}
+
+.card-img-weekend1{
+    max-width: 400px;
+}
+
+.card-img-weekend1{
+    filter: brightness(40%);
+}
+
+.card-img-weekend1:hover{
+    filter: brightness(100%);
+
+}
+
+.weekend{
+    margin-left: 3.5em;
+}
+
+.buttontext:hover{
+    display: none;
+}
+.text-modal p{
+    font-size: 25px;
+}
+.modal-title-week{
+    font-size: 30px;
+}
+
+.buttontext h2{
+    position: absolute;
+    top: 45%;
+    font-size: 40px;
+    padding-left: 20px;
+    color: #FFFFFF;
+}
+
+.buttontext1 h2{
+    position: absolute;
+    top: 45%;
+    font-size: 40px;
+    padding-left: 100px;
+    color: #FFFFFF;
+}
+
+.buttontext2 h2{
+    position: absolute;
+    top: 45%;
+    font-size: 40px;
+    padding-left: 70px;
+    color: #FFFFFF;
+
+}
+
+/*endweekend*/
 
 /* Footer */
 .page-footer{
     background-color: #2F3D40;
+    margin-top: 1em;
+    padding-bottom: 20px;
 }
 
 .logo{
-    width: 5em;
+    width: 3em;
 }
 
 .contact{
+    font-size: 20px;
     padding-top: 12px;
     color: #FFFFFF;
+    font-family: "Roboto", sans-serif;
 }
 
 
 .logo1{
-    padding-bottom: 30px;
+   padding-bottom: 30px;
 }
 
+
 .logofooter{
-    width: 22em;
+    color: #FFFFFF;
+    font-family: "Dancing Script", sans-serif;
+    font-size: 3.5em;
+    padding-top: 35px;
   }
 
 .lien{
-    padding-top: 10px;
-    padding-left: 50px;
+    padding-top: 20px;
+    padding-left: 80px;
 }
 /* EndFooter */
+.localisation{
+    margin-top: 2em;
+    margin-bottom: 3em;
+}
 
-/*access on homepage*/
-
-.media-body{
+.text-localisation{
     text-align: justify;
-
+    font-family: "Roboto", sans-serif;
+    font-size: 25px;
+    margin-top: 2em;
 }
 
-h2{
-    font-size: 60px;
-    font-family: "Dancing Script";
-}
-
-.mt-0{
+.title-localisation{
     text-align: center;
-    padding-bottom: 70px;
+    padding-bottom: 50px;
 }
+
+
+.media-map{
+    margin-top: 55%;
+}
+
+
+.roomPrice{
+    font-size: 3vw;
+    font-family: "Dancing Script", sans-serif;
+    }
+
+/*seminaire*/
+
+.seminar{
+    margin-bottom: 4em;
+}
+
+
+.jumbotron-seminar{
+    background: url("/assets/images/seminaire/reunion.jpg");
+    height: 10em;
+    margin-bottom: 4em;
+}
+
+.seminar-title h1{
+    text-align: center;
+    font-family: "Dancing Script", sans-serif;
+    font-size: 80px;
+    color: #FFFFFF;
+    padding-top: 70px;
+}
+
+.col-seminaire-bis{
+    margin-left: 4em;
+    margin-right: 4em;
+}
+
+.col-seminaire-ter{
+    margin-left: 4em;
+    margin-right: 4em;
+}
+
+.title-seminaire{
+    text-align: center;
+    color: white;
+    vertical-align: central;
+}
+
+/*endseminaire*/
+
+/*description*/
+.description{
+    margin-bottom: 3em;
+}
+
 
 div iframe{
     border-color: transparent;
 }
+
+.description h1{
+    text-align: center;
+    margin-bottom: 1em;
+    margin-top: 1em;
+}
+
+
+hr{
+    width: 75%;
+    color:#2F3B40;
+    height: 25px;
+    size: 25px;
+}
+
+/* EndFooter */
+
+/*Contact&access*/
+
+.col-form-contact{
+    border-right-style: solid;
+    border-width: thin;
+
+}
+
+
+.jumbotron-contact{
+    height: 10em;
+    margin-left: -0.55em;
+    margin-right: -0.55em;
+    background-image: url("../images/orlnight.jpg");
+    background-size: cover;
+}
+
+.row-form{
+    margin-top: 90px;
+}
+.contact-title h1{
+    text-align: center;
+    font-family: "Dancing Script", sans-serif;
+    font-size: 80px;
+    margin-top: 1em;
+    margin-bottom: 1.5em;
+}
+
+.btn-form{
+    background-color: #2F3B40;
+    color: white;
+}
+
+.list-access{
+    font-size: 13px;
+}
+.p-form{
+    font-size: 18px;
+}
+
+.title-form{
+    color: white;
+    text-align: center;
+
+/*review*/
+
+.card-review{
+    margin-bottom: 3em;
+    background-color: #FFFFFF;
+}
+
+.review-title h1{
+    text-align: center;
+    font-family: "Dancing Script", sans-serif;
+    font-size: 80px;
+    margin-top: 1em;
+    margin-bottom: 1.5em;
+}
+
+.header-review{
+    margin-right: -0.5em;
+    margin-left: -0.5em;
+    background-color: rgba(47,61,64,0.6);
+    color: #FFFFFF;
+}
+
+.note{
+    color: #FFFFFF;
+    position: absolute;
+    right: 0;
+    margin-top: -1.6em;
+    margin-right: 1em;
+}
+
+.review{
+    font-size: 30px;
+    padding-top: 10px;
+
+}
+
+.date{
+    font-size: 15px;
+}
+
