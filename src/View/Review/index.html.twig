@@ -3,7 +3,7 @@
 {% block content %}
 
     <div class="container-fluid">
-        <div class="review-title">
+        <div class ="review-title">
             <h1>Commentaires clients</h1>
         </div>
         {% if get.success ==true %}
@@ -11,6 +11,13 @@
         {% else %}
         <a class="btn btn-primary" href="/review/addreview" role="button">Partagez votre expérience</a>
         {% endif %}
+            <div class ="review-button">
+                    {% if get.success ==true %}
+                        <p class="text-success text-center">Votre commentaire a bien été soumis à la modération.</p>
+                    {% else %}
+                        <a class="btn btn-primary" href="/review/addreview" role="button">Partagez votre expérience</a>
+                    {% endif %}
+            </div>
         <div class="row justify-content-around">
             {% for review in reviews %}
                     <div class="card-review col-lg-5 col-md-12 col-sm-12">
