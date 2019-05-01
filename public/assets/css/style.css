@@ -183,10 +183,20 @@ body {
     border: none;
 }
 .services {
-    background-color: rgba(47,61,64,0.6);
-    color: #FFFFFF;
+    background-color: rgba(47,61,64,0.1);
+    color: #2F3B40;
     list-style: disc;
-    border-radius: 0.6vw;
+    border-radius: 0.3vw;
+}
+
+.list-caracteristic{
+    padding-left: 70px;
+
+}
+
+.services h3{
+    text-align: center;
+    font-size: 50px;
 }
 
 .carouselPictureRoomPage {
@@ -195,7 +205,7 @@ body {
 }
 
 
-.roomtitle h2{
+.roomtitle h1{
     text-align: center;
     font-family: "Dancing Script", sans-serif;
     font-size: 80px;
@@ -209,13 +219,20 @@ body {
 
 /*weekend*/
 
-.weekendtitle h2{
+.jumbotron-weekend{
+
+    background: url("../images/orleans.jpg");
+    height: 10em;
+}
+
+.jumbotron-weekend h1{
     text-align: center;
     font-family: "Dancing Script", sans-serif;
     font-size: 80px;
-    margin-top: 1em;
-    margin-bottom: 1.5em;
+    color: #FFFFFF;
+    padding-top: 70px;
 }
+
 
 .typetitle h2{
     text-align: left;
@@ -251,6 +268,10 @@ body {
 
 }
 
+.weekend{
+    margin-left: 3.5em;
+}
+
 .buttontext:hover{
     display: none;
 }
@@ -259,9 +280,6 @@ body {
 }
 .modal-title-week{
     font-size: 30px;
-}
-.weekendpage{
-    margin-right: -8em;
 }
 
 .buttontext h2{
@@ -358,27 +376,38 @@ body {
 /*seminaire*/
 
 .seminar{
-    margin-bottom: 3em;
-}
-
-.seminartitle{
-    margin-top: 3em;
     margin-bottom: 4em;
 }
 
-.seminartitle h2{
-    font-size: 80px;
-}
 
-.jumbotron{
+.jumbotron-seminar{
     background: url("/assets/images/seminaire/reunion.jpg");
     height: 10em;
+    margin-bottom: 4em;
+}
 
+.seminar-title h1{
+    text-align: center;
+    font-family: "Dancing Script", sans-serif;
+    font-size: 80px;
+    color: #FFFFFF;
+    padding-top: 70px;
 }
 
 .col-seminaire-bis{
-    margin-left: 5em;
-    margin-right: 5em;
+    margin-left: 4em;
+    margin-right: 4em;
+}
+
+.col-seminaire-ter{
+    margin-left: 4em;
+    margin-right: 4em;
+}
+
+.title-seminaire{
+    text-align: center;
+    color: white;
+    vertical-align: central;
 }
 
 /*endseminaire*/
@@ -403,18 +432,6 @@ hr{
     size: 25px;
 }
 
-
-.col-seminaire-ter{
-    margin-left: 5em;
-    margin-right: 5em;
-}
-
-.title-seminaire{
-    text-align: center;
-    color: white;
-    vertical-align: central;
-}
-
 /* EndFooter */
 
 /*Contact&access*/
@@ -426,14 +443,81 @@ hr{
 }
 
 
-.jumbotron {
-    background-image: url("../images/gares(1).jpg");
-    background-size: 100%;
-    height: 13em;
-
+.jumbotron-contact{
+    height: 10em;
+    margin-left: -0.55em;
+    margin-right: -0.55em;
+    background-image: url("../images/orlnight.jpg");
+    background-size: cover;
 }
 
 .row-form{
     margin-top: 90px;
 }
+.contact-title h1{
+    text-align: center;
+    font-family: "Dancing Script", sans-serif;
+    font-size: 80px;
+    margin-top: 1em;
+    margin-bottom: 1.5em;
+}
+
+.btn-form{
+    background-color: #2F3B40;
+    color: white;
+}
+
+.list-access{
+    font-size: 13px;
+}
+.p-form{
+    font-size: 18px;
+}
+
+.title-form{
+    color: white;
+    text-align: center;
+
+/*review*/
+
+.card-review{
+    margin-bottom: 3em;
+    background-color: #FFFFFF;
+}
+
+.review-title h1{
+    text-align: center;
+    font-family: "Dancing Script", sans-serif;
+    font-size: 80px;
+    margin-top: 1em;
+    margin-bottom: 1.5em;
+}
+
+.header-review{
+    margin-right: -0.5em;
+    margin-left: -0.5em;
+    background-color: rgba(47,61,64,0.6);
+    color: #FFFFFF;
+}
+
+.note{
+    color: #FFFFFF;
+    position: absolute;
+    right: 0;
+    margin-top: -1.6em;
+    margin-right: 1em;
+}
+
+.review{
+    font-size: 30px;
+    padding-top: 10px;
+
+}
+
+.date{
+    font-size: 15px;
+}
+
+
+
 

@@ -1,22 +1,36 @@
 {% extends 'layoutVisitor.html.twig' %}
 
 {% block content %}
-    <div class="container-fluid"><h1>Commentaires clients</h1>
-        <div class="row"></div>
+
+    <div class="container-fluid">
+        <div class="review-title">
+            <h1>Commentaires clients</h1>
+        </div>
+        {% if get.success ==true %}
+        <p class="text-success text-center">Votre commentaire a bien été soumis à la modération.</p>
+        {% else %}
         <a class="btn btn-primary" href="/review/addreview" role="button">Partagez votre expérience</a>
-        <div class="row justify-content-center">
+        {% endif %}
+   <div class="row justify-content-around">
             {% for review in reviews %}
-                <div class="card col-3">
-                    <p class="text-right p-2 pr-3">Note : {{ review.grade }}/{{ maximumGrade }}</p>
-                    <h5 class="card-title text-center">{{ review.name }}</h5>
-                    <div class="card-body">
-                        <p class="card-text">{{ review.comment }}</p>
-                    </div>
-                    <div class="card-footer">
-                        <small class="text-muted">{{ review.date }}</small>
-                    </div>
+                <div class="card-review col-lg-5 col-md-12 col-sm-12">
+
+                        <div class="header-review">
+                            <div class="card-header">
+                            {{ review.name }} <div class="note">Note : {{ review.grade }}/{{ maximumGrade }}</div>
+                            </div>
+                        </div>
+                        <div class="card-body-review">
+                            <blockquote class="review">
+                                <p>{{ review.comment }}</p>
+                                <footer class="date">Date de publication:  {{ review.date }}</footer>
+                            </blockquote>
+                        </div>
+
                 </div>
             {% endfor %}
+
         </div>
     </div>
 {% endblock %}
+
