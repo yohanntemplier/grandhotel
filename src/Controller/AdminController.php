@@ -3,6 +3,7 @@
 namespace App\Controller;
 
 use App\Model\AdminRoomManager;
+use App\Model\AdminServicesManager;
 use App\Services\AddPictures;
 use App\Services\CleanForm;
 use App\Model\AdminReviewManager;
@@ -145,6 +146,53 @@ class AdminController extends AbstractController
             $adminRoomManager->delete($postData['id']);
             header('location:/Admin/rooms/?success=true');
         }
-        return $this->twig->render('Admin/rooms.html.twig', ['rooms' => $rooms,'get'=>$_GET]);
+        return $this->twig->render('Admin/rooms.html.twig', ['rooms' => $rooms, 'get' => $_GET]);
+    }
+
+    public function services()
+    {
+        $adminServicesManager = new AdminServicesManager();
+        $services = $adminServicesManager->selectAll();
+
+        if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+            $postData = $_POST;
+            $adminServicesManager->delete($postData['id']);
+            header('location:/Admin/services/?success=true');
+        }
+
+        return $this->twig->render('Admin/services.html.twig', ['services' => $services, 'get' => $_GET]);
+    }
+
+
+    public function addService()
+    {
+        $formRules = ['CaracteristicNameMaxLength' => 40];
+        $adminServicesManager = new AdminServicesManager();
+        $cleanForm = new CleanForm();
+        $errors = [];
+
+        if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+            $postData = $_POST;
+            if (!empty($postData['caracteristic_name'])) {
+                $postData['caracteristic_name'] = $cleanForm->trim($postData['caracteristic_name']);
+                $errors = $cleanForm->checkMaxLength(
+                    $postData['caracteristic_name'],
+                    $errors,
+                    $formRules['CaracteristicNameMaxLength'],
+                    'caracteristic_name'
+                );
+            } else {
+                $errors['caracteristic_name']['empty'] = 'Ce champ ne peut pas rester vide!';
+            }
+            if (empty($errors)) {
+                $adminServicesManager->insert($postData);
+                header('location:../Admin/services/?success=true');
+            }
+        }
+        return $this->twig->render(
+            'Admin/addservice.html.twig',
+            ['errors' => $errors,
+                'formRules' => $formRules]
+        );
     }
 }
