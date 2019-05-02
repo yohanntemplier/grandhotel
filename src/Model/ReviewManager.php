@@ -6,6 +6,7 @@
  * Time: 18:20
  * PHP version 7
  */
+
 namespace App\Model;
 
 /**
@@ -32,10 +33,10 @@ class ReviewManager extends AbstractManager
      * @param array $data
      * @throws \Exception
      */
-    public function insert(array $data):void
+    public function insert(array $data): void
     {
         $date = new \DateTime();
-        $today=$date->format("j/m/Y");
+        $today = $date->format("j/m/Y");
         // prepared request
         $statement = $this->pdo->prepare("INSERT INTO $this->table
         (`name`, `grade`, `comment`, `date`, `online`) VALUES (:name, :grade, :comment, :date, :online)");
@@ -45,14 +46,15 @@ class ReviewManager extends AbstractManager
         $statement->bindValue('date', $today, \PDO::PARAM_STR);
         $statement->bindValue('online', 0, \PDO::PARAM_INT);
         $statement->execute();
-    } 
-      /**
+    }
+
+    /**
      *Selects all the reviews that administrator agreed that it could be published
      * @return array
      */
     public function selectAllOnLine()
     {
-        return $this->pdo->query('SELECT name, comment, grade, date FROM review WHERE online =1;')->fetchAll();
-
+        return $this->pdo->query('SELECT name, comment, grade, date FROM review
+        WHERE online =1 ORDER BY id DESC;')->fetchAll();
     }
 }
