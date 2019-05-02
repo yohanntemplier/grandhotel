@@ -6,12 +6,7 @@
         <div class ="review-title">
             <h1>Commentaires clients</h1>
         </div>
-        {% if get.success ==true %}
-        <p class="text-success text-center">Votre commentaire a bien été soumis à la modération.</p>
-        {% else %}
-        <a class="btn btn-primary" href="/review/addreview" role="button">Partagez votre expérience</a>
-        {% endif %}
-            <div class ="review-button">
+           <div class ="review-button">
                     {% if get.success ==true %}
                         <p class="text-success text-center">Votre commentaire a bien été soumis à la modération.</p>
                     {% else %}

@@ -222,6 +222,7 @@ body {
 
     background: url("../images/orleans.jpg");
     height: 10em;
+    background-attachment: fixed;
 }
 
 .jumbotron-weekend h1{
@@ -344,6 +345,7 @@ body {
 .localisation{
     margin-top: 2em;
     margin-bottom: 3em;
+    margin-right: -3em;
 }
 
 .text-localisation{
@@ -380,6 +382,7 @@ body {
     background: url("/assets/images/seminaire/reunion.jpg");
     height: 10em;
     margin-bottom: 4em;
+    background-attachment: fixed;
 }
 
 .seminar-title h1{
@@ -416,6 +419,8 @@ body {
 
 div iframe{
     border-color: transparent;
+    width: 500px;
+    height: 500px;
 }
 
 .description h1{
@@ -449,6 +454,7 @@ hr{
     margin-right: -0.55em;
     background-image: url("../images/orlnight.jpg");
     background-size: cover;
+    background-attachment: fixed;
 }
 
 .row-form{
@@ -522,7 +528,7 @@ hr{
 }
 
 .review{
-    font-size: 25px;
+    font-size: 20px;
     padding-top: 10px;
 
 }
