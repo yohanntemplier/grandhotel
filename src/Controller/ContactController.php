@@ -11,6 +11,7 @@ namespace App\Controller;
 
 use App\Model\ContactManager;
 use App\Services\CleanForm;
+use App\Services\SendEmail;
 
 /**
  * Class FormController
@@ -33,7 +34,6 @@ class ContactController extends AbstractController
         $forms = ["firstname" => 50,
             "mail" => 50,
             "message" => 255];
-        $contactManager = new ContactManager();
         $cleanForm = new CleanForm();
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $postData = $_POST;
@@ -62,8 +62,9 @@ class ContactController extends AbstractController
                 "message"
             );
             if (empty($errors)) {
-                $contactManager->insert($postData);
-                header('location:index/?success=true&');
+                $sendMail = new SendEmail;
+                $sendMail->sendEmail($postData['firstname'], $postData['mail'], $postData['message']);
+                header('location:/Contact/index/?success=true&');
             }
         }
         return $this->twig->render('Contact/index.html.twig', ['errors' => $errors, 'get' => $_GET,]);
