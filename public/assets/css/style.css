@@ -19,9 +19,8 @@
 
 .btn-resa{
     background-color: white;
-    position: absolute;
-    right: 0;
-    margin-right: 1em;
+    font-size: xx-large;
+
 }
 
 .navbar-brand-resa:hover{
@@ -326,7 +325,7 @@ body {
 
 
 .logo1{
-   padding-bottom: 30px;
+    padding-bottom: 30px;
 }
 
 
@@ -335,7 +334,7 @@ body {
     font-family: "Dancing Script", sans-serif;
     font-size: 3.5em;
     padding-top: 35px;
-  }
+}
 
 .lien{
     padding-top: 20px;
@@ -368,7 +367,7 @@ body {
 .roomPrice{
     font-size: 3vw;
     font-family: "Dancing Script", sans-serif;
-    }
+}
 
 /*seminaire*/
 
