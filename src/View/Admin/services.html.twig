@@ -1,0 +1,48 @@
+{% extends 'layoutAdmin.html.twig' %}
+
+{% block content %}
+
+    <div class="text-center"><a class="btn btn-success mt-5 mb-5" href="/Admin/addservice" role="button">Ajouter un
+            service</a>
+        {% if get.success == 'true' %}
+            <p class="col-12 text-success"> Votre modification a bien été prise en compte</p></div>
+        {% endif %}
+    {% for service in services %}
+        <div class="row m-0 pt-3 pb-2 border-top border-bottom {% if loop.index is odd %}bg-light{% endif %}">
+            <p class="col-2 text-body">{{ service.caracteristic_name }}<p>
+            <button type="button" class=" ml-5 mr-5 btn btn-primary " data-toggle="modal"
+                    data-target="#modal{{ loop.index }}">
+                Supprimer le service
+            </button>
+            <!-- Modal -->
+            <div class="modal fade" id="modal{{ loop.index }}" tabindex="-1" role="dialog"
+                 aria-labelledby="supprimer la {{ service.caracteristic_name }}" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="modal{{ loop.index }}">Supprimer un
+                                service</h5>
+                            <button type="button" class="close" data-dismiss="modal"
+                                    aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            Voulez-vous supprimer {{ service.caracteristic_name }}?
+                        </div>
+                        <div class="modal-footer">
+                            <form method="post" action="/Admin/services">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Non
+                                </button>
+                                <button class="btn btn-danger" name='id'
+                                        value="{{ service.id }}"
+                                        type="submit"> Oui, supprimer
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    {% endfor %}
+{% endblock %}

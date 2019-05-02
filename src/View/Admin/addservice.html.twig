@@ -1,0 +1,26 @@
+{% extends 'layoutAdmin.html.twig' %}
+{% block title %} Ajouter un service{% endblock %}
+    {% block content %}
+        <div class="container-fluid">
+            <h1 class="ml-3 pb-5 pt-3">Ajouter un service</h1>
+            <div class="row justify-content-center">
+                <form method="POST" action="addservice" class="col-5">
+                    <div class="row">
+                        <label for="CaracteristicName" class=" col-5 pt-1 pl-3">Nom du service :</label>
+                        <input type="text" class=" mb-2 col-6" id="CaracteristicName" name="caracteristic_name"
+                               placeholder="Moins de {{ formRules.CaracteristicNameMaxLength }} caractères."
+                               value="{{ data.name }}">
+                    </div>
+                    {% for error in errors.caracteristic_name %}
+                        {% if error %}
+                            <div class="alert alert-danger">{{ error }}</div>
+                        {% endif %}
+                    {% endfor %}
+                    <div class="text-center">
+                        <button class="btn m-5 btn-primary" type="submit">Envoyer</button>
+                        <a class="btn m-5 btn-primary" href="../.." role="button">Annuler</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    {% endblock %}
