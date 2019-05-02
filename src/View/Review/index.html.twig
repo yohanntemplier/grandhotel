@@ -6,7 +6,7 @@
         <div class ="review-title">
             <h1>Commentaires clients</h1>
         </div>
-            <div class ="review-button">
+           <div class ="review-button">
                     {% if get.success ==true %}
                         <p class="text-success text-center">Votre commentaire a bien été soumis à la modération.</p>
                     {% else %}
@@ -15,8 +15,7 @@
             </div>
         <div class="row justify-content-around">
             {% for review in reviews %}
-                <div class="card-review col-lg-5 col-md-12 col-sm-12">
-
+                    <div class="card-review col-lg-5 col-md-12 col-sm-12">
                         <div class="header-review">
                             <div class="card-header">
                             {{ review.name }} <div class="note">Note : {{ review.grade }}/{{ maximumGrade }}</div>
@@ -28,10 +27,8 @@
                                 <footer class="date">Date de publication:  {{ review.date }}</footer>
                             </blockquote>
                         </div>
-
-                </div>
+                    </div>
             {% endfor %}
-
         </div>
     </div>
 {% endblock %}
