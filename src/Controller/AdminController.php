@@ -156,6 +156,8 @@ class AdminController extends AbstractController
 
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $postData = $_POST;
+            $cleanForm=new CleanForm();
+            $postData['id'] = $cleanForm->trim($postData['id']);
             $adminServicesManager->delete($postData['id']);
             header('location:/Admin/services/?success=true');
         }
